@@ -6,6 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        outfit: ["var(--font-outfit)", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
+        bebasNeue: ["var(--font-bebasNeue)", "curvsive"],
+      },
       colors: {
         rparts: {
           black: "#000000",
