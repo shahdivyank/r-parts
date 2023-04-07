@@ -1,8 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
+
 /* eslint-disable new-cap */
-import { Outfit, Montserrat, Bebas_Neue } from "@next/font/google";
-// import { bebasNeue } from "@next/font/google";
+import { Outfit, Montserrat } from "@next/font/google";
+/* eslint-disable camelcase */
+import { Bebas_Neue } from "@next/font/google";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -21,14 +23,10 @@ const bebasNeue = Bebas_Neue({
 });
 
 export default function App({ Component, pageProps }) {
-  // return(  <main className={`${readex.variable}`}></main><Component {...pageProps} /></main>)
   return (
     <main
       className={`${outfit.variable} ${montserrat.variable} ${bebasNeue.variable}`}
     >
-      {/* <main
-      className={`${outfit.className}${montserrat.className}${bebasNeue.className}`}
-    > */}
       <Component {...pageProps} />
     </main>
   );
