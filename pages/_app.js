@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
+import Layout from "../components/Layout";
 
 /* eslint-disable new-cap */
 import { Outfit, Montserrat } from "@next/font/google";
@@ -27,7 +28,9 @@ export default function App({ Component, pageProps }) {
     <main
       className={`${outfit.variable} ${montserrat.variable} ${bebasNeue.variable}`}
     >
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </main>
   );
 }
