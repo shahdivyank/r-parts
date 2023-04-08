@@ -9,7 +9,7 @@ export default function Navigation() {
     <div className="flex justify-between items-center my-3 mx-12">
       <div className="flex w-1/3 justify-around">
         <span className="flex items-center text-2xl font-medium gap-x-2 font-montserrat">
-          <BsGear className="stroke-0" />
+          <BsGear className="stroke-[0.5px]" />
           <div className="flex">
             <p>{"R'P"}</p>
             <p className="italic">A</p>
@@ -25,9 +25,9 @@ export default function Navigation() {
       </div>
       <div className="flex w-1/6 justify-between">
         <div className="flex gap-x-6">
-          <p className="font-outfit font-medium">Market</p>
-          <p className="font-outfit font-medium">Sell</p>
-          <p className="font-outfit font-medium">Info</p>
+          <p className="font-outfit font-medium">MARKET</p>
+          <p className="font-outfit font-medium">SELL</p>
+          <p className="font-outfit font-medium">INFO</p>
         </div>
         <span className="border-[0.5px] border-black px-0 mx-0"></span>
         <div className="flex gap-x-6">
