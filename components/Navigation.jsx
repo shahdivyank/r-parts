@@ -31,10 +31,10 @@ export default function Navigation() {
         <p className="font-outfit font-medium">INFO</p>
         <span className="border-[0.5px] border-black px-0 mx-0"></span>
         <span className="flex items-center">
-          <FaRegUser className="flex items-center stroke-2 text-lg" />
+          <FaRegUser className="flex items-center stroke-2 text-xl" />
         </span>
         <span className="flex items-center">
-          <HiOutlineShoppingBag className="flex items-center stroke-2 text-xl" />
+          <HiOutlineShoppingBag className="flex items-center stroke-2 text-2xl" />
         </span>
       </div>
     </div>
