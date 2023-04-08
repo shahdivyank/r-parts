@@ -21,7 +21,7 @@ module.exports = {
           wrappergGray: "#F0F0F0",
           bannerGray: "#E6E6E6",
           borderGray: "#D9D9D9",
-          subHeadingtGray: "#858585",
+          subHeadingGray: "#858585",
         },
       },
     },
