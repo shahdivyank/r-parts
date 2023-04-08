@@ -22,6 +22,7 @@ module.exports = {
           bannerGray: "#E6E6E6",
           borderGray: "#D9D9D9",
           subHeadingGray: "#858585",
+          green: "#8CBF83",
         },
       },
     },

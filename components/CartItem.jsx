@@ -22,7 +22,7 @@ const CartItem = () => {
         </div>
         <div className="flex gap-x-2">
           <div className="font-outfit"> Condition:</div>
-          <div className="font-outfit font-semibold">New</div>
+          <div className="font-outfit font-semibold text-rparts-green">New</div>
         </div>
         <div className="flex w-1/4 justify-between border-[1px] border-rparts-borderGray px-3 rounded-3xl mt-4">
           <div className="font-outfit cursor-pointer">-</div>
