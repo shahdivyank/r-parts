@@ -10,21 +10,21 @@ const CartItem = () => {
         <Image src={Product} alt="Product" layout="responsive" />
       </div>
       <div className="w-96 flex flex-col justify-between">
-        <div className="font-outfit font-medium text-base">
-          ESP8266 WiFi Bee
-        </div>
+        <div className="font-outfit font-medium text-xl">ESP8266 WiFi Bee</div>
         <div className="font-outfit text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
           convallis mi ut velit porttitor placerat.
         </div>
         <div className="flex gap-x-2">
-          <div className="font-outfit"> Condition:</div>
-          <div className="font-outfit font-semibold text-rparts-green">New</div>
+          <div className="font-outfit text-sm"> Condition:</div>
+          <div className="font-outfit font-semibold text-rparts-green text-sm">
+            New
+          </div>
         </div>
         <div className="flex w-32 justify-between border-[1px] border-rparts-borderGray px-3 rounded-3xl mt-3">
-          <div className="font-outfit cursor-pointer">-</div>
-          <div className="font-outfit cursor-pointer">1</div>
-          <div className="font-outfit cursor-pointer">+</div>
+          <div className="font-outfit cursor-pointer text-sm">-</div>
+          <div className="font-outfit cursor-pointer text-sm">1</div>
+          <div className="font-outfit cursor-pointer text-ms">+</div>
         </div>
       </div>
       <div className="flex flex-col justify-between items-end">
