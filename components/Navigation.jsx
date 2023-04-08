@@ -18,7 +18,7 @@ export default function Navigation() {
         </span>
         <div className="w-2/3 flex items-center justify-between border-[1px] border-rparts-borderGray px-4 py-2 rounded-3xl">
           <input
-            className="w-full font-outfit"
+            className="w-full font-outfit focus:outline-none"
             type="search"
             placeholder={"Search R'Parts"}
           />
