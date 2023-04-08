@@ -6,7 +6,7 @@ import { FiMapPin, FiPhone, FiMail } from "react-icons/Fi";
 import { BiCopyright } from "react-icons/Bi";
 
 const Footer = () => {
-  const logoStyles = { color: "white", fontSize: "1.5em" };
+  // const logoStyles = { color: "white", fontSize: "1.5em" };
   const contactStyles = { color: "white", fontSize: "1.2em" };
   const tradeStyle = { color: "white" };
 
@@ -15,38 +15,36 @@ const Footer = () => {
       <Row>
         <div className="bg-rparts-blue flex items-center gap-4">
           <Col>
-            <div className="flex flex-row">
-              <BsGear style={logoStyles} />
-              <p className="text-2xl text-white font-bold ">R&apos;Parts</p>
+            <div className="grid justify-items-center text-left ">
+              {/* <div className="flex flex-row"> */}
+              <BsGear className="text-white flex glow" />
+              <p className="text-xl text-white font-bold ">R&apos;Parts</p>
+              {/* </div> */}
+              {/* <Row> */}
+              {/* <div className="flex flex-row"> */}
+              <FiMapPin style={contactStyles} />
+              <p className="text-base text-white ">
+                900 University Ave, Riverside, CA 92521
+              </p>
+              {/* </div> */}
+              {/* <div className="flex flex-row"> */}
+              <FiPhone style={contactStyles} />
+              <p className="text-base text-white ">+1(909)214-5009</p>
+              {/* </div> */}
+              {/* <div className="flex flex-row"> */}
+              <FiMail style={contactStyles} />
+              <p className="text-base text-white ">contact@parts.com</p>
+              {/* </div> */}
+              {/* </Row> */}
+              {/* <Row> */}
+              {/* <div className="flex flex-row"> */}
+              <BiCopyright style={tradeStyle} />
+              <p className="text-xs text-white">
+                ACM-UC Riverside. All Rights Reseverd.
+              </p>
+              {/* </div> */}
+              {/* </Row> */}
             </div>
-            <Row>
-              <div className="flex flex-row">
-                <FiMapPin style={contactStyles} />
-                <p className="text-2xl text-white font-bold ">
-                  900 University Ave, Riverside, CA 92521
-                </p>
-              </div>
-              <div className="flex flex-row">
-                <FiPhone style={contactStyles} />
-                <p className="text-2xl text-white font-bold ">
-                  +1(909)214-5009
-                </p>
-              </div>
-              <div className="flex flex-row">
-                <FiMail style={contactStyles} />
-                <p className="text-2xl text-white font-bold ">
-                  contact@parts.com
-                </p>
-              </div>
-            </Row>
-            <Row>
-              <div className="flex flex-row">
-                <BiCopyright style={tradeStyle} />
-                <p className="text-xs text-white">
-                  ACM-UC Riverside. All Rights Reseverd.
-                </p>
-              </div>
-            </Row>
           </Col>
           <Col>
             <Row>
