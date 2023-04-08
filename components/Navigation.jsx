@@ -18,7 +18,7 @@ export default function Navigation() {
         </span>
         <div className="w-2/3 flex items-center justify-between border-[1px] border-rparts-borderGray px-4 py-2 rounded-3xl">
           <input
-            className="w-full text-rparts-subHeadingGray font-outfit"
+            className="w-full font-outfit focus:outline-none"
             type="search"
             placeholder={"Search R'Parts"}
           />
@@ -31,10 +31,10 @@ export default function Navigation() {
         <p className="font-outfit font-medium">INFO</p>
         <span className="border-[0.5px] border-black px-0 mx-0"></span>
         <span className="flex items-center">
-          <FaRegUser className="flex items-center stroke-2 text-lg" />
+          <FaRegUser className="flex items-center stroke-2 text-xl" />
         </span>
         <span className="flex items-center">
-          <HiOutlineShoppingBag className="flex items-center stroke-2 text-xl" />
+          <HiOutlineShoppingBag className="flex items-center stroke-2 text-2xl" />
         </span>
       </div>
     </div>
