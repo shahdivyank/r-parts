@@ -1,11 +1,11 @@
 import Hello from "../components/Hello";
-import CartTotal from "../components/CartTotal";
+import ProfileImage from "../components/ProfileImage";
 
 export default function Home() {
   return (
     <>
       <Hello />
-      <CartTotal />
+      <ProfileImage />
     </>
   );
 }
