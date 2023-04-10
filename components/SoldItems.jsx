@@ -25,9 +25,7 @@ const SoldItems = () => {
       <div className="flex flex-col font-medium">
         <div className="flex w-full justify-between">
           <p className="font-medium text-2xl">Sold Items</p>
-          <span className="text-5xl">
-            <RiArrowDropDownLine className="" />
-          </span>
+          <RiArrowDropDownLine className="text-5xl" />
         </div>
         <span className="justify-end border-[1px] border-rparts-borderGray mb-3" />
         <div className="flex w-full self-end justify-end text-xs font-light">
