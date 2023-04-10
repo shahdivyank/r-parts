@@ -22,14 +22,12 @@ const purchasedItemsEntries = [
 const PurchasedItems = () => {
   return (
     <div className="w-[40%] flex flex-col justify-between p-10 border-[1px] border-rparts-borderGray rounded-3xl bg-rparts-wrappergGray font-outfit">
-      <div className="flex flex-col font-medium gap-y-3">
+      <div className="flex flex-col font-medium">
         <div className="flex w-full justify-between">
           <p className="font-medium text-2xl">Past Purchases</p>
-          <span className="text-5xl">
-            <RiArrowDropDownLine className="" />
-          </span>
+          <RiArrowDropDownLine className="text-5xl" />
         </div>
-        <span className="justify-end border-[1px] border-rparts-borderGray" />
+        <span className="justify-end border-[1px] border-rparts-borderGray mb-3" />
         <div className="flex w-full self-end justify-end text-xs font-light">
           <p className="mr-44">ITEM</p>
           <p className="mr-[4.9rem]">ORDER PLACED</p>
