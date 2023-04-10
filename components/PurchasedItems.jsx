@@ -32,7 +32,7 @@ const PurchasedItems = () => {
         <span className="justify-end border-[1px] border-rparts-borderGray" />
         <div className="flex w-full self-end justify-end text-xs font-light">
           <p className="mr-44">ITEM</p>
-          <p className="mr-[5.7rem]">DATE SOLD</p>
+          <p className="mr-[4.9rem]">ORDER PLACED</p>
           <p className="mr-2">TOTAL</p>
         </div>
       </div>
