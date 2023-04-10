@@ -1,7 +1,6 @@
 import React from "react";
 import PurchasedItem from "./PurchasedItem";
 import { RiArrowDropDownLine } from "react-icons/ri";
-// import { FaRegUser } from "react-icons/fa";
 
 const purchasedItemsEntries = [
   {
