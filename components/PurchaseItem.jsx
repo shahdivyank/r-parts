@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Product from "../public/product.svg";
 
-const SoldItem = ({ entry, i }) => {
+const PurchaseItem = () => {
   return (
-    <div className="flex justify-between my-3 font-outfit">
+    <div className="w-[40%] flex justify-between my-3 font-outfit">
       <div className="text-rparts-subHeadingGray flex justify-cente items-center">
-        {i}
+        1
       </div>
 
       <div className="flex gap-x-2">
@@ -14,25 +14,25 @@ const SoldItem = ({ entry, i }) => {
           <Image src={Product} alt="Product" />
         </div>
         <div className="flex flex-col justify-center">
-          <div className="font-medium text-lg">{entry.title}</div>
+          <div className="font-medium text-lg">ESP8266 WiFi Bee</div>
           <div className="flex text-sm gap-x-1">
             <p>Order Number:</p>
-            <p className="font-medium">{entry.orderNumber}</p>
+            <p className="font-medium">11-02408123120</p>
           </div>
           <div className="flex gap-x-1 text-sm">
             <p>Quantity:</p>
-            <p className="font-medium gap-x-1">{entry.quantity}</p>
+            <p className="font-medium gap-x-1">1</p>
           </div>
         </div>
       </div>
       <div className="flex flex-col font-medium justify-center items-center text-lg">
-        {entry.date}
+        11/02/2021
       </div>
       <div className="flex flex-col font-medium justify-center items-center text-lg">
-        {entry.price}
+        $57.09
       </div>
     </div>
   );
 };
 
-export default SoldItem;
+export default PurchaseItem;

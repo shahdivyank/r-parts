@@ -1,11 +1,11 @@
 import Hello from "../components/Hello";
-import SoldItems from "../components/SoldItems";
+import PurchaseItem from "../components/PurchaseItem";
 
 export default function Home() {
   return (
     <>
       <Hello />
-      <SoldItems />
+      <PurchaseItem />
     </>
   );
 }
