@@ -1,11 +1,11 @@
 import Hello from "../components/Hello";
-import ProfileImage from "../components/ProfileImage";
+import SoldItems from "../components/SoldItems";
 
 export default function Home() {
   return (
     <>
       <Hello />
-      <ProfileImage />
+      <SoldItems />
     </>
   );
 }
