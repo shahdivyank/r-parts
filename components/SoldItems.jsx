@@ -1,6 +1,23 @@
 import React from "react";
 import SoldItem from "./SoldItem";
 
+const soldItemsEntries = [
+  {
+    title: "ESP8266 WiFi Bee",
+    orderNumber: "11-02408123120",
+    quantity: "1",
+    date: "11/02/2021",
+    price: "$57.09",
+  },
+  {
+    title: "ESP8266 WiFi Bee",
+    orderNumber: "11-02408123120",
+    quantity: "1",
+    date: "11/02/2021",
+    price: "$57.09",
+  },
+];
+
 const SoldItems = () => {
   return (
     <div className="w-[40%] flex flex-col justify-between p-10 border-[1px] border-rparts-borderGray rounded-3xl bg-rparts-wrappergGray font-outfit">
@@ -13,10 +30,9 @@ const SoldItems = () => {
           <p className="mr-2">TOTAL</p>
         </div>
       </div>
-      <div className="gap-y-10">
-        <SoldItem />
-        <SoldItem />
-      </div>
+      {soldItemsEntries.map((entry, i) => (
+        <SoldItem key={i} entry={entry} i={i + 1} />
+      ))}
     </div>
   );
 };
