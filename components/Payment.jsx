@@ -8,7 +8,7 @@ const Payment = () => {
       <div className="text-3xl font-bold font-outfit  p-3">Payment Method</div>
 
       <button className=" flex  items-center">
-        <div className="flex m-4 px-3 py-2">
+        <div className="flex m-4 px-1 py-2">
           <Image
             src={creditcard}
             alt="credit card image"
@@ -23,7 +23,7 @@ const Payment = () => {
             this to our representative and pay with your preferred payment
             method.
           </text>
-          <text className="text-rparts-orange font-outfit font-medium m-1 ">
+          <text className="text-rparts-orange font-outfit font-medium ">
             We are not accepting cards.
           </text>
         </div>
