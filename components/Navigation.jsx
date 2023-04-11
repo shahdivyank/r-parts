@@ -1,5 +1,5 @@
 import React from "react";
-import { BsGear } from "react-icons/Bs";
+import { BsGear } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
 import { RiSearchLine } from "react-icons/ri";
 import { HiOutlineShoppingBag } from "react-icons/hi";

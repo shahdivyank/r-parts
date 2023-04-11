@@ -1,8 +1,8 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { BsGear } from "react-icons/Bs";
-import { FiMapPin, FiPhone, FiMail } from "react-icons/Fi";
-import { BiCopyright } from "react-icons/Bi";
+import { BsGear } from "react-icons/bs";
+import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
+import { BiCopyright } from "react-icons/bi";
 
 const Footer = () => {
   return (
