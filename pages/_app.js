@@ -3,9 +3,9 @@ import "../styles/globals.css";
 import Layout from "../components/Layout";
 
 /* eslint-disable new-cap */
-import { Outfit, Montserrat } from "@next/font/google";
+import { Outfit, Montserrat } from "next/font/google";
 /* eslint-disable camelcase */
-import { Bebas_Neue } from "@next/font/google";
+import { Bebas_Neue } from "next/font/google";
 
 const outfit = Outfit({
   subsets: ["latin"],
