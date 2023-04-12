@@ -15,6 +15,7 @@ module.exports = {
         rparts: {
           black: "#000000",
           footerBlue: "#123666",
+          hoverorange: "#FFA34F",
           blue: "#2D6CC0",
           orange: "#FF8F28",
           white: "#F5F5F5",
