@@ -23,10 +23,10 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-7 flex space-x-3">
-            <button className="text-white bg-rparts-orange rounded-full py-2 px-12">
+            <button className="text-white bg-rparts-orange hover:bg-rparts-hoverorange rounded-full py-2 px-12">
               START SHOPPING
             </button>
-            <button className="text-rparts-orange bg-rparts-white border-2 border-rparts-orange rounded-full py-2 px-8">
+            <button className="text-rparts-orange bg-rparts-white border-2 hover:bg-rparts-wrappergGray border-rparts-orange rounded-full py-2 px-8">
               SELL PART
             </button>
           </div>
