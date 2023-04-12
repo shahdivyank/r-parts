@@ -11,6 +11,9 @@ module.exports = {
         montserrat: ["var(--font-montserrat)", "sans-serif"],
         bebasNeue: ["var(--font-bebasNeue)", "curvsive"],
       },
+      fontSize: {
+        landing: "13rem",
+      },
       colors: {
         rparts: {
           black: "#000000",
