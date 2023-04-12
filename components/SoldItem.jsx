@@ -1,37 +1,34 @@
 import React from "react";
 import Image from "next/image";
 import Product from "../public/product.svg";
+import { Col, Row } from "react-bootstrap";
 
 const SoldItem = ({ entry, i }) => {
   return (
-    <div className="flex justify-between my-3 font-outfit">
-      <div className="text-rparts-subHeadingGray flex justify-cente items-center">
+    <Row className="my-3 px-8">
+      <Col xl={1} className="flex items-center font-medium">
         {i}
-      </div>
-
-      <div className="flex gap-x-2">
-        <div className="flex justify-center items-center w-16 mt-1">
-          <Image src={Product} alt="Product" />
+      </Col>
+      <Col xl={7} className="gap-x-2 flex items-center">
+        <Image src={Product} alt="Product" className="w-20" />
+        <div>
+          <p className="text-lg font-medium">{entry.title}</p>
+          <p className="font-light">
+            Order Number:{" "}
+            <span className="font-medium">{entry.orderNumber}</span>
+          </p>
+          <p className="font-light">
+            Quantity: <span className="font-medium">{entry.quantity}</span>
+          </p>
         </div>
-        <div className="flex flex-col justify-center">
-          <div className="font-medium text-lg">{entry.title}</div>
-          <div className="flex text-sm gap-x-1">
-            <p>Order Number:</p>
-            <p className="font-medium">{entry.orderNumber}</p>
-          </div>
-          <div className="flex gap-x-1 text-sm">
-            <p>Quantity:</p>
-            <p className="font-medium gap-x-1">{entry.quantity}</p>
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col font-medium justify-center items-center text-lg">
-        {entry.date}
-      </div>
-      <div className="flex flex-col font-medium justify-center items-center text-lg">
-        {entry.price}
-      </div>
-    </div>
+      </Col>
+      <Col xl={2} className="flex items-center">
+        <p className="text-lg font-medium">{entry.date}</p>
+      </Col>
+      <Col xl={2} className="flex items-center">
+        <p className="text-lg font-medium">{entry.total}</p>
+      </Col>
+    </Row>
   );
 };
 

@@ -1,9 +1,9 @@
-import PurchasedItems from "../components/PurchasedItems";
+import SoldItems from "../components/SoldItems";
 
 export default function Home() {
   return (
     <>
-      <PurchasedItems />
+      <SoldItems />
     </>
   );
 }
