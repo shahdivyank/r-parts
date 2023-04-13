@@ -21,10 +21,10 @@ const appointmentEntries = [
   },
 ];
 
-const Appoointments = () => {
+const Appointments = () => {
   return (
     <>
-      <div className="w-[45%] border-[1px] border-rparts-borderGray rounded-3xl p-3 font-outfit">
+      <div className="w-full border-[1px] border-rparts-borderGray rounded-3xl p-3 font-outfit">
         <div className="flex items-center mb-10 pl-7 w-full">
           <p className="text-black text-2xl font-medium">Appointments</p>
         </div>
@@ -50,4 +50,4 @@ const Appoointments = () => {
   );
 };
 
-export default Appoointments;
+export default Appointments;

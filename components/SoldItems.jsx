@@ -24,7 +24,7 @@ const SoldItems = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <Accordion defaultActiveKey="0" className="w-[40%] bg-rparts-wrappergGray">
+    <Accordion defaultActiveKey="0" className="bg-rparts-wrappergGray">
       <Accordion.Item
         className="!border-none underlayColor=transparent font-outfit"
         eventKey="0"
