@@ -24,7 +24,7 @@ const SoldItems = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <Accordion defaultActiveKey="0" className="">
+    <Accordion defaultActiveKey="1" className="">
       <Accordion.Item
         className="!border-none underlayColor=transparent font-outfit"
         eventKey="0"
@@ -33,17 +33,17 @@ const SoldItems = () => {
           onClick={() => setToggle(!toggle)}
           className={`!bg-rparts-wrappergGray text-black after:hidden focus:!shadow-none ${
             toggle
-              ? `!rounded-t-3xl !rounded-b-3xl delay-300	`
-              : `!rounded-t-3xl`
+              ? `!rounded-t-3xl`
+              : `!rounded-t-3xl !rounded-b-3xl delay-300`
           } px-12 py-4`}
         >
           <div className="w-full flex justify-between items-center">
             <p className="text-black text-2xl font-medium m-0 ">Sold Items</p>
             <div className="text-3xl">
               {toggle ? (
-                <IoIosArrowForward className="stroke-[10px] " />
-              ) : (
                 <IoIosArrowDown className="stroke-[10px]" />
+              ) : (
+                <IoIosArrowForward className="stroke-[10px]" />
               )}
             </div>
           </div>
