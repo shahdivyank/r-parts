@@ -1,4 +1,5 @@
 import Landing from "../public/Landing.svg";
+import Gear1 from "../public/Gear1.svg";
 import Image from "next/image";
 
 const Landing1 = () => {
@@ -31,7 +32,37 @@ const Landing1 = () => {
             </button>
           </div>
         </div>
-        <Image src={Landing} alt="Landing" layout="responsive" />
+
+        <Image src={Landing} alt="Landing" layout="responsive" class="mt-5" />
+
+        <div className="absolute -right-[10%] -top-[3%] w-5/12">
+          <Image
+            src={Gear1}
+            alt="Landing"
+            layout="responsive"
+            className="box"
+          />
+        </div>
+        <div className="absolute right-[23%] top-[48%] w-3/12">
+          <Image
+            src={Gear1}
+            alt="Landing"
+            layout="responsive"
+            className="box"
+          />
+        </div>
+        <div className="absolute -left-[23%] top-[4%] w-4/12">
+          <Image
+            src={Gear1}
+            alt="Landing"
+            layout="responsive"
+            className="box"
+          />
+        </div>
+
+        <div className=" absolute flex bottom-0 ">
+          <a className="scroll-btn" />
+        </div>
       </div>
     </>
   );

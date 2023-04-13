@@ -1,4 +1,3 @@
-import Landing4SVG from "../public/Landing4.svg";
 import Image from "next/image";
 
 const Landing4 = () => {
@@ -41,9 +40,18 @@ const Landing4 = () => {
                 egestas magna.
               </div>
             </div>
-            <div className="absolute w-1/2 left-[25%] -top-[8%]">
-              <Image src={Landing4SVG} alt="Landing" layout="responsive" />
+            <div className="absolute w-1/2 left-[25%] -top-[10%]">
+              <Image
+                src={Landing4SVG}
+                alt="Landing"
+                layout="responsive"
+                class="box"
+              />
+              {/* <Image src={Flow} alt="Landing" layout="responsive" /> */}
             </div>
+            {/* <div className="relative z-0">
+          <Image src={Flow} alt="Landing" layout="responsive" />
+        </div> */}
           </div>
         </div>
       </div>

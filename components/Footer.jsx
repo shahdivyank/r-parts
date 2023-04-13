@@ -6,7 +6,7 @@ import { BiCopyright } from "react-icons/bi";
 
 const Footer = () => {
   return (
-    <footer className="bg-rparts-blue flex items-center py-4">
+    <footer className="bg-rparts-footerBlue flex items-center py-4">
       <Row className="w-full p-0 m-0">
         <Col xl={6}>
           <div className="grid place-items-start justify-center align-end pt-6">
