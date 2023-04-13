@@ -24,7 +24,7 @@ const SoldItems = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <Accordion defaultActiveKey="0" className="bg-rparts-wrappergGray">
+    <Accordion defaultActiveKey="0" className="">
       <Accordion.Item
         className="!border-none underlayColor=transparent font-outfit"
         eventKey="0"
@@ -59,7 +59,7 @@ const SoldItems = () => {
               ITEM
             </Col>
             <Col xl={2} className="font-light text-xs">
-              DATE SOLD
+              DATE
             </Col>
             <Col xl={2} className="font-light text-xs">
               TOTAL

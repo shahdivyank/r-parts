@@ -22,12 +22,11 @@ const Appointment = ({ entry, i }) => {
           </p>
         </div>
       </Col>
-      <Col xl={2} className="">
+      <Col xl={2}>
         <p className="font-medium">{entry.time}</p>
         <p className="font-medium">{entry.date}</p>
       </Col>
-      <Col xl={2} className="">
-        {/* <p className=" font-medium">{entry.total}</p> */}
+      <Col xl={2}>
         <button className="rounded-3xl border-[1px] border-rparts-subHeadingGray text-xs text-rparts-subHeadingGray w-full hover:bg-rparts-subHeadingGray hover:text-rparts-wrappergGray">
           RESCHEDULE
         </button>

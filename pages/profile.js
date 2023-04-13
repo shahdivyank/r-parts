@@ -6,7 +6,7 @@ import ProfileImage from "../components/ProfileImage";
 
 const profile = () => {
   return (
-    <div className="min-h-screen w-full flex justify-center items-center">
+    <section className="h-full flex justify-center items-center">
       <div className="w-[60%] flex justify-center items-center my-20">
         {/* <div className="flex justify-center items-center"> */}
         <div className="w-full flex gap-x-10">
@@ -21,7 +21,7 @@ const profile = () => {
         </div>
         {/* </div> */}
       </div>
-    </div>
+    </section>
   );
 };
 

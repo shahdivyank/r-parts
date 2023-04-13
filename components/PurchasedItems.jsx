@@ -24,7 +24,7 @@ const PurchasedItems = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <Accordion defaultActiveKey="0" className="bg-rparts-wrappergGray">
+    <Accordion defaultActiveKey="0" className="">
       <Accordion.Item
         className="!border-none underlayColor=transparent font-outfit"
         eventKey="0"
@@ -41,7 +41,7 @@ const PurchasedItems = () => {
             <p className="text-black text-2xl font-medium m-0 ">
               Purchased Parts
             </p>
-            <div className="text-3xl stroke-[10px] ">
+            <div className="text-3xl">
               {toggle ? (
                 <IoIosArrowForward className="stroke-[10px]" />
               ) : (
@@ -55,15 +55,15 @@ const PurchasedItems = () => {
           eventKey={0}
         >
           <span className="relative flex border-[1px] border-rparts-borderGray mx-4 -top-4" />
-          <Row className="mb-4 flex justify-start">
+          <Row className="mb-4 flex justify-start px-8">
             <Col xl={1}></Col>
             <Col xl={7} className="font-light text-xs">
               ITEM
             </Col>
-            <Col xl={2} className="font-light text-xs w-fit">
-              ORDER PLACED
+            <Col xl={2} className="font-light text-xs">
+              DATE
             </Col>
-            <Col xl={2} className="font-light text-xs w-fit">
+            <Col xl={2} className="font-light text-xs">
               TOTAL
             </Col>
           </Row>

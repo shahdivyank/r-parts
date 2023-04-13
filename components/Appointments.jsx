@@ -24,7 +24,7 @@ const appointmentEntries = [
 const Appointments = () => {
   return (
     <>
-      <div className="w-full border-[1px] border-rparts-borderGray rounded-3xl p-3 font-outfit">
+      <div className="w-full border-[1px] border-rparts-borderGray rounded-3xl p-3 pt-4 font-outfit">
         <div className="flex items-center mb-10 pl-7 w-full">
           <p className="text-black text-2xl font-medium">Appointments</p>
         </div>
