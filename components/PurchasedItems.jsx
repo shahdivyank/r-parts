@@ -18,6 +18,34 @@ const purchasedItemsEntries = [
     date: "11/02/2021",
     total: "$57.09",
   },
+  {
+    title: "ESP8266 WiFi Bee",
+    orderNumber: "11-02408123120",
+    quantity: "1",
+    date: "11/02/2021",
+    total: "$57.09",
+  },
+  {
+    title: "ESP8266 WiFi Bee",
+    orderNumber: "11-02408123120",
+    quantity: "1",
+    date: "11/02/2021",
+    total: "$57.09",
+  },
+  {
+    title: "ESP8266 WiFi Bee",
+    orderNumber: "11-02408123120",
+    quantity: "1",
+    date: "11/02/2021",
+    total: "$57.09",
+  },
+  {
+    title: "ESP8266 WiFi Bee",
+    orderNumber: "11-02408123120",
+    quantity: "1",
+    date: "11/02/2021",
+    total: "$57.09",
+  },
 ];
 
 const PurchasedItems = () => {
@@ -51,7 +79,9 @@ const PurchasedItems = () => {
           </div>
         </Accordion.Button>
         <Accordion.Body
-          className="!bg-rparts-wrapperGray rounded-b-3xl"
+          className={`!bg-rparts-wrapperGray rounded-b-3xl ${
+            purchasedItemsEntries.length > 3 ? `h-[21.85rem]` : ``
+          } overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-rparts-bannerGray`}
           eventKey={0}
         >
           <span className="relative flex border-[0.5px] border-rparts-borderGray mx-4 -top-4" />

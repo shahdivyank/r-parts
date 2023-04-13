@@ -44,7 +44,6 @@ const Appointments = () => {
         {appointmentEntries.map((entry, index) => (
           <Appointment key={index} entry={entry} i={index + 1} />
         ))}
-        {/* </div> */}
       </div>
     </>
   );

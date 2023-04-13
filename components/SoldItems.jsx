@@ -18,13 +18,23 @@ const soldItemsEntries = [
     date: "11/02/2021",
     total: "$57.09",
   },
+  {
+    title: "ESP8266 WiFi Bee",
+    orderNumber: "11-02408123120",
+    quantity: "1",
+    date: "11/02/2021",
+    total: "$57.09",
+  },
 ];
 
 const SoldItems = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <Accordion defaultActiveKey="1">
+    <Accordion
+      defaultActiveKey="1"
+      className="w-[100%] h-[100%] overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full"
+    >
       <Accordion.Item
         className="!border-none underlayColor=transparent font-outfit"
         eventKey="0"
@@ -49,7 +59,9 @@ const SoldItems = () => {
           </div>
         </Accordion.Button>
         <Accordion.Body
-          className="!bg-rparts-wrapperGray rounded-b-3xl"
+          className={`!bg-rparts-wrapperGray rounded-b-3xl ${
+            soldItemsEntries.length > 3 ? `h-[21.85rem]` : ``
+          } overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-rparts-bannerGray`}
           eventKey={0}
         >
           <span className="relative flex border-[0.5px] border-rparts-borderGray mx-4 -top-4" />
