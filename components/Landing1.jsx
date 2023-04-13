@@ -60,9 +60,9 @@ const Landing1 = () => {
           />
         </div>
 
-        <div className=" absolute flex bottom-0 ">
+        {/* <div className=" absolute flex bottom-0 ">
           <a className="scroll-btn" />
-        </div>
+        </div> */}
       </div>
     </>
   );
