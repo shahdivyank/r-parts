@@ -1,3 +1,4 @@
+import Landing4SVG from "../public/Landing4.svg";
 import Image from "next/image";
 
 const Landing4 = () => {
