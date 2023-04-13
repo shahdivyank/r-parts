@@ -8,18 +8,16 @@ const profile = () => {
   return (
     <section className="h-full flex justify-center items-center">
       <div className="w-[60%] flex justify-center items-center my-20">
-        {/* <div className="flex justify-center items-center"> */}
         <div className="w-full flex gap-x-10">
-          <div className="">
+          <div>
             <ProfileImage />
           </div>
-          <div className="flex w-3/4 flex-col gap-y-10">
+          <div className="flex w-full flex-col gap-y-10">
             <Appointments />
             <SoldItems />
             <PurchasedItems />
           </div>
         </div>
-        {/* </div> */}
       </div>
     </section>
   );

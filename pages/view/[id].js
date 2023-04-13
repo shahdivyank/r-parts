@@ -9,7 +9,7 @@ const View = () => {
   return (
     <div className="w-full flex justify-center items-center">
       <div className="w-10/12">
-        <p className="font-outfit text-rparts-subHeadingGray">
+        <p className="font-outfit text-rparts-subheadingGray">
           MARKET / PRODUCT
         </p>
         <Row>

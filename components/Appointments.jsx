@@ -28,14 +28,14 @@ const Appointments = () => {
         <div className="flex items-center mb-10 pl-7 w-full">
           <p className="text-black text-2xl font-medium">Appointments</p>
         </div>
-        <span className="relative flex border-[1px] border-rparts-borderGray mx-4 -top-4" />
+        <span className="relative flex border-[0.5px] border-rparts-borderGray mx-4 -top-4" />
         <Row className="mb-4 flex justify-start px-8">
           <Col xl={1}></Col>
           <Col xl={7} className="font-light text-xs">
             ITEM
           </Col>
           <Col xl={2} className="font-light text-xs">
-            TIME
+            TIME/DATE
           </Col>
           <Col xl={2} className="font-light text-xs">
             TOTAL

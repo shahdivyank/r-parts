@@ -24,14 +24,14 @@ const PurchasedItems = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <Accordion defaultActiveKey="1" className="">
+    <Accordion defaultActiveKey="1">
       <Accordion.Item
         className="!border-none underlayColor=transparent font-outfit"
         eventKey="0"
       >
         <Accordion.Button
           onClick={() => setToggle(!toggle)}
-          className={`!bg-rparts-wrappergGray text-black after:hidden focus:!shadow-none ${
+          className={`!bg-rparts-wrapperGray text-black after:hidden focus:!shadow-none ${
             toggle
               ? `!rounded-t-3xl`
               : `!rounded-t-3xl !rounded-b-3xl delay-300`
@@ -51,10 +51,10 @@ const PurchasedItems = () => {
           </div>
         </Accordion.Button>
         <Accordion.Body
-          className="!bg-rparts-wrappergGray rounded-b-3xl"
+          className="!bg-rparts-wrapperGray rounded-b-3xl"
           eventKey={0}
         >
-          <span className="relative flex border-[1px] border-rparts-borderGray mx-4 -top-4" />
+          <span className="relative flex border-[0.5px] border-rparts-borderGray mx-4 -top-4" />
           <Row className="mb-4 flex justify-start px-8">
             <Col xl={1}></Col>
             <Col xl={7} className="font-light text-xs">

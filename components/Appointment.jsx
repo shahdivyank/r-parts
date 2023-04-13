@@ -27,10 +27,10 @@ const Appointment = ({ entry, i }) => {
         <p className="font-medium">{entry.date}</p>
       </Col>
       <Col xl={2}>
-        <button className="rounded-3xl border-[1px] border-rparts-subHeadingGray text-xs text-rparts-subHeadingGray w-full hover:bg-rparts-subHeadingGray hover:text-rparts-wrappergGray">
+        <button className="rounded-3xl border-[1px] border-rparts-subheadingGray text-xs text-rparts-subheadingGray w-full hover:bg-rparts-subheadingGray hover:text-rparts-wrapperGray">
           RESCHEDULE
         </button>
-        <button className="rounded-3xl border-[1px] border-rparts-subHeadingGray text-xs text-rparts-subHeadingGray w-full hover:bg-rparts-subHeadingGray hover:text-rparts-wrappergGray">
+        <button className="rounded-3xl border-[1px] border-rparts-subheadingGray text-xs text-rparts-subheadingGray w-full hover:bg-rparts-subheadingGray hover:text-rparts-wrapperGray">
           CANCEL
         </button>
       </Col>

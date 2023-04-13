@@ -15,7 +15,7 @@ const specifications = [
 
 const ViewSpecifications = () => {
   return (
-    <div className="rounded-3xl bg-rparts-wrappergGray font-outfit p-3">
+    <div className="rounded-3xl bg-rparts-wrapperGray font-outfit p-3">
       <p className="text-2xl mb-2">Classes Applicable</p>
       <div className="list-normal">
         {specifications.map((classApplicable, index) => (
