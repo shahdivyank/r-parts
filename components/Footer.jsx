@@ -54,11 +54,11 @@ const Footer = () => {
           </p>
 
           <textarea
-            className="w-[38vw] h-[13vh] pl-5 pt-2 resize-none text-black rounded-3xl border-solid "
+            className="w-[38vw] h-[13vh] pl-5 pt-2 resize-none text-black rounded-3xl border-solid focus:outline-none"
             placeholder="Type your message here"
           />
           <div className="flex justify-end w-9/12 mt-3">
-            <button className="end-0 bg-rparts-orange hover:bg-rparts-hoverorange text-white rounded-2xl w-[10vw] h-[3.5vh] text-sm">
+            <button className="end-0 bg-rparts-orange hover:bg-rparts-hoverOrange text-white rounded-2xl w-[10vw] h-[3.5vh] text-sm">
               SEND MESSAGE
             </button>
           </div>

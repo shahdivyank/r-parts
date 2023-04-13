@@ -23,7 +23,7 @@ const Landing1 = () => {
             </div>
           </div>
           <div className="mt-7 flex space-x-3">
-            <button className="text-white bg-rparts-orange hover:bg-rparts-hoverorange rounded-full py-2 px-12">
+            <button className="text-white bg-rparts-orange hover:bg-rparts-hoverOrange rounded-full py-2 px-12">
               START SHOPPING
             </button>
             <button className="text-rparts-orange bg-white border-2 hover:bg-rparts-bannerGray border-rparts-orange rounded-full py-2 px-8">

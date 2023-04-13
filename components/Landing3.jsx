@@ -6,7 +6,7 @@ const Landing3 = () => {
     <>
       <div className="-mt-64">
         <div className="relative flex items-center">
-          <p className="absolute mt-24 font-bebasNeue right-[14%] w-2/3 text-8xl text-right text-rparts-subHeadingGray">
+          <p className="absolute mt-24 font-bebasNeue right-[14%] w-2/3 text-8xl text-right text-rparts-subheadingGray">
             decreasing student fees and assisting those who are aiming to
             <span className="text-rparts-orange"> learn</span>,
             <span className="text-rparts-orange"> grow</span>, and
