@@ -4,12 +4,14 @@ import Image from "next/image";
 const Landing3 = () => {
   return (
     <>
-      <div>
-        <div className="relative">
-          <div className="absolute font-bebasNeue text-8xl text-rparts-subHeadingGray text-right flex justify-center items-end">
-            decreasing student fees and assisting those who are aiming to learn,
-            grow, and push limits
-          </div>
+      <div className="-mt-64">
+        <div className="relative flex items-center">
+          <p className="absolute mt-24 font-bebasNeue right-[14%] w-2/3 text-8xl text-right text-rparts-subHeadingGray">
+            decreasing student fees and assisting those who are aiming to
+            <span className="text-rparts-orange"> learn</span>,
+            <span className="text-rparts-orange"> grow</span>, and
+            <span className="text-rparts-orange"> push limits</span>
+          </p>
           <Image src={Landing3SVG} alt="Landing" layout="responsive" />
         </div>
       </div>
