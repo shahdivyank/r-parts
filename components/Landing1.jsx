@@ -1,6 +1,7 @@
 import Landing from "../public/Landing.svg";
 import Gear1 from "../public/Gear1.svg";
 import Image from "next/image";
+import ScrollArrow from "../public/ScrollArrow.svg";
 
 const Landing1 = () => {
   return (
@@ -60,9 +61,16 @@ const Landing1 = () => {
           />
         </div>
 
-        {/* <div className=" absolute flex bottom-0 ">
-          <a className="scroll-btn" />
-        </div> */}
+        <div className="absolute flex flex-col bottom-0 text-rparts-borderGray">
+          {/* <div className="text-xs">SCROLL DOWN</div> */}
+          <Image
+            src={ScrollArrow}
+            alt="Landing"
+            layout="responsive"
+            className="animate-bounce"
+          />
+          {/* <a className="scroll-btn" /> */}
+        </div>
       </div>
     </>
   );
