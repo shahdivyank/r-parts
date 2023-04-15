@@ -1,5 +1,7 @@
 import Landing from "../public/Landing.svg";
+import Gear1 from "../public/Gear1.svg";
 import Image from "next/image";
+import ScrollArrow from "../public/ScrollArrow.svg";
 
 const Landing1 = () => {
   return (
@@ -31,7 +33,44 @@ const Landing1 = () => {
             </button>
           </div>
         </div>
-        <Image src={Landing} alt="Landing" layout="responsive" />
+
+        <Image src={Landing} alt="Landing" layout="responsive" class="mt-5" />
+
+        <div className="absolute -right-[10%] -top-[3%] w-5/12">
+          <Image
+            src={Gear1}
+            alt="Landing"
+            layout="responsive"
+            className="box"
+          />
+        </div>
+        <div className="absolute right-[23%] top-[48%] w-3/12">
+          <Image
+            src={Gear1}
+            alt="Landing"
+            layout="responsive"
+            className="box"
+          />
+        </div>
+        <div className="absolute -left-[23%] top-[4%] w-4/12">
+          <Image
+            src={Gear1}
+            alt="Landing"
+            layout="responsive"
+            className="box"
+          />
+        </div>
+
+        <div className="absolute flex flex-col bottom-0 text-rparts-borderGray">
+          {/* <div className="text-xs">SCROLL DOWN</div> */}
+          <Image
+            src={ScrollArrow}
+            alt="Landing"
+            layout="responsive"
+            className="animate-bounce"
+          />
+          {/* <a className="scroll-btn" /> */}
+        </div>
       </div>
     </>
   );

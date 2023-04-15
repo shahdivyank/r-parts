@@ -9,7 +9,7 @@ const Landing2 = () => {
     <>
       <div className="flex justify-center items-center space-x-16 mx-64 my-24">
         <div className="bg-rparts-white w-1/3 h-1/2 p-12 rounded-3xl flex justify-center items-center flex-col">
-          <div className="w-4/12 -mt-2 mb-2">
+          <div className="w-3/12 -mt-2 mb-2">
             <Image src={You} alt="Landing" layout="responsive" />
           </div>
           <div className="font-bebasNeue text-5xl mb-4">STEP ONE</div>
@@ -20,7 +20,7 @@ const Landing2 = () => {
           </div>
         </div>
         <div className="bg-rparts-white w-1/3 h-1/2 p-12 rounded-3xl flex justify-center items-center flex-col">
-          <div className="w-4/12 -mt-2 mb-2">
+          <div className="w-3/12 -mt-2 mb-2">
             <Image src={ACM} alt="Landing" layout="responsive" />
           </div>
           <div className="font-bebasNeue text-5xl mb-4">STEP TWO</div>
@@ -31,7 +31,7 @@ const Landing2 = () => {
           </div>
         </div>
         <div className="bg-rparts-white w-1/3 h-1/2 p-12 rounded-3xl flex justify-center items-center flex-col">
-          <div className="w-5/12 -mt-2 mb-2">
+          <div className="w-4/12 -mt-2 mb-2">
             <Image src={Community} alt="Landing" layout="responsive" />
           </div>
           <div className="font-bebasNeue text-5xl mb-4">STEP THREE</div>
