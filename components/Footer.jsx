@@ -6,11 +6,11 @@ import { BiCopyright } from "react-icons/bi";
 
 const Footer = () => {
   return (
-    <footer className="bg-rparts-footerBlue flex items-center py-4">
-      <Row className="w-full p-0 m-0">
+    <footer className="bg-rparts-footerBlue flex items-center py-20">
+      <Row className="w-full">
         <Col xl={6}>
-          <div className="grid place-items-start justify-center align-end pt-6">
-            <span className="flex text-white items-center text-2xl font-medium gap-x-2 font-montserrat">
+          <div className="grid place-items-start justify-center align-end">
+            <span className="flex text-white items-center text-2xl font-regular gap-x-2 font-montserrat">
               <BsGear className="text-xl stroke-[0.5px] rotate-12" />
               <div className="flex">
                 <p>{"R'P"}</p>
@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="flex flex-row justify-center items-center mb-2">
               <FiPhone className="text-xl text-white mr-4" />
               <p className="text-xs text-white font-montserrat ">
-                +1(909)214-5009
+                +1 (909) 214-5009
               </p>
             </div>
             <div className="flex flex-row justify-center items-center mb-7">
@@ -36,29 +36,29 @@ const Footer = () => {
               <p className="text-xs text-white ">contact@parts.com</p>
             </div>
 
-            <div className="flex flex-row justify-center items-center mt-8 mb-9">
+            <div className="flex mt-10">
               <BiCopyright className="text-xs text-white mr-2" />
               <p className="text-xs text-white font-montserrat">
-                ACM-UC Riverside. All Rights Reseverd.
+                ACM - UC Riverside. All Rights Reseverd.
               </p>
             </div>
           </div>
         </Col>
-        <Col xl={6} className=" p-3">
-          <p className="text-2xl text-white font-bold font-montserrat">
+        <Col xl={6} className="w-2/5">
+          <p className="text-xl text-white mb-2 font-semibold font-montserrat">
             Give Us Feedback!
           </p>
-          <p className=" text-sm text-white font-montserrat w-9/12">
+          <p className="text-sm text-white mb-4 font-montserrat w-full">
             R&apos;Parts is a growing community and we are actively looking for
             feedback from you! Growth and improvement is our priority.
           </p>
 
           <textarea
-            className="w-[38vw] h-[13vh] pl-5 pt-2 resize-none text-black rounded-3xl border-solid focus:outline-none"
+            className="w-full h-2/5 pl-5 pt-2 resize-none text-black rounded-3xl border-solid focus:outline-none"
             placeholder="Type your message here"
           />
-          <div className="flex justify-end w-9/12 mt-3">
-            <button className="end-0 bg-rparts-orange hover:bg-rparts-hoverOrange text-white rounded-2xl w-[10vw] h-[3.5vh] text-sm">
+          <div className="flex justify-end mt-3 mb-4">
+            <button className="bg-rparts-orange hover:bg-rparts-hoverOrange text-white rounded-2xl w-[10vw] h-[3.5vh] text-sm">
               SEND MESSAGE
             </button>
           </div>
