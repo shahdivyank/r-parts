@@ -36,7 +36,7 @@ const Footer = () => {
               <p className="text-xs text-white ">contact@parts.com</p>
             </div>
 
-            <div className="flex mt-10">
+            <div className="flex mt-16">
               <BiCopyright className="text-xs text-white mr-2" />
               <p className="text-xs text-white font-montserrat">
                 ACM - UC Riverside. All Rights Reseverd.
@@ -54,11 +54,11 @@ const Footer = () => {
           </p>
 
           <textarea
-            className="w-full h-2/5 pl-5 pt-2 resize-none text-black rounded-3xl border-solid focus:outline-none"
+            className="w-full h-2/5 pl-5 pt-3 font-outfit resize-none text-black rounded-3xl border-solid focus:outline-none"
             placeholder="Type your message here"
           />
           <div className="flex justify-end mt-3 mb-4">
-            <button className="bg-rparts-orange hover:bg-rparts-hoverOrange text-white rounded-2xl w-[10vw] h-[3.5vh] text-sm">
+            <button className="bg-rparts-orange font-outfit hover:bg-rparts-hoverOrange text-white rounded-2xl w-[10vw] h-[3.5vh] text-sm">
               SEND MESSAGE
             </button>
           </div>
