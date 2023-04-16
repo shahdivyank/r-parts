@@ -6,14 +6,30 @@
   margin: 10px 0;
 }
 
-.box {
-  animation: animName 65s linear infinite;
+.gearCW {
+  animation: clockwise 65s linear infinite;
   width: 50px;
   height: 50px;
   margin: 20px;
 }
 
-@keyframes animName {
+.gearCCW {
+  animation: counterclock 65s linear infinite;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+}
+
+@keyframes clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes counterclock {
   0% {
     transform: rotate(0deg);
   }
