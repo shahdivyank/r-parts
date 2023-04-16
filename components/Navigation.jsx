@@ -56,7 +56,7 @@ export default function Navigation() {
           <FaRegUser className="flex items-center stroke-2 text-xl" />
         </Link>
         <Link
-          href="/"
+          href="/cart"
           className="flex items-center hover:text-rparts-subheadingGray"
         >
           <HiOutlineShoppingBag className="flex items-center stroke-2 text-2xl" />
