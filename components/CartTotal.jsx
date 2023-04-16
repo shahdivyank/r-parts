@@ -24,7 +24,8 @@ const CartTotal = () => {
       <div className="gap-y-4 flex flex-col">
         <Link
           href="/checkout"
-          className="text-center bg-rparts-orange text-rparts-white px-10 py-2 w-full rounded-3xl font-outfit hover:bg-rparts-hoverOrange hover:text-black"
+          className="text-center bg-rparts-orange text-white px-10 py-2 w-full rounded-3xl font-outfit 
+          hover:bg-rparts-hoverOrange hover:text-white"
         >
           PROCEED TO CHECKOUT
         </Link>
