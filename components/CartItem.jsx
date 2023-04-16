@@ -13,7 +13,6 @@ const CartItem = ({ entry }) => {
           alt="Product"
           layout="responsive"
           objectFit="cover"
-          // className="bg-red-500"
         />
       </Col>
       <Col xl={7} className="flex flex-col justify-between">
