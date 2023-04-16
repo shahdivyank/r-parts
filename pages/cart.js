@@ -3,10 +3,10 @@ import CartTotal from "../components/CartTotal";
 
 export default function Cart() {
   return (
-    <section className="h-full w-screen font-outfit p-10 pb-20">
+    <section className="h-full w-screen font-outfit pt-4 pb-20">
       <div className="flex justify-evenly">
         <div className="w-1/2 flex flex-col justify-center">
-          <div className="flex gap-x-4 font-thin text-rparts-subheadingGray text-xs mb-8">
+          <div className="flex gap-x-4 font-thin text-rparts-subheadingGray text-xs mb-6">
             <button>MARKET</button>
             <p>/</p>
             <button>SHOPPING CART</button>
