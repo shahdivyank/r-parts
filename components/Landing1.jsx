@@ -46,7 +46,7 @@ const Landing1 = () => {
             src={Gear1}
             alt="Landing"
             layout="responsive"
-            className="box"
+            className="gearCW"
           />
         </div>
         <div className="absolute right-[23%] top-[48%] w-3/12">
@@ -54,7 +54,7 @@ const Landing1 = () => {
             src={Gear1}
             alt="Landing"
             layout="responsive"
-            className="box"
+            className="gearCCW"
           />
         </div>
         <div className="absolute -left-[23%] top-[4%] w-4/12">
@@ -62,19 +62,17 @@ const Landing1 = () => {
             src={Gear1}
             alt="Landing"
             layout="responsive"
-            className="box"
+            className="gearCW"
           />
         </div>
 
         <div className="absolute flex flex-col bottom-0 text-rparts-borderGray">
-          {/* <div className="text-xs">SCROLL DOWN</div> */}
           <Image
             src={ScrollArrow}
             alt="Landing"
             layout="responsive"
             className="animate-bounce"
           />
-          {/* <a className="scroll-btn" /> */}
         </div>
       </div>
     </>
