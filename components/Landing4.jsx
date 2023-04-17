@@ -46,7 +46,7 @@ const Landing4 = () => {
                 src={Landing4SVG}
                 alt="Landing"
                 layout="responsive"
-                class="box"
+                class="gearCCW"
               />
               {/* <Image src={Flow} alt="Landing" layout="responsive" /> */}
             </div>
