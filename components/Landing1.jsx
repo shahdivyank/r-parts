@@ -34,7 +34,12 @@ const Landing1 = () => {
           </div>
         </div>
 
-        <Image src={Landing} alt="Landing" layout="responsive" class="mt-5" />
+        <Image
+          src={Landing}
+          alt="Landing"
+          layout="responsive"
+          className="mt-5"
+        />
 
         <div className="absolute -right-[10%] -top-[3%] w-5/12">
           <Image

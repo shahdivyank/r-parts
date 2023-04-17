@@ -42,17 +42,8 @@ const Landing4 = () => {
               </div>
             </div>
             <div className="absolute w-1/2 left-[25%] -top-[10%]">
-              <Image
-                src={Landing4SVG}
-                alt="Landing"
-                layout="responsive"
-                class="box"
-              />
-              {/* <Image src={Flow} alt="Landing" layout="responsive" /> */}
+              <Image src={Landing4SVG} alt="Landing" layout="responsive" />
             </div>
-            {/* <div className="relative z-0">
-          <Image src={Flow} alt="Landing" layout="responsive" />
-        </div> */}
           </div>
         </div>
       </div>
