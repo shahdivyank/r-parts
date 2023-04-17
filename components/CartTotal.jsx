@@ -29,7 +29,7 @@ const CartTotal = () => {
         >
           PROCEED TO CHECKOUT
         </Link>
-        <p className="text-xs text-rparts-subheadingGray">
+        <p className="text-xs text-rparts-subheadingGray font-light">
           *Schedule pick-up times at checkout
         </p>
       </div>
