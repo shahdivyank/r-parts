@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Payment = () => {
   return (
-    <div className="rounded-3xl w-2/5 h-fit mx-6 my-4 p-4 bg-rparts-white border-2 border-rparts-borderGray">
+    <div className="rounded-3xl h-fit mx-6 my-4 p-4 bg-white border-2 border-rparts-borderGray">
       <div className="text-3xl font-bold font-outfit  p-3">Payment Method</div>
 
       <button className=" flex  items-center">

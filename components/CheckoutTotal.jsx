@@ -3,7 +3,7 @@ import React from "react";
 const CheckoutTotal = () => {
   return (
     <div>
-      <div className="rounded-3xl w-full h-fit mx-6 my-4 p-4 bg-rparts-wrappergGray border-2 border-rparts-borderGray flex flex-col ">
+      <div className="rounded-3xl h-fit my-4 p-4 bg-rparts-wrappergGray  flex flex-col ">
         <div className="font-bold flex justify-between font-outfit text-2xl ">
           <div> Total </div>
           <div> $179.97</div>
@@ -28,7 +28,7 @@ const CheckoutTotal = () => {
           </div>
         </div>
       </div>
-      <button className="bg-rparts-orange rounded-full py-2 px-4 w-full mx-6 text-white font-outfit">
+      <button className="bg-rparts-orange rounded-full w-full py-2 px-4 text-white font-outfit">
         PLACE ORDER
       </button>
     </div>
