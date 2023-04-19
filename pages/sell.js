@@ -21,26 +21,35 @@ export default function Sell() {
           placeholder="Enter Name of Product Here"
         />
 
-        <div className="flex">
-          <div>
-            <div className="text-xl font-outfit font-medium">
+        <div className="flex space-x-24">
+          <div className="w-1/2">
+            <div className="text-xl font-outfit font-medium mb-2">
               Proposed Price
             </div>
             <input
               type="text"
-              className=" border rounded-full px-3 py-3 placeholder:font-outfit"
+              className="w-full border rounded-full px-3 py-2 placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
               placeholder="Enter your proposed price here"
             />
           </div>
-          <div>
-            <div className="text-xl font-outfit font-medium">
-              Proposed Price
+          <div className="w-1/2">
+            <div className="text-xl font-outfit font-medium mb-2">
+              Condition
             </div>
-            <input
-              type="text"
-              className="border rounded-full px-3 py-3 placeholder:font-outfit"
-              placeholder="Enter your proposed price here"
-            />
+            <div className="flex space-x-4">
+              <button className="w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2 px-3 hover:bg-rparts-orange hover:text-white">
+                NEW
+              </button>
+              <button className="w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2 px-3 hover:bg-rparts-orange hover:text-white">
+                LIKE NEW
+              </button>
+              <button className="w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2 px-3 hover:bg-rparts-orange hover:text-white">
+                GOOD
+              </button>
+              <button className="w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2 px-3 hover:bg-rparts-orange hover:text-white">
+                POOR
+              </button>
+            </div>
           </div>
         </div>
       </div>
