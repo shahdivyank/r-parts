@@ -23,17 +23,17 @@ export default function Sell() {
 
         <div className="flex space-x-24">
           <div className="w-1/2">
-            <div className="text-xl font-outfit font-medium mb-2">
+            <div className="text-2xl font-outfit font-medium mb-2">
               Proposed Price
             </div>
             <input
               type="text"
-              className="w-full border rounded-full px-3 py-2 placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
+              className="w-full border rounded-2xl px-3 py-2 placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
               placeholder="Enter your proposed price here"
             />
           </div>
           <div className="w-1/2">
-            <div className="text-xl font-outfit font-medium mb-2">
+            <div className="text-2xl font-outfit font-medium mb-2">
               Condition
             </div>
             <div className="flex space-x-4">
@@ -51,6 +51,24 @@ export default function Sell() {
               </button>
             </div>
           </div>
+        </div>
+        <div>
+          <div className="text-2xl font-outfit font-medium mt-4 mb-2">
+            Description
+          </div>
+          <textarea
+            className="w-full h-[20vh] border rounded-2xl px-4 py-3 resize-none placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
+            placeholder="Enter product information (utility, usage history, background, etc.)"
+          />
+        </div>
+        <div>
+          <div className="text-2xl font-outfit font-medium mt-4 mb-2">
+            Specifications
+          </div>
+          <textarea
+            className="w-full h-[20vh] border rounded-2xl px-4 py-3 resize-none placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
+            placeholder="Type  product specifications here (model, color, content, etc.)"
+          />
         </div>
       </div>
     </>
