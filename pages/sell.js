@@ -42,7 +42,7 @@ export default function Sell() {
         </div>
         <input
           type="text"
-          className="font-outfit resize-none text-3xl w-full py-3 border-b mt-3 mb-10 placeholder-rparts-subheadingGray"
+          className="focus:outline-none font-outfit resize-none text-3xl w-full py-3 border-b mt-3 mb-10 placeholder-rparts-subheadingGray"
           placeholder="Enter Name of Product Here"
         />
 
@@ -56,7 +56,7 @@ export default function Sell() {
 
               <input
                 type="text"
-                className="w-full placeholder:font-light placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
+                className="focus:outline-none w-full placeholder:font-light placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
                 placeholder="Enter your proposed price here"
               />
             </div>
@@ -86,7 +86,7 @@ export default function Sell() {
             Description
           </div>
           <textarea
-            className="w-full h-[15vh] border rounded-2xl px-4 py-3 resize-none  placeholder:font-light placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
+            className="focus:outline-none w-full h-[15vh] border rounded-2xl px-4 py-3 resize-none  placeholder:font-light placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
             placeholder="Enter product information (utility, usage history, background, etc.)"
           />
         </div>
@@ -95,7 +95,7 @@ export default function Sell() {
             Specifications
           </div>
           <textarea
-            className="w-full h-[15vh] border rounded-2xl px-4 py-3 resize-none placeholder:font-light placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
+            className="focus:outline-none w-full h-[15vh] border rounded-2xl px-4 py-3 resize-none placeholder:font-light placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
             placeholder="Type product specifications here (model, color, content, etc.)"
           />
         </div>
