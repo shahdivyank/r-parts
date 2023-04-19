@@ -8,7 +8,7 @@ const SellPhoto = () => {
         <div className="w-5/12">
           <Image src={UploadPhoto} alt="Landing" layout="responsive" />
         </div>
-        <button className="border-solid border border-rparts-subheadingGray py-3 px-3 mt-4 text-rparts-subheadingGray rounded-3xl text-sm">
+        <button className="border border-rparts-subheadingGray py-2 px-3 mt-4 text-rparts-subheadingGray rounded-3xl text-xs">
           UPLOAD FROM COMPUTER
         </button>
       </div>

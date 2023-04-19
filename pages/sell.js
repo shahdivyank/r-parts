@@ -1,10 +1,35 @@
 import SellPhoto from "../components/SellPhoto";
 import AddPhoto from "../components/AddPhoto";
+import Checkbox from "../components/Checkbox";
+
+const classes = [
+  {
+    label: "CS122A",
+  },
+  {
+    label: "CS122A",
+  },
+  {
+    label: "CS122A",
+  },
+  {
+    label: "CS122A",
+  },
+  {
+    label: "CS122A",
+  },
+  {
+    label: "CS122A",
+  },
+  {
+    label: "CS122A",
+  },
+];
 
 export default function Sell() {
   return (
     <>
-      <div className="mx-48">
+      <div className="mx-[12vw] mt-[7vh]">
         <div className="font-outfit w-fit pt-4">
           <div className="font-bebasNeue text-3xl">LIST YOUR PART</div>
           <div className="text-sm text-rparts-subheadingGray mb-4 font-light">
@@ -17,58 +42,167 @@ export default function Sell() {
         </div>
         <input
           type="text"
-          className="font-outfit resize-none text-3xl w-full px-3 py-3 border-b mt-5 mb-10 placeholder-rparts-subheadingGray"
+          className="font-outfit resize-none text-3xl w-full py-3 border-b mt-3 mb-10 placeholder-rparts-subheadingGray"
           placeholder="Enter Name of Product Here"
         />
 
         <div className="flex space-x-24">
           <div className="w-1/2">
-            <div className="text-2xl font-outfit font-medium mb-2">
+            <div className="text-xl font-outfit font-medium mb-2">
               Proposed Price
             </div>
-            <input
-              type="text"
-              className="w-full border rounded-2xl px-3 py-2 placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
-              placeholder="Enter your proposed price here"
-            />
+            <div className="flex border rounded-2xl px-2 py-2 ">
+              <div className="text-rparts-subheadingGray px-2">$</div>
+
+              <input
+                type="text"
+                className="w-full placeholder:font-light placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
+                placeholder="Enter your proposed price here"
+              />
+            </div>
           </div>
           <div className="w-1/2">
-            <div className="text-2xl font-outfit font-medium mb-2">
+            <div className="text-xl font-outfit font-medium mb-2">
               Condition
             </div>
             <div className="flex space-x-4">
-              <button className="w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2 px-3 hover:bg-rparts-orange hover:text-white">
+              <button className="text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 hover:bg-rparts-orange hover:text-white hover:border-rparts-orange">
                 NEW
               </button>
-              <button className="w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2 px-3 hover:bg-rparts-orange hover:text-white">
+              <button className="text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 hover:bg-rparts-orange hover:text-white hover:border-rparts-orange">
                 LIKE NEW
               </button>
-              <button className="w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2 px-3 hover:bg-rparts-orange hover:text-white">
+              <button className="text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 hover:bg-rparts-orange hover:text-white hover:border-rparts-orange">
                 GOOD
               </button>
-              <button className="w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2 px-3 hover:bg-rparts-orange hover:text-white">
+              <button className="text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 hover:bg-rparts-orange hover:text-white hover:border-rparts-orange">
                 POOR
               </button>
             </div>
           </div>
         </div>
         <div>
-          <div className="text-2xl font-outfit font-medium mt-4 mb-2">
+          <div className="text-xl font-outfit font-medium mt-4 mb-2">
             Description
           </div>
           <textarea
-            className="w-full h-[20vh] border rounded-2xl px-4 py-3 resize-none placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
+            className="w-full h-[15vh] border rounded-2xl px-4 py-3 resize-none  placeholder:font-light placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
             placeholder="Enter product information (utility, usage history, background, etc.)"
           />
         </div>
         <div>
-          <div className="text-2xl font-outfit font-medium mt-4 mb-2">
+          <div className="text-xl font-outfit font-medium mt-4 mb-2">
             Specifications
           </div>
           <textarea
-            className="w-full h-[20vh] border rounded-2xl px-4 py-3 resize-none placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
-            placeholder="Type  product specifications here (model, color, content, etc.)"
+            className="w-full h-[15vh] border rounded-2xl px-4 py-3 resize-none placeholder:font-light placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
+            placeholder="Type product specifications here (model, color, content, etc.)"
           />
+        </div>
+
+        <div className="text-xl font-outfit font-medium mt-4 mb-2">
+          Classes Applicable
+        </div>
+        <div>
+          <div className="font-outfit font-light text-sm text-rparts-subheadingGray -mt-2">
+            Check as many classes this part is used in. If you do not know,
+            leave blank
+          </div>
+          <div className="grid grid-cols-4 gap-4 font-outfit my-3">
+            <div className="">
+              <div className="text-rparts-subheadingGray text-sm mb-2">
+                Computer Science
+              </div>
+              <div className="grid grid-cols-2 gap-4 flex">
+                <div className="">
+                  <div className="flex flex-col items-start">
+                    {classes.map((entry) => (
+                      <Checkbox key={entry} curr={entry} className="" />
+                    ))}
+                  </div>
+                </div>
+                <div className="flex items-end">
+                  <div className="text-rparts-subheadingGray text-sm mb-2"></div>
+                  <div className="flex flex-col items-start">
+                    {classes.map((entry) => (
+                      <Checkbox key={entry} curr={entry} className="" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="">
+              <div className="text-rparts-subheadingGray text-sm mb-2">
+                Computer Engineering
+              </div>
+              <div className="grid grid-cols-2 gap-4 flex">
+                <div className="">
+                  <div className="flex flex-col items-start">
+                    {classes.map((entry) => (
+                      <Checkbox key={entry} curr={entry} className="" />
+                    ))}
+                  </div>
+                </div>
+                <div className="flex items-end">
+                  <div className="text-rparts-subheadingGray text-sm mb-2"></div>
+                  <div className="flex flex-col items-start">
+                    {classes.map((entry) => (
+                      <Checkbox key={entry} curr={entry} className="" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="">
+              <div className="text-rparts-subheadingGray text-sm mb-2">
+                Electrical Engineering
+              </div>
+              <div className="grid grid-cols-2 gap-4 flex">
+                <div className="">
+                  <div className="flex flex-col items-start">
+                    {classes.map((entry) => (
+                      <Checkbox key={entry} curr={entry} className="" />
+                    ))}
+                  </div>
+                </div>
+                <div className="flex items-end">
+                  <div className="text-rparts-subheadingGray text-sm mb-2"></div>
+                  <div className="flex flex-col items-start">
+                    {classes.map((entry) => (
+                      <Checkbox key={entry} curr={entry} className="" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="">
+              <div className="text-rparts-subheadingGray text-sm mb-2">
+                Mechanical Engineering
+              </div>
+              <div className="grid grid-cols-2 gap-4 flex">
+                <div className="">
+                  <div className="flex flex-col items-start">
+                    {classes.map((entry) => (
+                      <Checkbox key={entry} curr={entry} className="" />
+                    ))}
+                  </div>
+                </div>
+                <div className="flex items-end">
+                  <div className="text-rparts-subheadingGray text-sm mb-2"></div>
+                  <div className="flex flex-col items-start">
+                    {classes.map((entry) => (
+                      <Checkbox key={entry} curr={entry} className="" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center mt-5">
+          <button className="w-1/2 bg-rparts-orange text-white rounded-full py-2 font-outfit">
+            LIST ITEM
+          </button>
         </div>
       </div>
     </>
