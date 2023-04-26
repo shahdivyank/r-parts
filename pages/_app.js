@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
 import Layout from "../components/Layout";
+import { useState } from "react";
+import PartsContext from "../components/PartsContext";
 
 /* eslint-disable new-cap */
 import { Outfit, Montserrat } from "next/font/google";
@@ -24,13 +26,19 @@ const bebasNeue = Bebas_Neue({
 });
 
 export default function App({ Component, pageProps }) {
+  const [user, setUser] = useState({
+    name: "CONTEXT USER",
+  });
+
   return (
-    <main
-      className={`${outfit.variable} ${montserrat.variable} ${bebasNeue.variable}`}
-    >
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </main>
+    <PartsContext.Provider value={{ user, setUser }}>
+      <main
+        className={`${outfit.variable} ${montserrat.variable} ${bebasNeue.variable}`}
+      >
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </main>
+    </PartsContext.Provider>
   );
 }
