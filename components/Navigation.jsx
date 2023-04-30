@@ -43,7 +43,7 @@ export default function Navigation() {
           SELL
         </Link>
         <Link
-          href="/"
+          href="/info"
           className="flex items-center hover:text-rparts-subheadingGray font-medium"
         >
           INFO
