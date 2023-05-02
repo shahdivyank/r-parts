@@ -3,10 +3,12 @@ const HowItWorks = () => {
     <section id="introduction">
       <div className="bg-white rounded-3xl font-outfit border-2 mt-16 mb-28 pb-8">
         <div>
-          <p className="m-0 text-2xl my-3 pl-8 pt-8 border-b-2">How It Works</p>
-          <div className="px-8 ml-8">
-            <p className="text-md">STEP 1:</p>
-            <p className="text-md">
+          <p className="text-2xl my-3 pt-2 ml-8 w-5/6 border-b-2 pb-3 font-medium">
+            How It Works
+          </p>
+          <div className="px-4 ml-4">
+            <p className="text-md pt-2">STEP 1:</p>
+            <p className="text-md pb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Ullamcorper morbi tincidunt ornare massa eget egestas purus. Justo
@@ -16,7 +18,7 @@ const HowItWorks = () => {
               <br />
             </p>
             <p className="text-md">STEP 2:</p>
-            <p className="text-md">
+            <p className="text-md pb-4">
               Sit amet consectetur adipiscing elit pellentesque habitant morbi.
               Non arcu risus quis varius quam quisque id. Quis auctor elit sed
               vulputate mi sit amet mauris. Placerat duis ultricies lacus sed
