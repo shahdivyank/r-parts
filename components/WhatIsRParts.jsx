@@ -1,7 +1,7 @@
 const WhatIsRParts = () => {
   return (
     <section id="introduction">
-      <div className="bg-white rounded-3xl font-outfit border-2 mt-16 mb-28 pb-8">
+      <div className="bg-white rounded-3xl font-outfit border-2 mt-16 pb-8">
         <div>
           <p className="m-0 text-2xl my-3 pl-8 pt-8 border-b-2">
             What Is RParts
