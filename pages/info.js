@@ -1,5 +1,6 @@
 import InfoBanner from "../components/SVGs/InfoBanner";
 import WhatIsRParts from "../components/WhatIsRParts";
+import HowItWorks from "../components/HowItWorks";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -14,6 +15,7 @@ export default function Info() {
           className="m-0 p-0 flex justify-center items-start flex-col"
         >
           <WhatIsRParts />
+          <HowItWorks />
         </Col>
       </Row>
     </div>
