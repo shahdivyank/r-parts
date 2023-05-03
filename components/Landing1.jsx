@@ -41,7 +41,7 @@ const Landing1 = () => {
             src={Gear1}
             alt="Landing"
             layout="responsive"
-            className="box"
+            className="box box-content"
           />
         </div>
         <div className="absolute right-[23%] top-[48%] w-3/12">
