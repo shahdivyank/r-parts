@@ -1,6 +1,6 @@
 import SellPhoto from "../components/SellPhoto";
 import AddPhoto from "../components/AddPhoto";
-import Checkbox from "../components/Checkbox";
+import Checkbox from "../components/CheckBox";
 import { useState } from "react";
 
 const classes = [
@@ -28,9 +28,7 @@ const classes = [
 ];
 
 export default function Sell() {
-  // const [toggleView, setToggleView] = useState(false);
   const [toggle, setToggle] = useState(0);
-  // const [checked, setCheck] = useState(0);
 
   return (
     <>
