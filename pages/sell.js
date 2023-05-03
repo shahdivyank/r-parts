@@ -1,6 +1,8 @@
 import SellPhoto from "../components/SellPhoto";
 import AddPhoto from "../components/AddPhoto";
 import Checkbox from "../components/Checkbox";
+import Popover from "../components/Popover";
+import { useState } from "react";
 
 const classes = [
   {
@@ -27,6 +29,8 @@ const classes = [
 ];
 
 export default function Sell() {
+  const [toggle, setToggle] = useState(0);
+
   return (
     <>
       <div className="mx-[12vw] mt-[7vh]">
@@ -48,8 +52,11 @@ export default function Sell() {
 
         <div className="flex space-x-24">
           <div className="w-1/2">
-            <div className="text-xl font-outfit font-medium mb-2">
-              Proposed Price
+            <div className="flex space-x-3">
+              <div className="text-xl font-outfit font-medium mb-2">
+                Proposed Price
+              </div>
+              <Popover />
             </div>
             <div className="flex border rounded-2xl px-2 py-2 ">
               <div className="text-rparts-subheadingGray px-2">$</div>
@@ -66,16 +73,44 @@ export default function Sell() {
               Condition
             </div>
             <div className="flex space-x-4">
-              <button className="text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 hover:bg-rparts-orange hover:text-white hover:border-rparts-orange">
+              <button
+                onClick={() => setToggle(0)}
+                className={`text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 ${
+                  toggle === 0
+                    ? "bg-rparts-orange text-white border rounded-full   border-rparts-orange"
+                    : "bg-transparent"
+                }`}
+              >
                 NEW
               </button>
-              <button className="text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 hover:bg-rparts-orange hover:text-white hover:border-rparts-orange">
+              <button
+                onClick={() => setToggle(1)}
+                className={`text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 ${
+                  toggle === 1
+                    ? "bg-rparts-orange text-white border rounded-full border-rparts-orange"
+                    : "bg-transparent"
+                }`}
+              >
                 LIKE NEW
               </button>
-              <button className="text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 hover:bg-rparts-orange hover:text-white hover:border-rparts-orange">
+              <button
+                onClick={() => setToggle(2)}
+                className={`text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 ${
+                  toggle === 2
+                    ? "bg-rparts-orange text-white border rounded-full border-rparts-orange"
+                    : "bg-transparent"
+                }`}
+              >
                 GOOD
               </button>
-              <button className="text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 hover:bg-rparts-orange hover:text-white hover:border-rparts-orange">
+              <button
+                onClick={() => setToggle(3)}
+                className={`text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 ${
+                  toggle === 3
+                    ? "bg-rparts-orange text-white border rounded-full border-rparts-orange"
+                    : "bg-transparent"
+                }`}
+              >
                 POOR
               </button>
             </div>

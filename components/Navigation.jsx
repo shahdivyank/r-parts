@@ -37,7 +37,7 @@ export default function Navigation() {
           MARKET
         </Link>
         <Link
-          href="/"
+          href="/sell"
           className="flex items-center hover:text-rparts-subheadingGray font-medium"
         >
           SELL
