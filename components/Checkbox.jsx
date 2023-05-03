@@ -1,6 +1,6 @@
 const Checkbox = ({ curr }) => {
   return (
-    <div className="flex items-center my-2">
+    <div className="flex items-center my-1">
       <input
         type="checkbox"
         id="checkbox1"
