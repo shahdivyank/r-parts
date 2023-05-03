@@ -1,6 +1,6 @@
 import SellPhoto from "../components/SellPhoto";
 import AddPhoto from "../components/AddPhoto";
-import Checkbox from "../components/CheckBox";
+import Checkbox from "../components/Checkbox";
 import { useState } from "react";
 
 const classes = [
