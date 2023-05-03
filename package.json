@@ -13,6 +13,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@nextui-org/react": "^1.0.0-beta.12",
     "bootstrap": "^5.2.3",
     "firebase": "^9.19.1",
     "next": "13.2.4",

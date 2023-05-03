@@ -22,7 +22,7 @@ export default function Navigation() {
         </Link>
         <div className="w-2/3 flex items-center justify-between border-[1px] border-rparts-borderGray px-4 py-2 rounded-3xl">
           <input
-            className="w-full focus:outline-none"
+            className="w-full focus:outline-none placeholder:text-rparts-subheadingGray placeholder:font-light"
             type="search"
             placeholder={"Search R'Parts"}
           />
@@ -43,7 +43,7 @@ export default function Navigation() {
           SELL
         </Link>
         <Link
-          href="/"
+          href="/info"
           className="flex items-center hover:text-rparts-subheadingGray font-medium"
         >
           INFO
