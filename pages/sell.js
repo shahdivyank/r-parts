@@ -1,6 +1,7 @@
 import SellPhoto from "../components/SellPhoto";
 import AddPhoto from "../components/AddPhoto";
 import Checkbox from "../components/Checkbox";
+import Popover from "../components/Popover";
 import { useState } from "react";
 
 const classes = [
@@ -55,9 +56,7 @@ export default function Sell() {
               <div className="text-xl font-outfit font-medium mb-2">
                 Proposed Price
               </div>
-              <div className="font-outfit text-xs text-rparts-borderGray border rounded-full h-fit w-fit px-1.5 py-0.5 mt-1">
-                ?
-              </div>
+              <Popover />
             </div>
             <div className="flex border rounded-2xl px-2 py-2 ">
               <div className="text-rparts-subheadingGray px-2">$</div>
