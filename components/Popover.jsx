@@ -35,10 +35,9 @@ const Popover = () => {
             }
             ref={popoverRef}
           >
-            <div className="border border-rparts-subheadingGray bg-rparts-wrapperGray rounded-xl p-3">
-              <div className="">blueGray popover title</div>
-              <div className="text-black p-3">
-                And heres some amazing content. Its very engaging. Right?
+            <div className="border border-rparts-subheadingGray bg-white text-rparts-subheadingGray rounded-xl p-3 m-2">
+              <div className="">
+                Final price will be decided upon in-person inspection.
               </div>
             </div>
           </div>
