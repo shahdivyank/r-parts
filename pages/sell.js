@@ -52,8 +52,13 @@ export default function Sell() {
 
         <div className="flex space-x-24">
           <div className="w-1/2">
-            <div className="text-xl font-outfit font-medium mb-2">
-              Proposed Price
+            <div className="flex space-x-3">
+              <div className="text-xl font-outfit font-medium mb-2">
+                Proposed Price
+              </div>
+              <div className="font-outfit text-xs text-rparts-borderGray border rounded-full h-fit w-fit px-1.5 py-0.5 mt-1">
+                ?
+              </div>
             </div>
             <div className="flex border rounded-2xl px-2 py-2 ">
               <div className="text-rparts-subheadingGray px-2">$</div>
