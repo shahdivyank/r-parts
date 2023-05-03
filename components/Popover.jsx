@@ -7,7 +7,7 @@ const Popover = () => {
   const popoverRef = React.createRef();
   const openPopover = () => {
     createPopper(btnRef.current, popoverRef.current, {
-      placement: "left",
+      placement: "right",
     });
     setPopoverShow(true);
   };
@@ -35,11 +35,8 @@ const Popover = () => {
             }
             ref={popoverRef}
           >
-            <div>
-              <div className="bg-red-600 text-white opacity-75 font-semibold p-3 mb-0 border-b border-solid border-blue-100 uppercase rounded-t-lg">
-                blueGray popover title
-              </div>
-              –
+            <div className="border border-rparts-subheadingGray bg-rparts-wrapperGray rounded-xl p-3">
+              <div className="">blueGray popover title</div>
               <div className="text-black p-3">
                 And heres some amazing content. Its very engaging. Right?
               </div>
