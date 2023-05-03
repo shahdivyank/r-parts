@@ -46,13 +46,9 @@ const Landing4 = () => {
                 src={Landing4SVG}
                 alt="Landing"
                 layout="responsive"
-                class="box"
+                className="gearCCW"
               />
-              {/* <Image src={Flow} alt="Landing" layout="responsive" /> */}
             </div>
-            {/* <div className="relative z-0">
-          <Image src={Flow} alt="Landing" layout="responsive" />
-        </div> */}
           </div>
         </div>
       </div>

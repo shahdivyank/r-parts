@@ -31,7 +31,7 @@ export default function Navigation() {
       </div>
       <div className="flex gap-x-10 justify-between">
         <Link
-          href="/"
+          href="/market"
           className="flex items-center hover:text-rparts-subheadingGray font-medium"
         >
           MARKET
@@ -43,7 +43,7 @@ export default function Navigation() {
           SELL
         </Link>
         <Link
-          href="/"
+          href="/info"
           className="flex items-center hover:text-rparts-subheadingGray font-medium"
         >
           INFO
