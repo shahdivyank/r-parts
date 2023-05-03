@@ -6,7 +6,7 @@ const Landing4 = () => {
     <>
       <div>
         <div className="relative mx-64 flex flex-col space-y-10 mb-20">
-          <div className="flex justify-between bg-rparts-white p-5 rounded-3xl">
+          <div className="flex justify-between bg-rparts-wrapperGray p-5 rounded-3xl">
             <div>
               <div className="font-bebasNeue text-7xl">SUSTAINABILITY</div>
               <div className="font-outfit font-light w-1/2">
@@ -24,7 +24,7 @@ const Landing4 = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between bg-rparts-white p-5 rounded-3xl">
+          <div className="flex justify-between bg-rparts-wrapperGray p-5 rounded-3xl">
             <div>
               <div className="font-bebasNeue text-7xl">INNOVATION</div>
               <div className="font-outfit font-light w-1/2 ">
