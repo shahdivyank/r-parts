@@ -1,8 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
 import Layout from "../components/Layout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PartsContext from "../components/PartsContext";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../firebase";
+import axios from "axios";
 
 /* eslint-disable new-cap */
 import { Outfit, Montserrat } from "next/font/google";
@@ -26,9 +29,32 @@ const bebasNeue = Bebas_Neue({
 });
 
 export default function App({ Component, pageProps }) {
-  const [user, setUser] = useState({
-    name: "CONTEXT USER",
-  });
+  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState({
+  //   name: "CONTEXT USER",
+  // });
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser !== null) {
+        axios
+          .post("api/getUserInfo", { uid: currentUser.uid })
+          .then((response) => {
+            setUser({
+              ...response.data.data,
+              name: currentUser.displayName,
+              image: currentUser.photoURL,
+              uid: currentUser.uid,
+              email: currentUser.email,
+            });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+    });
+  }, []);
+  // console.log(user);
 
   return (
     <PartsContext.Provider value={{ user, setUser }}>
