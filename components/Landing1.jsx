@@ -47,7 +47,7 @@ const Landing1 = () => {
           </div>
           <div className="mt-7 flex space-x-3">
             <button
-              onClick={login}
+              // onClick={login}
               className="text-white bg-rparts-orange hover:bg-rparts-hoverOrange rounded-full py-2 px-12"
             >
               START SHOPPING
