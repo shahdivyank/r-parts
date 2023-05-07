@@ -2,28 +2,29 @@ import Landing from "../public/Landing.svg";
 import Gear1 from "../public/Gear1.svg";
 import Image from "next/image";
 import ScrollArrow from "../public/ScrollArrow.svg";
-// import { useRouter } from "next/router";
-// import {
-//   setPersistence,
-//   browserLocalPersistence,
-//   signInWithPopup,
-//   GoogleAuthProvider,
-// } from "firebase/auth";
-// import { auth } from "../firebase";
+import { useRouter } from "next/router";
+import {
+  setPersistence,
+  browserLocalPersistence,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
+import { auth } from "../firebase";
 
 const Landing1 = () => {
-  // const router = useRouter();
-  // const login = () => {
-  //   setPersistence(auth, browserLocalPersistence).then(() => {
-  //     return signInWithPopup(auth, new GoogleAuthProvider())
-  //       .then(() => {
-  //         router.push("/profile");
-  //       })
-  //       .catch((error) => {
-  //         router.push("/");
-  //       });
-  //   });
-  // };
+  const router = useRouter();
+  const login = () => {
+    setPersistence(auth, browserLocalPersistence).then(() => {
+      return signInWithPopup(auth, new GoogleAuthProvider())
+        .then(() => {
+          router.push("/profile");
+        })
+        .catch((error) => {
+          console.log(error);
+          router.push("/");
+        });
+    });
+  };
 
   return (
     <>
@@ -47,7 +48,7 @@ const Landing1 = () => {
           </div>
           <div className="mt-7 flex space-x-3">
             <button
-              // onClick={login}
+              onClick={login}
               className="text-white bg-rparts-orange hover:bg-rparts-hoverOrange rounded-full py-2 px-12"
             >
               START SHOPPING

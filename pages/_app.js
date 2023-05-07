@@ -29,10 +29,9 @@ const bebasNeue = Bebas_Neue({
 });
 
 export default function App({ Component, pageProps }) {
-  const [user, setUser] = useState(null);
-  // const [user, setUser] = useState({
-  //   name: "CONTEXT USER",
-  // });
+  const [user, setUser] = useState({
+    name: "CONTEXT USER",
+  });
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
