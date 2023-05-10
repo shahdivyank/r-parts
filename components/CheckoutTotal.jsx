@@ -3,7 +3,7 @@ import React from "react";
 const CheckoutTotal = () => {
   return (
     <div>
-      <div className="rounded-3xl h-fit my-4 p-4 bg-rparts-wrappergGray  flex flex-col ">
+      <div className="rounded-3xl h-fit my-4 p-4 bg-rparts-wrapperGray flex flex-col ">
         <div className="font-bold flex justify-between font-outfit text-2xl ">
           <div> Total </div>
           <div> $179.97</div>
