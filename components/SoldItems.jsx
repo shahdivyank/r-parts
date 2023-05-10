@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import SoldItem from "./SoldItem";
-import { RiArrowDropDownLine } from "react-icons/ri";
+import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
+import { Col, Row, Accordion } from "react-bootstrap";
 
 const soldItemsEntries = [
   {
@@ -8,36 +9,80 @@ const soldItemsEntries = [
     orderNumber: "11-02408123120",
     quantity: "1",
     date: "11/02/2021",
-    price: "$57.09",
+    total: "$57.09",
   },
   {
     title: "ESP8266 WiFi Bee",
     orderNumber: "11-02408123120",
     quantity: "1",
     date: "11/02/2021",
-    price: "$57.09",
+    total: "$57.09",
+  },
+  {
+    title: "ESP8266 WiFi Bee",
+    orderNumber: "11-02408123120",
+    quantity: "1",
+    date: "11/02/2021",
+    total: "$57.09",
   },
 ];
 
 const SoldItems = () => {
+  const [toggle, setToggle] = useState(false);
+
   return (
-    <div className="w-[40%] flex flex-col justify-between p-10 border-[1px] border-rparts-borderGray rounded-3xl bg-rparts-wrappergGray font-outfit">
-      <div className="flex flex-col font-medium">
-        <div className="flex w-full justify-between">
-          <p className="font-medium text-2xl">Sold Items</p>
-          <RiArrowDropDownLine className="text-5xl" />
-        </div>
-        <span className="justify-end border-[1px] border-rparts-borderGray mb-3" />
-        <div className="flex w-full self-end justify-end text-xs font-light">
-          <p className="mr-44">ITEM</p>
-          <p className="mr-[5.7rem]">DATE SOLD</p>
-          <p className="mr-2">TOTAL</p>
-        </div>
-      </div>
-      {soldItemsEntries.map((entry, i) => (
-        <SoldItem key={i} entry={entry} i={i + 1} />
-      ))}
-    </div>
+    <Accordion
+      defaultActiveKey="1"
+      className="w-[100%] h-[100%] overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full"
+    >
+      <Accordion.Item
+        className="!border-none underlayColor=transparent font-outfit"
+        eventKey="0"
+      >
+        <Accordion.Button
+          onClick={() => setToggle(!toggle)}
+          className={`!bg-rparts-wrapperGray text-black after:hidden focus:!shadow-none ${
+            toggle
+              ? `!rounded-t-3xl`
+              : `!rounded-t-3xl !rounded-b-3xl delay-300`
+          } px-12 py-4`}
+        >
+          <div className="w-full flex justify-between items-center">
+            <p className="text-black text-2xl font-medium m-0 ">Sold Items</p>
+            <div className="text-3xl">
+              {toggle ? (
+                <IoIosArrowDown className="stroke-[10px]" />
+              ) : (
+                <IoIosArrowForward className="stroke-[10px]" />
+              )}
+            </div>
+          </div>
+        </Accordion.Button>
+        <Accordion.Body
+          className={`!bg-rparts-wrapperGray rounded-b-3xl ${
+            soldItemsEntries.length > 3 ? `h-[21.85rem]` : ``
+          } overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-rparts-bannerGray`}
+          eventKey={0}
+        >
+          <span className="relative flex border-[0.5px] border-rparts-borderGray mx-4 -top-4" />
+          <Row className="mb-4 flex justify-start px-8">
+            <Col xl={1}></Col>
+            <Col xl={7} className="font-light text-xs">
+              ITEM
+            </Col>
+            <Col xl={2} className="font-light text-xs">
+              DATE
+            </Col>
+            <Col xl={2} className="font-light text-xs">
+              TOTAL
+            </Col>
+          </Row>
+          {soldItemsEntries.map((entry, index) => (
+            <SoldItem key={index} entry={entry} i={index + 1} />
+          ))}
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
   );
 };
 

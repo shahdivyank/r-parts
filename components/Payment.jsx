@@ -16,7 +16,7 @@ const Payment = () => {
             width={800}
           />
         </div>
-        <div className="bg-rparts-wrappergGray rounded-r-full px-3 py-4 text-left">
+        <div className="bg-rparts-wrapperGray rounded-r-full px-3 py-4 text-left">
           <text className="font-outfit font-medium">
             At this moment, we are currently only taking in-person payments.
             After order placement, you will receive a confirmation email. Show
