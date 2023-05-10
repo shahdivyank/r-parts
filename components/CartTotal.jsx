@@ -3,10 +3,8 @@ import Link from "next/link";
 
 const CartTotal = () => {
   return (
-
     <div className="flex flex-col gap-y-6">
       <div className="flex flex-col px-5 py-4 gap-y-4 rounded-3xl bg-rparts-wrapperGray">
-
         <div className="flex justify-between">
           <p className="text-xl font-semibold font-outfit">Total</p>
           <p className="text-xl font-semibold bold font-outfit">$179.97</p>
