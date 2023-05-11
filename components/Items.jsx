@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Item from "./Item";
 import { Col, Row } from "react-bootstrap";
+import { useRouter } from "next/router";
 
 const items = [
   {
     id: 123,
-    title: "Sample Item",
+    title: "Water Bottle",
     description: "Sample Description",
     price: 25.0,
     images: [
@@ -29,7 +30,7 @@ const items = [
   },
   {
     id: 456,
-    title: "Sample Item",
+    title: "Laptop",
     description: "Sample Description",
     price: 26.0,
     images: [
@@ -53,7 +54,7 @@ const items = [
   },
   {
     id: 789,
-    title: "Sample Item",
+    title: "Computer",
     description: "Sample Description",
     price: 27.0,
     images: [
@@ -78,9 +79,26 @@ const items = [
 ];
 
 const Items = () => {
+  const router = useRouter();
+  const [filteredItems, setFilteredItems] = useState(items);
+
+  useEffect(() => {
+    console.log(router.query);
+    if (router.query.search) {
+      console.log(router.query.search);
+      setFilteredItems(
+        items.filter((item) =>
+          item.title.toUpperCase().includes(router.query.search.toUpperCase())
+        )
+      );
+    } else {
+      setFilteredItems(items);
+    }
+  }, [router.query]);
+
   return (
     <Row>
-      {items.map((item, index) => (
+      {filteredItems.map((item, index) => (
         <Col key={index}>
           <Item
             id={item.id}

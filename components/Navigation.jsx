@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { BsGear } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
 import { RiSearchLine } from "react-icons/ri";
@@ -17,6 +17,7 @@ import { useRouter } from "next/router";
 export default function Navigation() {
   const router = useRouter();
   const { user } = useContext(PartsContext);
+  const [search, setSearch] = useState("");
 
   const signin = (url) => {
     signInWithPopup(auth, new GoogleAuthProvider())
@@ -59,8 +60,11 @@ export default function Navigation() {
             className="w-full focus:outline-none placeholder:text-rparts-subheadingGray placeholder:font-light"
             type="search"
             placeholder={"Search R'Parts"}
+            onChange={(e) => setSearch(e.target.value)}
           />
-          <RiSearchLine className="text-rparts-subheadingGray" />
+          <Link href={`/market?search=${search}`}>
+            <RiSearchLine className="text-rparts-subheadingGray" />
+          </Link>
         </div>
       </div>
       <div className="flex gap-x-10 justify-between">
