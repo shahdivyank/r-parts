@@ -3,8 +3,19 @@ import Col from "react-bootstrap/Col";
 import { BsGear } from "react-icons/bs";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 import { BiCopyright } from "react-icons/bi";
+import axios from "axios";
+import { useState } from "react";
 
 const Footer = () => {
+  const [message, setMessage] = useState("");
+
+  const submit = () => {
+    axios
+      .post("/api/sendFeedback", { message: message })
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
+  };
+
   return (
     <footer className="bg-rparts-footerBlue flex items-center py-20 mt-48">
       <Row className="w-full">
@@ -56,9 +67,13 @@ const Footer = () => {
           <textarea
             className="w-full h-2/5 pl-5 pt-3 font-outfit resize-none text-black rounded-3xl border-solid focus:outline-none"
             placeholder="Type your message here"
+            onChange={(e) => setMessage(e.target.value)}
           />
           <div className="flex justify-end mt-3 mb-4">
-            <button className="bg-rparts-orange font-outfit hover:bg-rparts-hoverOrange text-white rounded-2xl w-[10vw] h-[3.5vh] text-sm">
+            <button
+              onClick={submit}
+              className="bg-rparts-orange font-outfit hover:bg-rparts-hoverOrange text-white rounded-2xl w-[10vw] h-[3.5vh] text-sm"
+            >
               SEND MESSAGE
             </button>
           </div>

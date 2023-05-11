@@ -2,6 +2,7 @@ import Landing from "../public/Landing.svg";
 import Gear1 from "../public/Gear1.svg";
 import Image from "next/image";
 import ScrollArrow from "../public/ScrollArrow.svg";
+import Link from "next/link";
 
 const Landing1 = () => {
   return (
@@ -25,12 +26,15 @@ const Landing1 = () => {
             </div>
           </div>
           <div className="mt-7 flex space-x-3">
-            <button className="text-white bg-rparts-orange hover:bg-rparts-hoverOrange rounded-full py-2 px-12">
+            <Link
+              href="/market"
+              className="text-white bg-rparts-orange hover:bg-rparts-hoverOrange rounded-full py-2 px-12"
+            >
               START SHOPPING
-            </button>
-            <button className="text-rparts-orange bg-white border-2 hover:bg-rparts-bannerGray border-rparts-orange rounded-full py-2 px-8">
+            </Link>
+            {/* <button className="text-rparts-orange bg-white border-2 hover:bg-rparts-bannerGray border-rparts-orange rounded-full py-2 px-8">
               SELL PART
-            </button>
+            </button> */}
           </div>
         </div>
 
