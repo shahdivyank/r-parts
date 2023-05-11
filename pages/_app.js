@@ -34,6 +34,8 @@ export default function App({ Component, pageProps }) {
       "https://www.playbillder.com/static/productions/Notre_Dame_High_School/2019/Into_the_Woods/images/Bobby_907_.JPG",
   });
   const [selectedItem, setSelectedItem] = useState(null);
+  const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -49,7 +51,16 @@ export default function App({ Component, pageProps }) {
 
   return (
     <PartsContext.Provider
-      value={{ user, setUser, selectedItem, setSelectedItem }}
+      value={{
+        user,
+        setUser,
+        selectedItem,
+        setSelectedItem,
+        cart,
+        setCart,
+        total,
+        setTotal,
+      }}
     >
       <main
         className={`${outfit.variable} ${montserrat.variable} ${bebasNeue.variable}`}

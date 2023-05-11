@@ -5,7 +5,13 @@ import PartsContext from "./PartsContext";
 const ViewDescription = () => {
   const [quantity, setQuantity] = useState(1);
 
-  const { selectedItem } = useContext(PartsContext);
+  const { selectedItem, cart, setCart, total, setTotal } =
+    useContext(PartsContext);
+
+  const addToCart = () => {
+    setCart([...cart, { ...selectedItem, quantity: quantity }]);
+    setTotal(total + selectedItem.price * quantity);
+  };
 
   return (
     <div>
@@ -39,7 +45,10 @@ const ViewDescription = () => {
       <p className="font-outfit font-semibold text-3xl mt-2">
         ${selectedItem.price}.00
       </p>
-      <button className="px-8 py-2 bg-rparts-orange font-outfit rounded-full text-white mt-4">
+      <button
+        className="px-8 py-2 bg-rparts-orange font-outfit rounded-full text-white mt-4"
+        onClick={addToCart}
+      >
         ADD TO CART
       </button>
 

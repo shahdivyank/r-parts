@@ -1,43 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartItem from "./CartItem";
-
-const cartEntries = [
-  {
-    title: "ESP8266 WiFi Bee",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis mi ut velit porttitor placerat.",
-    quantity: "1",
-    condition: "New",
-    date: "11/02/2021",
-    price: "$57.09",
-  },
-  {
-    title: "ESP8266 WiFi Bee",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis mi ut velit porttitor placerat.",
-    quantity: "1",
-    condition: "New",
-    date: "11/02/2021",
-    price: "$57.09",
-  },
-  {
-    title: "ESP8266 WiFi Bee",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis mi ut velit porttitor placerat.",
-    quantity: "1",
-    condition: "New",
-    date: "11/02/2021",
-    price: "$57.09",
-  },
-];
+import PartsContext from "./PartsContext";
 
 const CartItems = () => {
+  const { cart } = useContext(PartsContext);
   return (
     <div className="flex flex-col justify-between p-12 border-[1px] border-rparts-borderGray rounded-3xl">
-      {cartEntries.map((entry, index) => (
+      {cart.map((item, index) => (
         <>
-          <CartItem key={index} entry={entry} />
-          {index !== cartEntries.length - 1 ? (
+          <CartItem
+            key={index}
+            id={item.id}
+            title={item.title}
+            description={item.description}
+            quantity={item.quantity}
+            price={item.price}
+            image={item.images[0]}
+          />
+          {index !== cart.length - 1 ? (
             <span className="flex border-[0.5px] border-rparts-borderGray my-6" />
           ) : (
             ``

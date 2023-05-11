@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
+import PartsContext from "./PartsContext";
 
 const CartTotal = () => {
+  const { cart, total } = useContext(PartsContext);
+
   return (
     <div className="flex flex-col gap-y-6">
       <div className="flex flex-col px-5 py-4 gap-y-4 rounded-3xl bg-rparts-wrapperGray">
         <div className="flex justify-between">
           <p className="text-xl font-semibold font-outfit">Total</p>
-          <p className="text-xl font-semibold bold font-outfit">$179.97</p>
+          <p className="text-xl font-semibold bold font-outfit">${total}.00</p>
         </div>
         <span className="border-[0.5px] border-rparts-borderGray"></span>
         <div className="gap-y-20">
           <div className="flex justify-between">
             <p className="font-outfit">Items</p>
-            <p className="font-outfit">3</p>
+            <p className="font-outfit">{cart.length}</p>
           </div>
           <div className="flex justify-between">
             <p className="font-outfit">Delivery*</p>
