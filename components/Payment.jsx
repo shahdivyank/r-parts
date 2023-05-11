@@ -17,15 +17,15 @@ const Payment = () => {
           />
         </div>
         <div className="bg-rparts-wrapperGray rounded-r-full px-3 py-4 text-left">
-          <text className="font-outfit font-medium">
+          <p className="font-outfit font-medium mb-0">
             At this moment, we are currently only taking in-person payments.
             After order placement, you will receive a confirmation email. Show
             this to our representative and pay with your preferred payment
             method.
-          </text>
-          <text className="text-rparts-orange font-outfit font-medium ">
+          </p>
+          <p className="text-rparts-orange font-outfit font-medium mb-0">
             We are not accepting cards.
-          </text>
+          </p>
         </div>
       </button>
 

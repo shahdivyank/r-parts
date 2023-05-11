@@ -28,11 +28,7 @@ const bebasNeue = Bebas_Neue({
 });
 
 export default function App({ Component, pageProps }) {
-  const [user, setUser] = useState({
-    name: "CONTEXT NAME",
-    image:
-      "https://www.playbillder.com/static/productions/Notre_Dame_High_School/2019/Into_the_Woods/images/Bobby_907_.JPG",
-  });
+  const [user, setUser] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);

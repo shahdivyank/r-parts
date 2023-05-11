@@ -37,7 +37,7 @@ const SoldItems = () => {
     >
       <Accordion.Item
         className="!border-none underlayColor=transparent font-outfit"
-        eventKey="0"
+        eventkey="0"
       >
         <Accordion.Button
           onClick={() => setToggle(!toggle)}
@@ -62,7 +62,7 @@ const SoldItems = () => {
           className={`!bg-rparts-wrapperGray rounded-b-3xl ${
             soldItemsEntries.length > 3 ? `h-[21.85rem]` : ``
           } overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-rparts-bannerGray`}
-          eventKey={0}
+          eventkey={0}
         >
           <span className="relative flex border-[0.5px] border-rparts-borderGray mx-4 -top-4" />
           <Row className="mb-4 flex justify-start px-8">
