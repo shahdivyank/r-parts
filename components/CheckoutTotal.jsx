@@ -10,7 +10,7 @@ const CheckoutTotal = () => {
           <div>Total</div>
           <div>${total}.00</div>
         </div>
-        <hr class="h-px my-6 border-2 dark:bg-gray-700" />
+        <hr className="h-px my-6 border-2 dark:bg-gray-700" />
 
         <div className="font-outfit flex justify-between">
           <div>Items</div>
