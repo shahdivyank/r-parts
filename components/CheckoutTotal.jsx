@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
+import PartsContext from "./PartsContext";
 
 const CheckoutTotal = () => {
+  const { total } = useContext(PartsContext);
   return (
     <div>
       <div className="rounded-3xl h-fit my-4 p-4 bg-rparts-wrapperGray flex flex-col ">
         <div className="font-bold flex justify-between font-outfit text-2xl ">
-          <div> Total </div>
-          <div> $179.97</div>
+          <div>Total</div>
+          <div>${total}.00</div>
         </div>
         <hr class="h-px my-6 border-2 dark:bg-gray-700" />
 
         <div className="font-outfit flex justify-between">
-          <div> Items</div>
-          <div> 3</div>
+          <div>Items</div>
+          <div>3</div>
         </div>
 
         <div className="font-outfit flex justify-between">
-          <div> Payment Method</div>
-          <div> Cash </div>
+          <div>Payment Method</div>
+          <div>Cash</div>
         </div>
 
         <div className="font-outfit flex justify-between">

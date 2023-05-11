@@ -59,9 +59,7 @@ const CartItem = ({
       </Col>
       <Col xl={2} className="flex flex-col justify-between items-end">
         <div className="font-semibold text-base">${price}.00</div>
-        <button>
-          <HiOutlineTrash className="text-xl stroke-2" />
-        </button>
+        <HiOutlineTrash className="text-xl stroke-2" />
       </Col>
     </Row>
   );
