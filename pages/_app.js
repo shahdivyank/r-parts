@@ -1,13 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
 import Layout from "../components/Layout";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PartsContext from "../components/PartsContext";
 
 /* eslint-disable new-cap */
 import { Outfit, Montserrat } from "next/font/google";
 /* eslint-disable camelcase */
 import { Bebas_Neue } from "next/font/google";
+import { auth } from "../firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -27,11 +29,28 @@ const bebasNeue = Bebas_Neue({
 
 export default function App({ Component, pageProps }) {
   const [user, setUser] = useState({
-    name: "CONTEXT USER",
+    name: "CONTEXT NAME",
+    image:
+      "https://www.playbillder.com/static/productions/Notre_Dame_High_School/2019/Into_the_Woods/images/Bobby_907_.JPG",
   });
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser({
+          name: user.displayName,
+          uid: user.uid,
+          image: user.photoURL,
+        });
+      }
+    });
+  }, []);
 
   return (
-    <PartsContext.Provider value={{ user, setUser }}>
+    <PartsContext.Provider
+      value={{ user, setUser, selectedItem, setSelectedItem }}
+    >
       <main
         className={`${outfit.variable} ${montserrat.variable} ${bebasNeue.variable}`}
       >
