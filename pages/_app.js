@@ -10,6 +10,7 @@ import { Outfit, Montserrat } from "next/font/google";
 import { Bebas_Neue } from "next/font/google";
 import { auth } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import axios from "axios";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -30,10 +31,16 @@ const bebasNeue = Bebas_Neue({
 export default function App({ Component, pageProps }) {
   const [user, setUser] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(null);
   const [total, setTotal] = useState(0);
+  const [items, setItems] = useState([]);
+  const [order, setOrder] = useState(null);
 
   useEffect(() => {
+    axios.post("/api/getItems").then((response) => {
+      setItems(response.data);
+    });
+
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser({
@@ -48,6 +55,8 @@ export default function App({ Component, pageProps }) {
   return (
     <PartsContext.Provider
       value={{
+        items,
+        setItems,
         user,
         setUser,
         selectedItem,
@@ -56,6 +65,8 @@ export default function App({ Component, pageProps }) {
         setCart,
         total,
         setTotal,
+        order,
+        setOrder,
       }}
     >
       <main

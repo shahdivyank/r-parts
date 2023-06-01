@@ -8,7 +8,7 @@ const ViewSpecifications = () => {
     <div className="rounded-3xl bg-rparts-wrapperGray font-outfit p-3">
       <p className="text-2xl mb-2">Specifications</p>
       <div className="list-normal">
-        {selectedItem.specifications.map((classApplicable, index) => (
+        {selectedItem.data.specifications.map((classApplicable, index) => (
           <div key={index} className="flex items-center">
             <FaCircle className="mr-2 text-xs" />
             <p>{classApplicable}</p>

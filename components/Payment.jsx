@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import creditcard from "../public/creditcard.svg";
 import Image from "next/image";
+import PartsContext from "./PartsContext";
 
 const Payment = () => {
+  const { order, setOrder } = useContext(PartsContext);
+
+  // enum values are: "cash" or "e-payment"
+  const [payment, setPayment] = useState("cash");
+
+  // remove after toggle behavior has been done
+  console.log(payment, setPayment);
+
+  const handlePayment = (paymentMethod) => {
+    setOrder({ ...order, payment: paymentMethod });
+  };
+
   return (
     <div className="rounded-3xl h-fit  my-4 p-4 bg-white border-2 border-rparts-borderGray">
       <div className="text-3xl font-bold font-outfit  p-3">Payment Method</div>
@@ -33,7 +46,10 @@ const Payment = () => {
         Select your preferred payment method:
       </div>
       <div className="flex justify-start px-3">
-        <button className="bg-rparts-orange rounded-full px-4 py-2 my-4 mr-3 text-rparts-white font-outfit text-white">
+        <button
+          onClick={() => handlePayment("cash")}
+          className="bg-rparts-orange rounded-full px-4 py-2 my-4 mr-3 text-rparts-white font-outfit text-white"
+        >
           Cash
         </button>
         <button className="rounded-full px-4 py-2 my-4 text-rparts-black font-outfit border-2 border-rparts-borderGray">

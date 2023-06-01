@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import React, { useContext } from "react";
 import PartsContext from "./PartsContext";
@@ -19,22 +18,23 @@ const Item = ({
   const selectProduct = () => {
     setSelectedItem({
       id: id,
-      title: title,
-      description: description,
-      price: price,
-      images: images,
-      condition: condition,
-      available: available,
-      classes: classes,
-      specifications: specifications,
+      data: {
+        title: title,
+        description: description,
+        price: price,
+        images: images,
+        condition: condition,
+        available: available,
+        classes: classes,
+        specifications: specifications,
+      },
     });
   };
 
   return (
     <Link href={`/view/${id}`} onClick={selectProduct}>
-      <Image src={images[0]} alt={title} width={100} height={100} />
+      <img src={images[0]} />
       <p>{title}</p>
-      <p>{description}</p>
       <p>{price}</p>
     </Link>
   );

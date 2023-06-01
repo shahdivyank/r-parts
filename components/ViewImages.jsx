@@ -1,26 +1,23 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import PartsContext from "./PartsContext";
 
-const ViewImages = () => {
-  const { selectedItem } = useContext(PartsContext);
-
-  const [image, setImage] = useState(selectedItem.images[0]);
+const ViewImages = ({ images, first }) => {
+  const [image, setImage] = useState(first);
 
   return (
     <Row className="flex">
       <Col xl={2}>
-        <div onClick={() => setImage(selectedItem.images[0])}>
+        <div onClick={() => setImage(images[0])}>
           {" "}
-          <img src={selectedItem.images[0]} />
+          <img src={images[0]} />
         </div>
 
-        <div onClick={() => setImage(selectedItem.images[1])}>
-          <img src={selectedItem.images[1]} />
+        <div onClick={() => setImage(images[1])}>
+          <img src={images[1]} />
         </div>
 
-        <div onClick={() => setImage(selectedItem.images[2])}>
-          <img src={selectedItem.images[2]} />
+        <div onClick={() => setImage(images[2])}>
+          <img src={images[2]} />
         </div>
       </Col>
       <Col xl={10}>

@@ -1,8 +1,17 @@
 import React, { useContext } from "react";
 import PartsContext from "./PartsContext";
+import axios from "axios";
 
 const CheckoutTotal = () => {
-  const { total } = useContext(PartsContext);
+  const { total, order } = useContext(PartsContext);
+
+  const handleSubmit = () => {
+    console.log("ORDER", order);
+    axios.post("/api/placeOrder", order).then((response) => {
+      console.log("order placed successfully");
+    });
+  };
+
   return (
     <div>
       <div className="rounded-3xl h-fit my-4 p-4 bg-rparts-wrapperGray flex flex-col ">
@@ -30,7 +39,10 @@ const CheckoutTotal = () => {
           </div>
         </div>
       </div>
-      <button className="bg-rparts-orange rounded-full w-full py-2 px-4 text-white font-outfit">
+      <button
+        onClick={handleSubmit}
+        className="bg-rparts-orange rounded-full w-full py-2 px-4 text-white font-outfit"
+      >
         PLACE ORDER
       </button>
     </div>

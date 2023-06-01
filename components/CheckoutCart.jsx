@@ -10,11 +10,11 @@ const CartItems = () => {
       {cart.map((item, index) => (
         <div key={index}>
           <CheckoutCartItem
-            image={item.images[0]}
-            title={item.title}
-            condition={item.condition}
-            quantity={item.quantity}
-            price={item.price}
+            image={item.data.images[0]}
+            title={item.data.title}
+            condition={item.data.condition}
+            quantity={item.data.quantity}
+            price={item.data.price}
           />
           <span className="flex border-[1px] border-rparts-borderGray my-7" />
         </div>

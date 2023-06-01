@@ -37,8 +37,9 @@ const ViewDescription = () => {
 
   const addToCart = () => {
     if (user) {
-      setCart([...cart, { ...selectedItem, quantity: quantity }]);
-      setTotal(total + selectedItem.price * quantity);
+      const items = cart === null ? [] : cart;
+      setCart([...items, { ...selectedItem.data, quantity: quantity }]);
+      setTotal(total + selectedItem.data.price * quantity);
     } else {
       login();
     }
@@ -47,13 +48,13 @@ const ViewDescription = () => {
   return (
     <div>
       <p className="font-bebasNeue text-4xl font-semibold">
-        {selectedItem.title}
+        {selectedItem.data.title}
       </p>
-      <p className="font-outfit">{selectedItem.description}</p>
+      <p className="font-outfit">{selectedItem.data.description}</p>
 
       <p className="font-outfit mt-2">
         Condition:{" "}
-        <span className="text-rparts-green">{selectedItem.condition}</span>
+        <span className="text-rparts-green">{selectedItem.data.condition}</span>
       </p>
       <hr className="w-full h-1 mt-4" />
 
@@ -70,11 +71,11 @@ const ViewDescription = () => {
           />
         </div>
         <p className="text-rparts-orange font-semibold mx-4">
-          {selectedItem.available} AVAILABLE
+          {selectedItem.data.available} AVAILABLE
         </p>
       </div>
       <p className="font-outfit font-semibold text-3xl mt-2">
-        ${selectedItem.price}.00
+        ${selectedItem.data.price}.00
       </p>
       <button
         className="px-8 py-2 bg-rparts-orange font-outfit rounded-full text-white mt-4"
