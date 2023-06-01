@@ -44,7 +44,14 @@ const Footer = () => {
             </div>
             <div className="flex flex-row justify-center items-center mb-7">
               <FiMail className="text-xl text-white mr-4" />
-              <p className="text-xs text-white ">contact@parts.com</p>
+              <a
+                className="text-xs text-white "
+                href="mailto:contact@parts.com"
+                target="_blank"
+                norefferer="noopener"
+              >
+                contact@parts.com
+              </a>
             </div>
 
             <div className="flex mt-16">
