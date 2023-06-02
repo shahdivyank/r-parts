@@ -2,34 +2,48 @@ import SellPhoto from "../components/SellPhoto";
 import AddPhoto from "../components/AddPhoto";
 import Checkbox from "../components/Checkbox";
 import Popover from "../components/Popover";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import PartsContext from "../components/PartsContext";
+import axios from "axios";
 
-const classes = [
-  {
-    label: "CS122A",
-  },
-  {
-    label: "CS122A",
-  },
-  {
-    label: "CS122A",
-  },
-  {
-    label: "CS122A",
-  },
-  {
-    label: "CS122A",
-  },
-  {
-    label: "CS122A",
-  },
-  {
-    label: "CS122A",
-  },
-];
+const computerScienceClasses = ["CS10A", "CS10B", "CS10C"];
+
+const electricalClasses = ["EE128", "EE111", "EE120B"];
 
 export default function Sell() {
-  const [toggle, setToggle] = useState(0);
+  const { user } = useContext(PartsContext);
+
+  // enum values include new, like new, good, poor
+  const [condition, setCondition] = useState("new");
+  const [data, setData] = useState({
+    name: null,
+    price: null,
+    description: null,
+    specifications: null,
+    classes: null,
+  });
+  const [images, setImages] = useState([]);
+  const [classes, setClasses] = useState([]);
+
+  const handleTyping = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const listItem = () => {
+    const packet = {
+      ...data,
+      price: parseFloat(data.price),
+      condition,
+      uid: user.uid,
+      email: user.email,
+      user: user.name,
+      images: images,
+      classes: classes,
+    };
+    axios.post("/api/sellItems", packet).then((response) => {
+      console.log(response);
+    });
+  };
 
   return (
     <>
@@ -41,10 +55,15 @@ export default function Sell() {
           </div>
         </div>
         <div className="flex space-x-6">
-          <SellPhoto />
-          <AddPhoto />
+          {images.map((image, index) => (
+            <SellPhoto key={index} image={image} />
+          ))}
+          <AddPhoto setImages={setImages} images={images} />
         </div>
         <input
+          value={data.name}
+          name="name"
+          onChange={handleTyping}
           type="text"
           className="focus:outline-none font-outfit resize-none text-3xl w-full py-3 border-b mt-3 mb-10 placeholder-rparts-subheadingGray"
           placeholder="Enter Name of Product Here"
@@ -62,7 +81,10 @@ export default function Sell() {
               <div className="text-rparts-subheadingGray px-2">$</div>
 
               <input
-                type="text"
+                value={data.price}
+                name="price"
+                onChange={handleTyping}
+                type="number"
                 className="focus:outline-none w-full placeholder:font-light placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
                 placeholder="Enter your proposed price here"
               />
@@ -74,9 +96,9 @@ export default function Sell() {
             </div>
             <div className="flex space-x-4">
               <button
-                onClick={() => setToggle(0)}
+                onClick={() => setCondition("new")}
                 className={`text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 ${
-                  toggle === 0
+                  condition === "new"
                     ? "bg-rparts-orange text-white border rounded-full   border-rparts-orange"
                     : "bg-transparent"
                 }`}
@@ -84,9 +106,9 @@ export default function Sell() {
                 NEW
               </button>
               <button
-                onClick={() => setToggle(1)}
+                onClick={() => setCondition("like new")}
                 className={`text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 ${
-                  toggle === 1
+                  condition === "like new"
                     ? "bg-rparts-orange text-white border rounded-full border-rparts-orange"
                     : "bg-transparent"
                 }`}
@@ -94,9 +116,9 @@ export default function Sell() {
                 LIKE NEW
               </button>
               <button
-                onClick={() => setToggle(2)}
+                onClick={() => setCondition("good")}
                 className={`text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 ${
-                  toggle === 2
+                  condition === "good"
                     ? "bg-rparts-orange text-white border rounded-full border-rparts-orange"
                     : "bg-transparent"
                 }`}
@@ -104,9 +126,9 @@ export default function Sell() {
                 GOOD
               </button>
               <button
-                onClick={() => setToggle(3)}
+                onClick={() => setCondition("poor")}
                 className={`text-sm w-1/2 text-rparts-subheadingGray font-outfit text-center border rounded-full border-rparts-subheadingGray py-2.5 px-3 ${
-                  toggle === 3
+                  condition === "poor"
                     ? "bg-rparts-orange text-white border rounded-full border-rparts-orange"
                     : "bg-transparent"
                 }`}
@@ -121,6 +143,9 @@ export default function Sell() {
             Description
           </div>
           <textarea
+            value={data.description}
+            name="description"
+            onChange={handleTyping}
             className="focus:outline-none w-full h-[15vh] border rounded-2xl px-4 py-3 resize-none  placeholder:font-light placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
             placeholder="Enter product information (utility, usage history, background, etc.)"
           />
@@ -130,6 +155,9 @@ export default function Sell() {
             Specifications
           </div>
           <textarea
+            value={data.specifications}
+            name="specifications"
+            onChange={handleTyping}
             className="focus:outline-none w-full h-[15vh] border rounded-2xl px-4 py-3 resize-none placeholder:font-light placeholder:text-rparts-subheadingGray placeholder:font-outfit placeholder:font-regular"
             placeholder="Type product specifications here (model, color, content, etc.)"
           />
@@ -149,40 +177,16 @@ export default function Sell() {
                 Computer Science
               </div>
               <div className="grid grid-cols-2 gap-4 flex">
-                <div className="">
-                  <div className="flex flex-col items-start">
-                    {classes.map((entry) => (
-                      <Checkbox key={entry} curr={entry} className="" />
-                    ))}
-                  </div>
-                </div>
                 <div className="flex items-end">
                   <div className="text-rparts-subheadingGray text-sm mb-2"></div>
                   <div className="flex flex-col items-start">
-                    {classes.map((entry) => (
-                      <Checkbox key={entry} curr={entry} className="" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="">
-              <div className="text-rparts-subheadingGray text-sm mb-2">
-                Computer Engineering
-              </div>
-              <div className="grid grid-cols-2 gap-4 flex">
-                <div className="">
-                  <div className="flex flex-col items-start">
-                    {classes.map((entry) => (
-                      <Checkbox key={entry} curr={entry} className="" />
-                    ))}
-                  </div>
-                </div>
-                <div className="flex items-end">
-                  <div className="text-rparts-subheadingGray text-sm mb-2"></div>
-                  <div className="flex flex-col items-start">
-                    {classes.map((entry) => (
-                      <Checkbox key={entry} curr={entry} className="" />
+                    {computerScienceClasses.map((entry, index) => (
+                      <Checkbox
+                        key={index}
+                        label={entry}
+                        setState={setClasses}
+                        state={classes}
+                      />
                     ))}
                   </div>
                 </div>
@@ -195,38 +199,13 @@ export default function Sell() {
               <div className="grid grid-cols-2 gap-4 flex">
                 <div className="">
                   <div className="flex flex-col items-start">
-                    {classes.map((entry) => (
-                      <Checkbox key={entry} curr={entry} className="" />
-                    ))}
-                  </div>
-                </div>
-                <div className="flex items-end">
-                  <div className="text-rparts-subheadingGray text-sm mb-2"></div>
-                  <div className="flex flex-col items-start">
-                    {classes.map((entry) => (
-                      <Checkbox key={entry} curr={entry} className="" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="">
-              <div className="text-rparts-subheadingGray text-sm mb-2">
-                Mechanical Engineering
-              </div>
-              <div className="grid grid-cols-2 gap-4 flex">
-                <div className="">
-                  <div className="flex flex-col items-start">
-                    {classes.map((entry) => (
-                      <Checkbox key={entry} curr={entry} className="" />
-                    ))}
-                  </div>
-                </div>
-                <div className="flex items-end">
-                  <div className="text-rparts-subheadingGray text-sm mb-2"></div>
-                  <div className="flex flex-col items-start">
-                    {classes.map((entry) => (
-                      <Checkbox key={entry} curr={entry} className="" />
+                    {electricalClasses.map((entry, index) => (
+                      <Checkbox
+                        key={index}
+                        label={entry}
+                        setState={setClasses}
+                        state={classes}
+                      />
                     ))}
                   </div>
                 </div>
@@ -235,7 +214,10 @@ export default function Sell() {
           </div>
         </div>
         <div className="flex justify-center mt-5">
-          <button className="w-1/2 bg-rparts-orange text-white rounded-full py-2 font-outfit">
+          <button
+            onClick={listItem}
+            className="w-1/2 bg-rparts-orange text-white rounded-full py-2 font-outfit"
+          >
             LIST ITEM
           </button>
         </div>

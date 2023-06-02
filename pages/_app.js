@@ -47,6 +47,7 @@ export default function App({ Component, pageProps }) {
           name: user.displayName,
           uid: user.uid,
           image: user.photoURL,
+          email: user.email,
         });
       }
     });
