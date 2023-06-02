@@ -74,12 +74,22 @@ export default function Navigation() {
         >
           MARKET
         </Link>
-        <Link
-          href="/sell"
-          className="flex items-center hover:text-rparts-subheadingGray font-medium"
-        >
-          SELL
-        </Link>
+        {user && (
+          <Link
+            href="/sell"
+            className="flex items-center hover:text-rparts-subheadingGray"
+          >
+            <FaRegUser className="flex items-center stroke-2 text-xl" />
+          </Link>
+        )}
+        {!user && (
+          <button
+            onClick={() => login("sell")}
+            className="flex items-center hover:text-rparts-subheadingGray"
+          >
+            <FaRegUser className="flex items-center stroke-2 text-xl" />
+          </button>
+        )}
         <Link
           href="/info"
           className="flex items-center hover:text-rparts-subheadingGray font-medium"
