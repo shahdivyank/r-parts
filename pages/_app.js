@@ -38,17 +38,6 @@ export default function App({ Component, pageProps, session }) {
     axios.post("/api/getItems").then((response) => {
       setItems(response.data);
     });
-
-    // onAuthStateChanged(auth, (user) => {
-    //   if (user) {
-    //     setUser({
-    //       name: user.displayName,
-    //       uid: user.uid,
-    //       image: user.photoURL,
-    //       email: user.email,
-    //     });
-    //   }
-    // });
   }, []);
 
   return (
