@@ -3,19 +3,21 @@ import CartItems from "../components/CartItems";
 import CartTotal from "../components/CartTotal";
 import PartsContext from "../components/PartsContext";
 import axios from "axios";
+import { useSession } from "next-auth/react";
 
 export default function Cart() {
-  const { user, cart, setCart, setOrder } = useContext(PartsContext);
+  const { data: session } = useSession();
+  const { cart, setCart, setOrder } = useContext(PartsContext);
 
   useEffect(() => {
-    if (user && cart == null) {
-      axios.post("/api/getCart", { uid: user.uid }).then((response) => {
+    if (session && cart == null) {
+      axios.post("/api/getCart", { uid: session.user.uid }).then((response) => {
         setCart(response.data.cart);
         console.log(response.data);
         setOrder({ cart: response.data.id });
       });
     }
-  }, [user]);
+  }, [session]);
 
   return (
     <section className="h-full w-screen font-outfit pt-4 pb-20">

@@ -5,6 +5,7 @@ import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 import { BiCopyright } from "react-icons/bi";
 import axios from "axios";
 import { useState } from "react";
+// import { signOut } from "next-auth/react";
 
 const Footer = () => {
   const [message, setMessage] = useState("");
@@ -79,6 +80,7 @@ const Footer = () => {
           <div className="flex justify-end mt-3 mb-4">
             <button
               onClick={submit}
+              // onClick={() => signOut()}
               className="bg-rparts-orange font-outfit hover:bg-rparts-hoverOrange text-white rounded-2xl w-[10vw] h-[3.5vh] text-sm"
             >
               SEND MESSAGE

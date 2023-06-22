@@ -1,45 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { BsGear } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
 import { RiSearchLine } from "react-icons/ri";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import Link from "next/link";
-import PartsContext from "./PartsContext";
-import { auth } from "../firebase";
-import {
-  GoogleAuthProvider,
-  browserLocalPersistence,
-  setPersistence,
-  signInWithPopup,
-} from "firebase/auth";
-import { useRouter } from "next/router";
+import { signIn } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 export default function Navigation() {
-  const router = useRouter();
-  const { user } = useContext(PartsContext);
+  const { data: session } = useSession();
   const [search, setSearch] = useState("");
-
-  const signin = (url) => {
-    signInWithPopup(auth, new GoogleAuthProvider())
-      .then((user) => {
-        router.push(`/${url}`);
-      })
-      .catch((error) => {
-        console.log(error);
-        router.push("/");
-      });
-  };
-
-  const login = (url) => {
-    setPersistence(auth, browserLocalPersistence)
-      .then(() => {
-        signin(url);
-      })
-      .catch((error) => {
-        console.log(error);
-        router.push("/");
-      });
-  };
 
   return (
     <div className="flex justify-between items-center my-3 mx-12 font-outfit">
@@ -74,20 +44,20 @@ export default function Navigation() {
         >
           MARKET
         </Link>
-        {user && (
+        {session && (
           <Link
             href="/sell"
-            className="flex items-center hover:text-rparts-subheadingGray"
+            className="flex items-center hover:text-rparts-subheadingGray font-medium"
           >
-            <FaRegUser className="flex items-center stroke-2 text-xl" />
+            SELL
           </Link>
         )}
-        {!user && (
+        {!session && (
           <button
             onClick={() => login("sell")}
-            className="flex items-center hover:text-rparts-subheadingGray"
+            className="flex items-center hover:text-rparts-subheadingGray font-medium"
           >
-            <FaRegUser className="flex items-center stroke-2 text-xl" />
+            SELL
           </button>
         )}
         <Link
@@ -97,7 +67,7 @@ export default function Navigation() {
           INFO
         </Link>
         <span className="border-[0.5px] border-black px-0 mx-0" />
-        {user && (
+        {session && (
           <Link
             href="/profile"
             className="flex items-center hover:text-rparts-subheadingGray"
@@ -105,16 +75,16 @@ export default function Navigation() {
             <FaRegUser className="flex items-center stroke-2 text-xl" />
           </Link>
         )}
-        {!user && (
+        {!session && (
           <button
-            onClick={() => login("profile")}
+            onClick={() => signIn("google")}
             className="flex items-center hover:text-rparts-subheadingGray"
           >
             <FaRegUser className="flex items-center stroke-2 text-xl" />
           </button>
         )}
 
-        {user && (
+        {session && (
           <Link
             href="/cart"
             className="flex items-center hover:text-rparts-subheadingGray"
@@ -123,9 +93,9 @@ export default function Navigation() {
           </Link>
         )}
 
-        {!user && (
+        {!session && (
           <button
-            onClick={() => login("cart")}
+            onClick={() => signIn("google")}
             className="flex items-center hover:text-rparts-subheadingGray"
           >
             <HiOutlineShoppingBag className="flex items-center stroke-2 text-2xl" />

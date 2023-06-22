@@ -2,16 +2,15 @@ import SellPhoto from "../components/SellPhoto";
 import AddPhoto from "../components/AddPhoto";
 import Checkbox from "../components/Checkbox";
 import Popover from "../components/Popover";
-import { useContext, useState } from "react";
-import PartsContext from "../components/PartsContext";
+import { useState } from "react";
 import axios from "axios";
+import { useSession } from "next-auth/react";
 
 const computerScienceClasses = ["CS10A", "CS10B", "CS10C"];
-
 const electricalClasses = ["EE128", "EE111", "EE120B"];
 
 export default function Sell() {
-  const { user } = useContext(PartsContext);
+  const { data: session } = useSession();
 
   // enum values include new, like new, good, poor
   const [condition, setCondition] = useState("new");
@@ -34,9 +33,9 @@ export default function Sell() {
       ...data,
       price: parseFloat(data.price),
       condition,
-      uid: user.uid,
-      email: user.email,
-      user: user.name,
+      uid: session.user.uid,
+      email: session.user.email,
+      user: session.user.name,
       images: images,
       classes: classes,
     };

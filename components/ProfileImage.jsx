@@ -1,19 +1,20 @@
-import React, { useContext } from "react";
+import React from "react";
 import Image from "next/image";
-import PartsContext from "./PartsContext";
+import { useSession } from "next-auth/react";
 
 const ProfileImage = () => {
-  const { user } = useContext(PartsContext);
+  const { data: session } = useSession();
+
   return (
-    user && (
+    session && (
       <div className="flex flex-col w-full rounded-3xl font-bebasNeue justify-center items-center gap-y-3">
         <Image
-          src={user.image}
+          src={session.user.image}
           alt="Profile Picture"
           width={128}
           height={128}
         />
-        <p className="font-medium text-4xl text-center">{user.name}</p>
+        <p className="font-medium text-4xl text-center">{session.user.name}</p>
       </div>
     )
   );

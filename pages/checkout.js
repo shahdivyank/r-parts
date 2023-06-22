@@ -5,19 +5,21 @@ import CheckoutCart from "../components/CheckoutCart";
 import { useContext, useEffect } from "react";
 import PartsContext from "../components/PartsContext";
 import axios from "axios";
+import { useSession } from "next-auth/react";
 
 export default function Checkout() {
-  const { user, cart, setCart, setOrder } = useContext(PartsContext);
+  const { data: session } = useSession();
+  const { cart, setCart, setOrder } = useContext(PartsContext);
 
   useEffect(() => {
-    if (user && cart == null) {
-      axios.post("/api/getCart", { uid: user.uid }).then((response) => {
+    if (session && cart == null) {
+      axios.post("/api/getCart", { uid: session.user.uid }).then((response) => {
         setCart(response.data.cart);
         console.log(response.data);
         setOrder({ cart: response.data.id });
       });
     }
-  }, [user]);
+  }, [session]);
 
   return (
     cart && (

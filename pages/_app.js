@@ -3,14 +3,12 @@ import "../styles/globals.css";
 import Layout from "../components/Layout";
 import { useEffect, useState } from "react";
 import PartsContext from "../components/PartsContext";
-
+import { SessionProvider } from "next-auth/react";
+import axios from "axios";
 /* eslint-disable new-cap */
 import { Outfit, Montserrat } from "next/font/google";
 /* eslint-disable camelcase */
 import { Bebas_Neue } from "next/font/google";
-import { auth } from "../firebase";
-import { onAuthStateChanged } from "firebase/auth";
-import axios from "axios";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -28,7 +26,7 @@ const bebasNeue = Bebas_Neue({
   weight: "400",
 });
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, session }) {
   const [user, setUser] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
   const [cart, setCart] = useState(null);
@@ -41,42 +39,44 @@ export default function App({ Component, pageProps }) {
       setItems(response.data);
     });
 
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser({
-          name: user.displayName,
-          uid: user.uid,
-          image: user.photoURL,
-          email: user.email,
-        });
-      }
-    });
+    // onAuthStateChanged(auth, (user) => {
+    //   if (user) {
+    //     setUser({
+    //       name: user.displayName,
+    //       uid: user.uid,
+    //       image: user.photoURL,
+    //       email: user.email,
+    //     });
+    //   }
+    // });
   }, []);
 
   return (
-    <PartsContext.Provider
-      value={{
-        items,
-        setItems,
-        user,
-        setUser,
-        selectedItem,
-        setSelectedItem,
-        cart,
-        setCart,
-        total,
-        setTotal,
-        order,
-        setOrder,
-      }}
-    >
-      <main
-        className={`${outfit.variable} ${montserrat.variable} ${bebasNeue.variable}`}
+    <SessionProvider session={session}>
+      <PartsContext.Provider
+        value={{
+          items,
+          setItems,
+          user,
+          setUser,
+          selectedItem,
+          setSelectedItem,
+          cart,
+          setCart,
+          total,
+          setTotal,
+          order,
+          setOrder,
+        }}
       >
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </main>
-    </PartsContext.Provider>
+        <main
+          className={`${outfit.variable} ${montserrat.variable} ${bebasNeue.variable}`}
+        >
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </main>
+      </PartsContext.Provider>
+    </SessionProvider>
   );
 }

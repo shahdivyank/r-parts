@@ -1,47 +1,23 @@
 import React, { useContext, useState } from "react";
 import { FaMinus, FaPlus, FaRegPaperPlane } from "react-icons/fa";
 import PartsContext from "./PartsContext";
-import { auth } from "../firebase";
-import {
-  GoogleAuthProvider,
-  browserLocalPersistence,
-  setPersistence,
-  signInWithPopup,
-} from "firebase/auth";
+import { signIn } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 const ViewDescription = () => {
+  const { data: session } = useSession();
   const [quantity, setQuantity] = useState(1);
 
-  const { selectedItem, cart, setCart, total, setTotal, user } =
+  const { selectedItem, cart, setCart, total, setTotal } =
     useContext(PartsContext);
 
-  const signin = (url) => {
-    signInWithPopup(auth, new GoogleAuthProvider())
-      .then((user) => {
-        console.log(user);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  const login = (url) => {
-    setPersistence(auth, browserLocalPersistence)
-      .then(() => {
-        signin(url);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
   const addToCart = () => {
-    if (user) {
+    if (session) {
       const items = cart === null ? [] : cart;
       setCart([...items, { ...selectedItem.data, quantity: quantity }]);
       setTotal(total + selectedItem.data.price * quantity);
     } else {
-      login();
+      signIn("google");
     }
   };
 
