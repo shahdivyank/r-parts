@@ -66,7 +66,9 @@ const ViewDescription = () => {
           <p className="font-semibold">Free Pickup at WCH127</p>
           <p>
             Schedule Pickup Time at Checkout.{" "}
-            <span className="underline">Details.</span>
+            <a href="http://localhost:3000/info" className="underline">
+              Details.
+            </a>
           </p>
         </div>
       </div>
