@@ -3,6 +3,7 @@ import { FaMinus, FaPlus, FaRegPaperPlane } from "react-icons/fa";
 import PartsContext from "./PartsContext";
 import { signIn } from "next-auth/react";
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 
 const ViewDescription = () => {
   const { data: session } = useSession();
@@ -66,9 +67,9 @@ const ViewDescription = () => {
           <p className="font-semibold">Free Pickup at WCH127</p>
           <p>
             Schedule Pickup Time at Checkout.{" "}
-            <a href="http://localhost:3000/info" className="underline">
+            <Link href="/info" className="underline">
               Details.
-            </a>
+            </Link>
           </p>
         </div>
       </div>
