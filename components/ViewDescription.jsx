@@ -38,14 +38,20 @@ const ViewDescription = () => {
       <div className="flex items-center">
         <div className="flex justify-evenly items-center rounded-full border-2 border-rparts-borderGray w-fit p-2 mt-2">
           <FaMinus
-            onClick={
-              quantity === 0 ? () => {} : () => setQuantity(quantity - 1)
-            }
+            onClick={() => {
+              if (quantity > 0) {
+                setQuantity(quantity - 1);
+              }
+            }}
             className="mr-2 hover:cursor-pointer"
           />
           <p className="mb-0 mx-4">{quantity}</p>
           <FaPlus
-            onClick={() => setQuantity(quantity + 1)}
+            onClick={() => {
+              if (quantity < parseInt(selectedItem.data.available, 10)) {
+                setQuantity(quantity + 1);
+              }
+            }}
             className="ml-2 hover:cursor-pointer"
           />
         </div>
