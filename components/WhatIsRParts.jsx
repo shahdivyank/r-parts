@@ -1,12 +1,16 @@
+import Image from "next/image";
+import acmLogoPic from "../public/acm-logo-blue.png";
+import ucrLogoPic from "../public/ucr-logo.png";
+
 const WhatIsRParts = () => {
   return (
     <section id="introduction">
-      <div className="bg-white rounded-3xl font-outfit border-2 mt-16 pb-8">
+      <div className="bg-white rounded-3xl font-outfit border-2 mt-16 mb-16 pb-8">
         <div>
-          <p className="m-0 text-2xl my-3 pl-8 pt-8 border-b-2">
-            What Is RParts
+          <p className="text-2xl my-3 pt-2 ml-8 w-5/6 border-b-2 pb-3 font-medium">
+            What is R’Parts
           </p>
-          <div className="px-8 ml-8">
+          <div className="px-6 ml-6">
             <p className="text-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -35,6 +39,13 @@ const WhatIsRParts = () => {
               tellus id interdum velit laoreet. Nisl pretium fusce id velit ut
               tortor pretium viverra suspendisse.
             </p>
+          </div>
+          <div className="flex flex-row mt-6 pl-80">
+            <div className="pr-8 pl-6">
+              <Image src={acmLogoPic} alt="acm logo" width={78} height={78} />
+            </div>
+            <div className="pl-6"></div>
+            <Image src={ucrLogoPic} alt="ucr logo" width={219} height={67} />
           </div>
         </div>
       </div>
