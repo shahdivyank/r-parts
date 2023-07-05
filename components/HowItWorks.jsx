@@ -1,7 +1,7 @@
 const HowItWorks = () => {
   return (
-    <section id="introduction">
-      <div className="bg-white rounded-3xl font-outfit border-2 mb-16 pb-8">
+    <section id="how it works">
+      <div className="bg-white rounded-3xl font-outfit border-2 mt-16 pb-8">
         <div>
           <p className="text-2xl my-3 pt-2 ml-8 w-5/6 border-b-2 pb-3 font-medium">
             How It Works
