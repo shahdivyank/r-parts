@@ -3,6 +3,7 @@ import { FaMinus, FaPlus, FaRegPaperPlane } from "react-icons/fa";
 import PartsContext from "./PartsContext";
 import { signIn } from "next-auth/react";
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 
 const ViewDescription = () => {
   const { data: session } = useSession();
@@ -37,12 +38,20 @@ const ViewDescription = () => {
       <div className="flex items-center">
         <div className="flex justify-evenly items-center rounded-full border-2 border-rparts-borderGray w-fit p-2 mt-2">
           <FaMinus
-            onClick={() => setQuantity(quantity - 1)}
+            onClick={() => {
+              if (quantity > 0) {
+                setQuantity(quantity - 1);
+              }
+            }}
             className="mr-2 hover:cursor-pointer"
           />
           <p className="mb-0 mx-4">{quantity}</p>
           <FaPlus
-            onClick={() => setQuantity(quantity + 1)}
+            onClick={() => {
+              if (quantity < parseInt(selectedItem.data.available, 10)) {
+                setQuantity(quantity + 1);
+              }
+            }}
             className="ml-2 hover:cursor-pointer"
           />
         </div>
@@ -66,7 +75,9 @@ const ViewDescription = () => {
           <p className="font-semibold">Free Pickup at WCH127</p>
           <p>
             Schedule Pickup Time at Checkout.{" "}
-            <span className="underline">Details.</span>
+            <Link href="/info" className="underline">
+              Details.
+            </Link>
           </p>
         </div>
       </div>
