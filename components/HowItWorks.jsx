@@ -6,7 +6,7 @@ const HowItWorks = () => {
           <p className="text-2xl my-3 pt-2 ml-8 w-5/6 border-b-2 pb-3 font-medium">
             How It Works
           </p>
-          <div className="px-4 ml-4">
+          <div className="px-6 ml-6">
             <p className="text-md pt-2">STEP 1:</p>
             <p className="text-md pb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
