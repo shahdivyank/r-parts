@@ -9,14 +9,31 @@ export default function Info() {
   return (
     <div className="bg-rparts-white flex justify-center items-center flex-col pt-0">
       <InfoBanner />
+
       <a
-        href="#main-content"
-        class="absolute px-3 py-2 transition-all -translate-y-full focus:translate-y-0 bg-indigo-800 text-gray-100 text-base font-medium rounded-b-lg mx-4 focus:outline-none focus:ring-4 focus:ring-indigo-500  hover:no-underline hover:bg-indigo-900 hover:text-white z-10"
+        href="#what-is"
+        class="font-outfit px-3 py-2 transition-all bg-black text-rparts-subheadingGray rounded-b-lg mr-24 hover:bg-rparts-orange hover:text-black z-10"
+      >
+        {" "}
+        What is R’Parts
+      </a>
+
+      <a
+        href="#how-it-works"
+        class="font-outfit px-3 py-2 transition-all bg-black text-rparts-subheadingGray rounded-b-lg mr-24 hover:bg-rparts-orange hover:text-black z-10"
+      >
+        {" "}
+        How It Works
+      </a>
+
+      <a
+        href="#faqs"
+        class="font-outfit px-3 py-2 transition-all bg-black text-rparts-subheadingGray rounded-b-lg mr-24 hover:bg-rparts-orange hover:text-black z-10"
       >
         {" "}
         FAQ
       </a>
-      <div class="flex items-center justify-center min-h-screen from-teal-100 via-teal-300 to-teal-500 bg-gradient-to-br"></div>
+
       <Row className="flex justify-center items-start w-10/12 ">
         <Col
           xl={8}
@@ -24,9 +41,7 @@ export default function Info() {
         >
           <WhatIsRParts />
           <HowItWorks />
-          <main id="main-content">
-            <FAQ />
-          </main>
+          <FAQ />
         </Col>
       </Row>
     </div>
