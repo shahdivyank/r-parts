@@ -39,7 +39,7 @@ const ViewDescription = () => {
         <div className="flex justify-evenly items-center rounded-full border-2 border-rparts-borderGray w-fit p-2 mt-2">
           <FaMinus
             onClick={() => {
-              if (quantity > 0) {
+              if (quantity > 1) {
                 setQuantity(quantity - 1);
               }
             }}
