@@ -38,21 +38,22 @@ const Schedule = () => {
         All pick ups will be at
         <span className="font-medium"> ACM Clubroom</span> in
         <span className="font-medium"> Winston Chung Hall 127</span>
-        <div className="flex justify-evenly">
-          <Calendar onChange={(day) => handleDayChange(day)} value={day} />
-        </div>
-        <div className="text-xl font-outfit font-medium text-rparts-black ">
-          Choose a time:
-          <Row className="flex justify-start items-center">
-            {times.map((time, index) => (
-              <Col
-                key={index}
-                xl={6}
-                className="flex justify-center items-center"
-              >
-                <button
-                  onClick={() => handleTimeChange(time)}
-                  className="rounded-2xl
+        <div className="w-full flex flex-col">
+          <div className="flex justify-evenly my-4">
+            <Calendar onChange={(day) => handleDayChange(day)} value={day} />
+          </div>
+          <div className="text-xl font-outfit font-medium text-rparts-black">
+            Choose a time:
+            <Row className="flex justify-start items-center mt-3">
+              {times.map((time, index) => (
+                <Col
+                  key={index}
+                  xl={6}
+                  className="flex justify-center items-center"
+                >
+                  <button
+                    onClick={() => handleTimeChange(time)}
+                    className="rounded-2xl
                   h-fit
                   font-normal
                   font-outfit
@@ -60,12 +61,13 @@ const Schedule = () => {
                   hover:text-white
                   py-2 px-4 border-[1px]
                   border-rparts-borderGray my-2"
-                >
-                  {time}
-                </button>
-              </Col>
-            ))}
-          </Row>
+                  >
+                    {time}
+                  </button>
+                </Col>
+              ))}
+            </Row>
+          </div>
         </div>
       </div>
     </div>

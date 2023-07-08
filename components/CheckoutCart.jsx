@@ -19,7 +19,12 @@ const CartItems = () => {
             quantity={item?.data?.quantity}
             price={item?.data?.price}
           />
-          <span className="flex border-[0.5px] border-rparts-borderGray my-7" />
+          {cart && index !== cart.length - 1 ? (
+            <span className="flex border-[0.5px] border-rparts-borderGray my-7" />
+          ) : (
+            // ``
+            <span className="flex border-[0px] border-rparts-borderGray my-7" />
+          )}
         </div>
       ))}
     </div>
