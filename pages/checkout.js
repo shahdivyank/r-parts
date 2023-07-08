@@ -25,19 +25,19 @@ export default function Checkout() {
     cart && (
       <>
         <div className="flex justify-center w-full ">
-          <div className="w-7/12 mx-3">
+          <div className="w-[70%]">
             <div className="font-bebasNeue text-4xl font-bold ">CHECKOUT </div>
-            <div className="font-outfit text-rparts-subHeadingGray">
+            <div className="font-outfit text-rparts-subHeadingGray text-sm">
               Complete your purchase by providing the following information
             </div>
-            <div className="flex w-full justify-center ">
-              <div className="flex flex-col">
+            <div className="flex justify-center gap-x-10">
+              <div className="flex w-[60%] flex-col">
                 <Payment />
                 <Schedule />
 
                 <CheckoutCart />
               </div>
-              <div className="w-11/12 mx-10 ">
+              <div className="w-[40%] mx-10 ">
                 <CheckoutTotal />
               </div>
             </div>

@@ -22,6 +22,8 @@ const ViewDescription = () => {
     }
   };
 
+  console.log(cart);
+
   return (
     <div>
       <p className="font-bebasNeue text-4xl font-semibold">
