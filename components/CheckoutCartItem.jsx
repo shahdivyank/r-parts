@@ -24,7 +24,7 @@ const CartItem = ({ image, title, condition, quantity, price }) => {
         </div>
       </div>
       <div className="flex flex-col justify-between items-end">
-        <div className="font-outfit font-bold text-xl ">${price}.00</div>
+        <div className="font-outfit font-bold ">${price}.00</div>
       </div>
     </div>
   );
