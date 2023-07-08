@@ -19,9 +19,6 @@ export default function Cart() {
     }
   }, [session]);
 
-  console.log("cart", cart);
-  // console.log(order);
-
   return (
     <section className="h-full w-screen font-outfit pt-4 pb-20">
       <div className="flex justify-center gap-x-20">

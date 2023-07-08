@@ -4,8 +4,6 @@ import PartsContext from "./PartsContext";
 
 const CartItems = () => {
   const { cart } = useContext(PartsContext);
-
-  console.log("cart in cartitems", cart);
   return (
     cart && (
       <div className="flex flex-col justify-between p-12 border-[1px] border-rparts-borderGray rounded-3xl">
