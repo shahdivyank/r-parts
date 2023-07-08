@@ -26,7 +26,14 @@ export default function Checkout() {
       <>
         <div className="flex justify-center w-full ">
           <div className="w-[70%]">
-            <div className="font-bebasNeue text-4xl font-bold ">CHECKOUT </div>
+            <div className="flex gap-x-4 text-rparts-subheadingGray text-xs my-6">
+              <button>MARKET</button>
+              <p>/</p>
+              <button>SHOPPING CART</button>
+              <p>/</p>
+              <button>CHECKOUT</button>
+            </div>
+            <div className="font-bebasNeue text-3xl font-bold ">CHECKOUT </div>
             <div className="font-outfit text-rparts-subHeadingGray text-sm">
               Complete your purchase by providing the following information
             </div>
