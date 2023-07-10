@@ -18,13 +18,15 @@ const InfoNav = () => {
           How It Works
         </a>
 
-        <a
-          href="#faqs"
-          className="font-outfit px-3 py-2 transition-all bg-black text-rparts-subheadingGray rounded-r-full mr-24 hover:bg-rparts-orange hover:text-white w-52 h-12"
-        >
-          {" "}
-          FAQ
-        </a>
+        <div className="flex bg-white ">
+          <a
+            href="#faqs"
+            className="font-outfit px-3 py-2 transition-all bg-black text-rparts-subheadingGray rounded-r-full mr-24 hover:bg-rparts-orange hover:text-white w-52 h-12"
+          >
+            {" "}
+            FAQ
+          </a>
+        </div>
       </div>
     </section>
   );
