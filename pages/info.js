@@ -2,6 +2,7 @@ import InfoBanner from "../components/SVGs/InfoBanner";
 import WhatIsRParts from "../components/WhatIsRParts";
 import HowItWorks from "../components/HowItWorks";
 import FAQ from "../components/FAQ";
+import InfoNav from "../components/InfoNav";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -9,31 +10,7 @@ export default function Info() {
   return (
     <div className="bg-rparts-white flex justify-center items-center flex-col pt-0">
       <InfoBanner />
-      <div className="flex flex-col">
-        <a
-          href="#what-is"
-          className="font-outfit mb-2 px-3 py-2 transition-all bg-black text-rparts-subheadingGray rounded-r-full mr-24 hover:bg-rparts-hoverOrange hover:text-white z-10"
-        >
-          {" "}
-          What is R’Parts
-        </a>
-
-        <a
-          href="#how-it-works"
-          className="font-outfit mb-2 px-3 py-2 transition-all bg-black text-rparts-subheadingGray rounded-r-full mr-24 hover:bg-rparts-orange hover:text-black z-10"
-        >
-          {" "}
-          How It Works
-        </a>
-
-        <a
-          href="#faqs"
-          className="font-outfit px-3 py-2 transition-all bg-black text-rparts-subheadingGray rounded-r-full mr-24 hover:bg-rparts-orange hover:text-black z-10"
-        >
-          {" "}
-          FAQ
-        </a>
-      </div>
+      <InfoNav />
       <Row className="flex justify-center items-start w-10/12 ">
         <Col
           xl={8}
