@@ -45,7 +45,7 @@ const Landing1 = () => {
           className="mt-5"
         />
 
-        <div className="absolute -right-[10%] -top-[3%] w-5/12">
+        <div className="absolute -right-[10%] -top-[3%] w-5/12 rounded-full">
           <Image
             src={Gear1}
             alt="Landing"
@@ -53,7 +53,7 @@ const Landing1 = () => {
             className="gearCW rounded-full"
           />
         </div>
-        <div className="absolute right-[23%] top-[48%] w-3/12">
+        <div className="absolute right-[23%] top-[48%] w-3/12 rounded-full">
           <Image
             src={Gear1}
             alt="Landing"
@@ -61,7 +61,7 @@ const Landing1 = () => {
             className="gearCCW rounded-full"
           />
         </div>
-        <div className="absolute -left-[23%] top-[4%] w-4/12">
+        <div className="absolute -left-[23%] top-[4%] w-4/12 rounded-full">
           <Image
             src={Gear1}
             alt="Landing"

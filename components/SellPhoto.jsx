@@ -4,8 +4,8 @@
 const SellPhoto = ({ image }) => {
   return (
     <>
-      <div className="bg-rparts-wrapperGray rounded-3xl aspect-square flex justify-center items-center flex-col w-3/12">
-        <div className="w-5/12">
+      <div className="bg-rparts-wrapperGray rounded-3xl aspect-square flex justify-center items-center flex-col flex-shrink-0 w-3/12">
+        <div className="">
           {/* <Image src={UploadPhoto} alt="Landing" layout="responsive" /> */}
           <img src={image} />
         </div>
