@@ -33,6 +33,11 @@ const CartItem = ({
     );
   };
 
+  const removeItem = () => {
+    setCart(cart.filter((item, index) => item.id !== id));
+  };
+  console.log(cart);
+
   return (
     <Row className="font-outfit">
       <Col xl={3} className="mt-2">
@@ -59,7 +64,10 @@ const CartItem = ({
       </Col>
       <Col xl={2} className="flex flex-col justify-between items-end">
         <div className="font-semibold text-base">${price}.00</div>
-        <HiOutlineTrash className="text-xl stroke-2" />
+        <HiOutlineTrash
+          className="text-xl stroke-2 cursor-pointer hover:text-rparts-subheadingGray"
+          onClick={removeItem}
+        />
       </Col>
     </Row>
   );
