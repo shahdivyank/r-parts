@@ -22,6 +22,8 @@ const ViewDescription = () => {
     }
   };
 
+  console.log(cart);
+
   return (
     <div>
       <p className="font-bebasNeue text-4xl font-semibold">
@@ -39,7 +41,7 @@ const ViewDescription = () => {
         <div className="flex justify-evenly items-center rounded-full border-2 border-rparts-borderGray w-fit p-2 mt-2">
           <FaMinus
             onClick={() => {
-              if (quantity > 0) {
+              if (quantity > 1) {
                 setQuantity(quantity - 1);
               }
             }}

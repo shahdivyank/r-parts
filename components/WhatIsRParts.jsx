@@ -1,7 +1,3 @@
-import Image from "next/image";
-import acmLogoPic from "../public/acm-logo-blue.png";
-import ucrLogoPic from "../public/ucr-logo.png";
-
 const WhatIsRParts = () => {
   return (
     <section id="what-is">
@@ -39,13 +35,6 @@ const WhatIsRParts = () => {
               tellus id interdum velit laoreet. Nisl pretium fusce id velit ut
               tortor pretium viverra suspendisse.
             </p>
-          </div>
-          <div className="flex flex-row mt-6 pl-80">
-            <div className="pr-8 pl-6">
-              <Image src={acmLogoPic} alt="acm logo" width={78} height={78} />
-            </div>
-            <div className="pl-6"></div>
-            <Image src={ucrLogoPic} alt="ucr logo" width={219} height={67} />
           </div>
         </div>
       </div>

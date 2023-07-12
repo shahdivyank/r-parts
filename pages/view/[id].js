@@ -28,7 +28,7 @@ const View = () => {
       <div className="w-full flex justify-center items-center">
         <div className="w-10/12">
           <p className="font-outfit text-rparts-subheadingGray">
-            MARKET / PRODUCT
+            MARKET / {selectedItem.data.title}
           </p>
           <Row>
             <Col xl={6}>

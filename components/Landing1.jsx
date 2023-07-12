@@ -50,7 +50,7 @@ const Landing1 = () => {
             src={Gear1}
             alt="Landing"
             layout="responsive"
-            className="gearCW"
+            className="gearCW rounded-full"
           />
         </div>
         <div className="absolute right-[23%] top-[48%] w-3/12">
@@ -58,7 +58,7 @@ const Landing1 = () => {
             src={Gear1}
             alt="Landing"
             layout="responsive"
-            className="gearCCW"
+            className="gearCCW rounded-full"
           />
         </div>
         <div className="absolute -left-[23%] top-[4%] w-4/12">
@@ -66,7 +66,7 @@ const Landing1 = () => {
             src={Gear1}
             alt="Landing"
             layout="responsive"
-            className="gearCW"
+            className="gearCW rounded-full"
           />
         </div>
 
