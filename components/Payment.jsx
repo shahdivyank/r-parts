@@ -16,6 +16,12 @@ const Payment = () => {
     setOrder({ ...order, payment: paymentMethod });
   };
 
+  const [selectedButton, setSelectedButton] = useState(null);
+
+  const handleClick = (button) => {
+    setSelectedButton(button);
+  };
+
   return (
     <div className="rounded-3xl h-fit  my-4 p-4 bg-white border-[1px] border-rparts-borderGray">
       <div className="text-3xl font-semibold font-outfit  p-3">
@@ -49,12 +55,23 @@ const Payment = () => {
       </div>
       <div className="flex justify-start px-3">
         <button
-          onClick={() => handlePayment("cash")}
-          className="bg-rparts-orange rounded-full px-4 py-2 my-4 mr-3 text-rparts-white font-outfit text-white"
+          onClick={() => handlePayment("cash") & handleClick("cash")}
+          className={`${
+            selectedButton === "cash"
+              ? "bg-rparts-orange text-white"
+              : "bg-rparts-white text-black"
+          } rounded-full px-4 py-2 my-4 mr-3  font-outfit  border-[1px] border-rparts-borderGray`}
         >
           Cash
         </button>
-        <button className="rounded-full px-4 py-2 my-4 text-rparts-black font-outfit border-[1px] border-rparts-borderGray">
+        <button
+          onClick={() => handleClick("epay")}
+          className={`${
+            selectedButton === "epay"
+              ? "bg-rparts-orange text-white"
+              : "bg-rparts-white text-black"
+          } rounded-full px-4 py-2 my-4 text-rparts-black font-outfit border-[1px] border-rparts-borderGray`}
+        >
           E-Payment (Venmo, Zelle, CashApp, ApplePay)
         </button>
       </div>
