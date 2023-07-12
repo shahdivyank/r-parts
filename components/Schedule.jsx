@@ -28,44 +28,46 @@ const Schedule = () => {
   };
 
   return (
-    <div className="rounded-3xl h-fit  my-4 p-4 bg-white border-2 border-rparts-borderGray">
-      <div className="text-3xl font-outfit font-bold pt-3 px-3 pb-1">
+    <div className="rounded-3xl h-fit  my-4 p-4 bg-white border-[1px] border-rparts-borderGray">
+      <div className="text-3xl font-outfit font-semibold pt-3 px-3 pb-1">
         {" "}
         Schedule Pick Up{" "}
       </div>
-      <div className="text-rparts-subHeadingGray font-outfit px-3 pt-1">
+      <div className="text-rparts-subHeadingGray font-outfit font-light px-3">
         Pick the date and time that you are able to pick up your purchase(s).
         All pick ups will be at
-        <span className="font-semibold"> ACM Clubroom</span> in
-        <span className="font-semibold"> Winston Chung Hall 127</span>
-        <div className="flex justify-evenly">
-          <Calendar onChange={(day) => handleDayChange(day)} value={day} />
-        </div>
-        <div className="text-xl font-outfit font-bold text-rparts-black ">
-          Choose a time:
-          <Row className="flex justify-start items-center">
-            {times.map((time, index) => (
-              <Col
-                key={index}
-                xl={6}
-                className="flex justify-center items-center"
-              >
-                <button
-                  onClick={() => handleTimeChange(time)}
-                  className="rounded-2xl
+        <span className="font-medium"> ACM Clubroom</span> in
+        <span className="font-medium"> Winston Chung Hall 127</span>
+        <div className="w-full flex flex-col">
+          <div className="flex justify-evenly my-4">
+            <Calendar onChange={(day) => handleDayChange(day)} value={day} />
+          </div>
+          <div className="text-xl font-outfit font-medium text-rparts-black">
+            Choose a time:
+            <Row className="flex justify-start items-center mt-3">
+              {times.map((time, index) => (
+                <Col
+                  key={index}
+                  xl={6}
+                  className="flex justify-center items-center"
+                >
+                  <button
+                    onClick={() => handleTimeChange(time)}
+                    className="rounded-2xl
                   h-fit
                   font-normal
                   font-outfit
                   hover:bg-rparts-orange
                   hover:text-white
-                  py-2 px-4 border-2
-                  border-rparts-borderGray"
-                >
-                  {time}
-                </button>
-              </Col>
-            ))}
-          </Row>
+                  py-2 px-4 border-[1px]
+                  border-rparts-borderGray my-2"
+                  >
+                    {time}
+                  </button>
+                </Col>
+              ))}
+            </Row>
+          </div>
         </div>
       </div>
     </div>

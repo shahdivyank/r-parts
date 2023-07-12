@@ -17,8 +17,10 @@ const Payment = () => {
   };
 
   return (
-    <div className="rounded-3xl h-fit  my-4 p-4 bg-white border-2 border-rparts-borderGray">
-      <div className="text-3xl font-bold font-outfit  p-3">Payment Method</div>
+    <div className="rounded-3xl h-fit  my-4 p-4 bg-white border-[1px] border-rparts-borderGray">
+      <div className="text-3xl font-semibold font-outfit  p-3">
+        Payment Method
+      </div>
 
       <button className=" flex  items-center">
         <div className="flex m-4 px-1 py-2">
@@ -30,19 +32,19 @@ const Payment = () => {
           />
         </div>
         <div className="bg-rparts-wrapperGray rounded-r-full px-3 py-4 text-left">
-          <p className="font-outfit font-medium mb-0">
+          <span className="font-outfit mb-0">
             At this moment, we are currently only taking in-person payments.
             After order placement, you will receive a confirmation email. Show
             this to our representative and pay with your preferred payment
             method.
-          </p>
-          <p className="text-rparts-orange font-outfit font-medium mb-0">
+          </span>
+          <span className="text-rparts-orange font-outfit mb-0">
             We are not accepting cards.
-          </p>
+          </span>
         </div>
       </button>
 
-      <div className="font-outfit text-lg px-3 font-bold">
+      <div className="font-outfit text-lg px-3 font-medium">
         Select your preferred payment method:
       </div>
       <div className="flex justify-start px-3">
@@ -52,7 +54,7 @@ const Payment = () => {
         >
           Cash
         </button>
-        <button className="rounded-full px-4 py-2 my-4 text-rparts-black font-outfit border-2 border-rparts-borderGray">
+        <button className="rounded-full px-4 py-2 my-4 text-rparts-black font-outfit border-[1px] border-rparts-borderGray">
           E-Payment (Venmo, Zelle, CashApp, ApplePay)
         </button>
       </div>
