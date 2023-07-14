@@ -1,11 +1,11 @@
 const InfoBanner = () => {
   return (
     <svg
-      width="1097"
+      width="1500"
       height="159"
-      viewBox="0 0 1097 159"
+      viewBox="0 0 1221 159"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns="http://www.w3.org/1221/svg"
     >
       <mask
         id="mask0_588_2217"
@@ -13,10 +13,10 @@ const InfoBanner = () => {
         maskUnits="userSpaceOnUse"
         x="0"
         y="0"
-        width="1097"
+        width="1221"
         height="159"
       >
-        <rect width="1097" height="159" fill="#D9D9D9" />
+        <rect width="1221" height="159" fill="#D9D9D9" />
       </mask>
       <g mask="url(#mask0_588_2217)">
         <path

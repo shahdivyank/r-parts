@@ -17,7 +17,7 @@ export default function Info() {
             <InfoNav />
           </Col>
 
-          <Col xl={9}>
+          <Col xl={7}>
             <WhatIsRParts />
             <HowItWorks />
             <FAQ />
