@@ -21,7 +21,7 @@ const SellPhoto = ({ setImages, images }) => {
 
   return (
     <>
-      <div className="border-rparts-subheadingGray border rounded-3xl aspect-square flex justify-center items-center flex-col w-3/12">
+      <div className="border-rparts-subheadingGray border rounded-3xl aspect-square flex justify-center items-center flex-col w-1/5 m-[1%]">
         <div className="w-3/12">
           {/* <Image src={Plus} alt="Landing" layout="responsive" /> */}
 

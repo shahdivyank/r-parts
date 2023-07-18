@@ -2,7 +2,7 @@ import SellPhoto from "../components/SellPhoto";
 import AddPhoto from "../components/AddPhoto";
 import Checkbox from "../components/Checkbox";
 import Popover from "../components/Popover";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useSession } from "next-auth/react";
 
@@ -28,14 +28,14 @@ export default function Sell() {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const containerRef = useRef(null);
+  // const containerRef = useRef(null);
 
-  // Scroll to the far right when a new photo is uploaded
-  useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.scrollLeft = containerRef.current.scrollWidth;
-    }
-  }, [images]);
+  // // Scroll to the far right when a new photo is uploaded
+  // useEffect(() => {
+  //   if (containerRef.current) {
+  //     containerRef.current.scrollLeft = containerRef.current.scrollWidth;
+  //   }
+  // }, [images]);
 
   const listItem = () => {
     const packet = {
@@ -62,8 +62,8 @@ export default function Sell() {
             Fill out the following prompts that accurately describe your part
           </div>
         </div>
-        <div ref={containerRef} className="overflow-x-scroll">
-          <div className="flex space-x-6 w-full max-w-screen-xl">
+        <div className="">
+          <div className="flex w-full max-w-screen-xl flex-wrap">
             {images.map((image, index) => (
               <SellPhoto key={index} image={image} />
             ))}
