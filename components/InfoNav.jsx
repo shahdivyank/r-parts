@@ -28,7 +28,7 @@ const InfoNav = () => {
         <Link
           key={index}
           href={link.link}
-          className="font-outfit mb-2 px-3 py-2 border-[1px] border-rparts-borderGray text-rparts-subheadingGray rounded-r-full mr-36 hover:!bg-rparts-hoverOrange hover:text-white flex"
+          className="font-outfit mb-2 px-3 w-full py-2 border-[1px] border-rparts-borderGray text-rparts-subheadingGray rounded-r-full mr-36 hover:!bg-rparts-hoverOrange hover:text-white flex"
         >
           {link.image} {link.text}
         </Link>
