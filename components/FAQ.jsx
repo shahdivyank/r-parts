@@ -2,10 +2,7 @@ import Accordion from "react-bootstrap/Accordion";
 
 const FAQ = () => {
   return (
-    <section
-      id="faqs"
-      className="rounded-3xl font-outfit border-2 mt-16 pb-8 w-8/12"
-    >
+    <section id="faqs" className="rounded-3xl font-outfit border-2 mt-16 pb-8 ">
       <p className="text-2xl my-3 pt-2 ml-8 w-5/6 border-b-2 pb-3 font-medium">
         FAQs
       </p>
