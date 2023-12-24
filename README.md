@@ -1,4 +1,4 @@
-# Hackathon Website Template
+# R'Parts
 
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -12,7 +12,7 @@
 
 ## Figma
 
-[Hackathon Website Template Figma Design File](https://www.figma.com/file/YsmdMaZuYrkiaiWcB9XY1P/Hackathon-2024-Backend?type=design&node-id=0%3A1&mode=design&t=OkgKqUOkpAYqfjXU-1)
+[R'Parts Figma Design File](https://www.figma.com/file/wecb185mWk9vv38hyGGbDF/R'Parts?type=design&node-id=1238-67377&mode=design)
 
 ## Node.js
 
