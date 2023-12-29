@@ -32,7 +32,7 @@ const Total = ({ type }) => {
         text={type === "cart" ? "PROCEED TO CHECKOUT" : "PLACE ORDER"}
         color="bg-orange"
         rounded="full"
-        size="xl"
+        size="checkout"
       />
 
       {type === "cart" && (
