@@ -10,6 +10,6 @@ export const checkout = {
   total: "179.97",
   items: "3",
   pay: "Cash",
-  pickup: "January 1, 2023\n2:30 PM",
+  pickup: "January 1, 2023 2:30 PM",
   shipping: "N/A",
 };
