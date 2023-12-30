@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { BsGear } from "react-icons/bs";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { HiOutlinePhone } from "react-icons/hi";
@@ -6,18 +7,36 @@ import { HiOutlineMail } from "react-icons/hi";
 import Button from "../Button";
 
 const Footer = () => {
+  const [message, setMessage] = useState("");
+
+  const clearMessage = () => {
+    setMessage("");
+  };
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+    console.log(message);
+  };
+
+  const handleMessageSubmit = () => {
+    if (message.trim() !== "") {
+      // TODO: API CALL to submit message
+      // TODO: Toast success/error handling
+      //   ... then
+      clearMessage();
+    }
+  };
+
   return (
     <div className="bg-parts-blue text-white h-[350px] p-14 flex justify-evenly">
       <div className="flex flex-col h-full justify-between">
-        {/* RPARTS LOGO */}
+        {/* RPARTS LOGO + CONTACT INFO */}
         <div className="space-y-2">
           <span className="flex items-center text-2xl font-medium mb-5">
             <BsGear className="stroke-[0.5px] rotate-12 mr-2" />{" "}
             <span>{" R'P"}</span>
             <span className="italic">A</span>RTS
           </span>
-
-          {/* CONTACT INFO */}
           <div className="flex items-center gap-x-5">
             <HiOutlineLocationMarker className="text-xl stroke-2" />
             <p className="font-medium">
@@ -38,6 +57,7 @@ const Footer = () => {
         </p>
       </div>
 
+      {/* FEEDBACK INPUT TEXTAREA */}
       <div className="flex flex-col justify-between gap-y-5">
         <div>
           <p className="text-xl font-medium">Give Us your Feedback!</p>
@@ -49,9 +69,11 @@ const Footer = () => {
         </div>
         <textarea
           type="textarea"
+          value={message}
           placeholder="Type your message here..."
           className="h-full rounded-3xl text-black p-3 focus:outline-parts-orange text-sm"
           style={{ resize: "none" }}
+          onChange={handleMessageChange}
         />
         <div className="self-end">
           <Button
@@ -59,7 +81,8 @@ const Footer = () => {
             color="bg-orange"
             rounded="full"
             size="sm"
-          />{" "}
+            onClick={handleMessageSubmit}
+          />
         </div>
       </div>
     </div>
