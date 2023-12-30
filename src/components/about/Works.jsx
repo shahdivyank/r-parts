@@ -40,10 +40,10 @@ const Works = () => {
             <FaCircle className="text-parts-orange" />
             <FaRegCircle className="text-parts-gray-400" />
           </div>
-          <div className="text-5xl font-bebas text-[#434343] mt-2">
+          <div className="text-5xl font-bebas text-parts-gray-600 mt-2">
             <span className="underline">WE</span> REFURBISH
           </div>
-          <div className="text-[#434343] font-outfit font-extralight mt-2">
+          <div className="text-parts-gray-600 font-outfit font-extralight mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur
             adipiscing
@@ -55,11 +55,11 @@ const Works = () => {
             <FaCircle className="text-parts-orange" />
             <FaCircle className="text-parts-orange" />
           </div>
-          <div className="text-5xl font-bebas text-[#434343] mb-2">
+          <div className="text-5xl font-bebas text-parts-gray-600 mb-2">
             <span className="underline">TOGETHER</span> <br />
             WE GIVE BACK
           </div>
-          <div className="text-[#434343] font-outfit font-extralight">
+          <div className="text-parts-gray-600 font-outfit font-extralight">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>
           <div className="m-auto md:grid grid-cols-2 gap-8 mb-[-7rem] pt-[15rem]">
