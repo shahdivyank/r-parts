@@ -1,6 +1,7 @@
 // eslint-disable-next-line camelcase
 import { Bebas_Neue, Outfit } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer.jsx/Footer";
 
 // eslint-disable-next-line new-cap
 const bebas = Bebas_Neue({
@@ -24,7 +25,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${bebas.variable} ${outfit.variable}`}>{children}</body>
+      <body className={`${bebas.variable} ${outfit.variable}`}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
