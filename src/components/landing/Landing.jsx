@@ -44,7 +44,7 @@ const Landing = () => {
             </Link>
             <Link href="/sell">
               <Button
-                text={"LIST AN ITEM"}
+                text={"SELL AN ITEM"}
                 color="border-orange"
                 rounded="full"
                 size="sm"
