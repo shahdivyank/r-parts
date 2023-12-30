@@ -7,7 +7,7 @@ import arrow from "../../../public/svg/arrow.svg";
 
 const Landing = () => {
   return (
-    <div className="p-20">
+    <div className="p-20 font-outfit">
       <div>
         {/* HERO HEADING */}
         <p className="text-parts-gray-500 font-light text-sm">
@@ -39,15 +39,15 @@ const Landing = () => {
                 text={"GO TO MARKET"}
                 color="bg-orange"
                 rounded="full"
-                size="xl"
+                size="sm"
               />
             </Link>
             <Link href="/sell">
               <Button
-                text={"GO TO MARKET"}
+                text={"LIST AN ITEM"}
                 color="border-orange"
                 rounded="full"
-                size="xl"
+                size="sm"
               />
             </Link>
           </div>

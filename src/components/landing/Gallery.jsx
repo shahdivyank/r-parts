@@ -20,7 +20,7 @@ const ProductImage = ({ item }) => (
 const ProductInfo = ({ item }) => (
   <div className="w-full h-[40%] p-2 flex flex-col rounded-xl relative">
     <Link href="/market">
-      <FiArrowUpRight className="absolute right-0 outline outline-parts-gray-400 rounded-full text-4xl p-1" />
+      <FiArrowUpRight className="absolute right-0 outline outline-parts-gray-400 rounded-full text-4xl p-1 hover:rotate-12 hover:opacity-30 ease-in-out transition-all duration-300" />
     </Link>
     <p className="text-black font-semibold">{item.title}</p>
     <div className="font-semibold text-sm">
