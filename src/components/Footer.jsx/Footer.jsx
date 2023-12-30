@@ -21,7 +21,6 @@ const Footer = () => {
   const handleMessageSubmit = () => {
     if (message.trim() !== "") {
       // TODO: API CALL to submit message
-      // TODO: Toast success/error handling
       //   ... then
       clearMessage();
     }
@@ -32,24 +31,24 @@ const Footer = () => {
       <div className="flex flex-col h-full justify-between">
         {/* RPARTS LOGO + CONTACT INFO */}
         <div className="space-y-2">
-          <span className="flex items-center text-2xl font-medium mb-5">
+          <p className="flex items-center text-2xl mb-5 font-montserrat">
             <BsGear className="stroke-[0.5px] rotate-12 mr-2" />{" "}
             <span>{" R'P"}</span>
             <span className="italic">A</span>RTS
-          </span>
+          </p>
           <div className="flex items-center gap-x-5">
             <HiOutlineLocationMarker className="text-xl stroke-2" />
-            <p className="font-medium">
+            <p className="font-medium text-sm">
               900 University Ave, Riverside, CA 92521
             </p>
           </div>
           <div className="flex items-center gap-x-5">
             <HiOutlinePhone className="text-xl stroke-2" />
-            <p className="font-medium">+1 (123) 456-7890</p>
+            <p className="font-medium text-sm">+1 (123) 456-7890</p>
           </div>
           <div className="flex items-center gap-x-5">
             <HiOutlineMail className="text-xl stroke-2" />
-            <p className="font-medium">contact@rparts.com</p>
+            <p className="font-medium text-sm">contact@rparts.com</p>
           </div>
         </div>
         <p className="text-sm font-light">
