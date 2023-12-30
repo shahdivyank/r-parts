@@ -1,18 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { FaMinus, FaPlus, FaRegPaperPlane } from "react-icons/fa";
-// import { signIn } from "next-auth/react";
-// import { useSession } from "next-auth/react";
 import Link from "next/link";
 
 const ViewDescription = () => {
-  // const { data: session } = useSession();
-  const { data: session } = useState(true);
   const [quantity, setQuantity] = useState(1);
 
-  const { cart, setCart } = useState(["Board"]);
-
-  // const { selectedItem, cart, setCart, total, setTotal } = useContext(PartsContext);
   const selectedItem = {
     data: {
       description:
@@ -23,18 +16,6 @@ const ViewDescription = () => {
       price: 59,
     },
   };
-
-  const addToCart = () => {
-    if (session) {
-      const items = cart === null ? [] : cart;
-      setCart([...items, { ...selectedItem.data, quantity: quantity }]);
-      setTotal(total + selectedItem.data.price * quantity);
-    } else {
-      // signIn("google");
-    }
-  };
-
-  console.log(cart);
 
   return (
     <div>
@@ -78,7 +59,7 @@ const ViewDescription = () => {
       </p>
       <button
         className="px-8 py-2 bg-parts-orange font-outfit rounded-full text-white mt-4 cursor-pointer"
-        onClick={addToCart}
+        onClick={null}
       >
         ADD TO CART
       </button>
@@ -89,7 +70,7 @@ const ViewDescription = () => {
           <p className="font-semibold">Free Pickup at WCH127</p>
           <p>
             Schedule Pickup Time at Checkout.{" "}
-            <Link href="/info" className="underline">
+            <Link href="/" className="underline">
               Details.
             </Link>
           </p>
