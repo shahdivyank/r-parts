@@ -1,21 +1,6 @@
 import Image from "next/image";
 import React from "react";
-
-function EllipsisCircle({
-  color = "transparent",
-  hasOutline,
-  borderColor = "none",
-}) {
-  const ellipsisStyle = {
-    backgroundColor: color,
-    border: hasOutline ? "1px solid white" : "none",
-    borderColor: hasOutline ? borderColor : "none",
-  };
-
-  return (
-    <div className="w-3 h-3 rounded-full mx-0.5" style={ellipsisStyle}></div>
-  );
-}
+import { FaCircle, FaRegCircle } from "react-icons/fa";
 
 const Works = () => {
   return (
@@ -23,10 +8,10 @@ const Works = () => {
       <div className="text-2xl font-outfit font-normal">How It Works</div>
       <div className="mt-8 md:grid grid-cols-4 gap-8">
         <div className="bg-parts-orange col-span-2 rounded-3xl pb-[10rem] pl-16 pr-8 pt-14">
-          <div className="flex">
-            <EllipsisCircle color="white" />
-            <EllipsisCircle hasOutline />
-            <EllipsisCircle hasOutline />
+          <div className="flex gap-1 text-[0.8rem]">
+            <FaCircle className="text-white" />
+            <FaRegCircle className="text-white" />
+            <FaRegCircle className="text-white" />
           </div>
           <div className="text-6xl text-white mt-6 font-bebas">
             IT STARTS WITH <span className="underline">YOU</span>
@@ -50,10 +35,10 @@ const Works = () => {
             image here
             <Image />
           </div>
-          <div className="flex">
-            <EllipsisCircle color="#FF8F28" />
-            <EllipsisCircle color="#FF8F28" />
-            <EllipsisCircle hasOutline borderColor="#D9D9D9" />
+          <div className="flex gap-1 text-[0.8rem]">
+            <FaCircle className="text-parts-orange" />
+            <FaCircle className="text-parts-orange" />
+            <FaRegCircle className="text-parts-gray-400" />
           </div>
           <div className="text-5xl font-bebas text-[#434343] mt-2">
             <span className="underline">WE</span> REFURBISH
@@ -65,10 +50,10 @@ const Works = () => {
           </div>
         </div>
         <div className="bg-parts-gray-200 col-span-1 rounded-xl p-8">
-          <div className="flex mb-4">
-            <EllipsisCircle color="#FF8F28" />
-            <EllipsisCircle color="#FF8F28" />
-            <EllipsisCircle color="#FF8F28" />
+          <div className="flex gap-1 text-[0.8rem] mb-4">
+            <FaCircle className="text-parts-orange" />
+            <FaCircle className="text-parts-orange" />
+            <FaCircle className="text-parts-orange" />
           </div>
           <div className="text-5xl font-bebas text-[#434343] mb-2">
             <span className="underline">TOGETHER</span> <br />
