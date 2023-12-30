@@ -1,43 +1,8 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import item from "../../../public/svg/item.svg";
 import { FiArrowUpRight } from "react-icons/fi";
-
-export const products = {
-  item1: {
-    title: "item",
-    image: item,
-    alt: "item",
-    stack: false,
-  },
-  item2: {
-    title: "Lorem ipsum dolor",
-    oldPrice: "$00.00",
-    newPrice: "$00.00",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis mi ut velit porttitor placerat. Nulla egestas mattis magna, ut luctus ligula mollis sit amet. Nam vitae leo dignissim, sollicitudin eros in.",
-    image: item,
-    alt: "item",
-    stack: true,
-  },
-  item3: {
-    title: "Lorem ipsum dolor",
-    oldPrice: "$00.00",
-    newPrice: "$00.00",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis mi ut velit porttitor placerat. Nulla egestas mattis magna, ut luctus ligula mollis sit amet. Nam vitae leo dignissim, sollicitudin eros in.",
-    image: item,
-    alt: "item",
-    stack: true,
-  },
-  item4: {
-    title: "item",
-    image: item,
-    alt: "item",
-    stack: false,
-  },
-};
+import { products } from "@/data/Landing";
 
 const ProductImage = ({ item }) => (
   <div className={`${item?.stack ? `w-full h-[60%]` : `w-1/4`} relative`}>
@@ -69,7 +34,7 @@ const ProductInfo = ({ item }) => (
 const Gallery = () => {
   return (
     <div className="flex gap-x-6 w-full justify-between h-[500px]">
-      {/* FULL HEIGHT */}
+      {/* FULL IMAGE */}
       <ProductImage item={products.item1} />
 
       {/* STACK */}
@@ -84,7 +49,7 @@ const Gallery = () => {
         <ProductImage item={products.item3} />
       </div>
 
-      {/* FULL HEIGHT */}
+      {/* FULL IMAGE */}
       <ProductImage item={products.item4} />
     </div>
   );

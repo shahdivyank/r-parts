@@ -1,10 +1,9 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button";
-import arrow from "../../../public/svg/arrow.svg";
-
 import Gallery from "./Gallery";
+import arrow from "../../../public/svg/arrow.svg";
 
 const Landing = () => {
   return (
