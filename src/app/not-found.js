@@ -4,8 +4,8 @@ import Error from "@/components/Error";
 const NotFoundError = () => {
   return (
     <Error
-      name="Page Not Found"
       code="404"
+      name="PAGE NOT FOUND"
       message="The page you are looking for does not seem to exist."
     />
   );
