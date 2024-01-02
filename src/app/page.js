@@ -1,4 +1,4 @@
-import Works from "@/components/info/Works";
+import Works from "@/components/landing/Works";
 import Banner from "@/components/landing/Banner";
 import Landing from "@/components/landing/Landing";
 
