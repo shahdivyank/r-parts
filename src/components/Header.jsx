@@ -1,4 +1,4 @@
-const Header = ({ text }) => {
+const Header = ({ title }) => {
   return (
     <div className="w-full overflow-hidden flex flex-col items-end justify-center h-[80px] md:h-[120px] lg:h-[190px]">
       {Array.from({ length: 3 }).map((_, row) => (
@@ -12,7 +12,7 @@ const Header = ({ text }) => {
                   : "text-parts-gray-200"
               }`}
             >
-              {text}
+              {title}
             </span>
           ))}
         </div>

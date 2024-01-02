@@ -6,32 +6,22 @@ import {
   HiOutlinePhone,
   HiOutlineMail,
 } from "react-icons/hi";
-import Button from "../Button";
+import Button from "./Button";
 
 const Footer = () => {
   const [message, setMessage] = useState("");
-
-  const clearMessage = () => {
-    setMessage("");
-  };
-
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-    console.log(message);
-  };
 
   const handleMessageSubmit = () => {
     if (message.trim() !== "") {
       // TODO: API CALL to submit message
       //   ... then
-      clearMessage();
+      setMessage("");
     }
   };
 
   return (
-    <div className="bg-parts-blue text-white h-[350px] p-14 flex justify-evenly font-outfit">
+    <div className="bg-parts-blue text-white p-14 flex justify-evenly font-outfit w-full">
       <div className="flex flex-col h-full justify-between">
-        {/* RPARTS LOGO + CONTACT INFO */}
         <div className="space-y-2">
           <p className="flex items-center text-2xl mb-5 font-montserrat">
             <BsGear className="stroke-[0.5px] rotate-12 mr-2" />{" "}
@@ -58,7 +48,6 @@ const Footer = () => {
         </p>
       </div>
 
-      {/* FEEDBACK INPUT TEXTAREA */}
       <div className="flex flex-col justify-between gap-y-5">
         <div>
           <p className="text-xl font-semibold">Give Us your Feedback!</p>
@@ -74,11 +63,11 @@ const Footer = () => {
           placeholder="Type your message here..."
           className="h-full rounded-3xl text-black p-3 focus:outline-parts-orange text-sm"
           style={{ resize: "none" }}
-          onChange={handleMessageChange}
+          onChange={(e) => setMessage(e.target.value)}
         />
         <div className="self-end">
           <Button
-            text={"SEND MESSSAGE"}
+            text="SEND MESSAGE"
             color="bg-orange"
             rounded="full"
             size="sm"

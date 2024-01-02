@@ -1,7 +1,3 @@
-import React from "react";
-
-const Market = () => {
-  return <div>Market</div>;
-};
+import Market from "@/components/market/Market";
 
 export default Market;

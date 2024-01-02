@@ -9,7 +9,6 @@ const Landing = () => {
   return (
     <div className="p-20 font-outfit">
       <div>
-        {/* HERO HEADING */}
         <p className="text-parts-gray-500 font-light text-sm">
           SECOND-HAND HARDWARE
         </p>
@@ -24,7 +23,6 @@ const Landing = () => {
           </span>
         </p>
 
-        {/* HERO DESCRIPTION */}
         <div className="flex w-full justify-between items-center mt-5 mb-14">
           <p className="w-[560px] font-light text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
@@ -54,7 +52,6 @@ const Landing = () => {
         </div>
       </div>
 
-      {/* PRODUCT GALLERY */}
       <Gallery />
     </div>
   );

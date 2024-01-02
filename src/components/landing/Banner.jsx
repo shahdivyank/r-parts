@@ -1,4 +1,8 @@
-const Banner = ({ years, parts, professors }) => {
+const Banner = () => {
+  const years = 100;
+  const parts = "3M";
+  const professors = "5M";
+
   return (
     <div className="w-full flex justify-evenly px-[10%] py-7 bg-parts-navy text-white font-outfit">
       <div className="flex items-center">
