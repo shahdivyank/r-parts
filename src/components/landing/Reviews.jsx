@@ -1,7 +1,12 @@
-import React from "react";
+import Marquee from "./Marquee";
 
 const Reviews = () => {
-  return <div>Reviews</div>;
+  return (
+    <>
+      <Marquee />
+      <Marquee reverse={true} />
+    </>
+  );
 };
 
 export default Reviews;

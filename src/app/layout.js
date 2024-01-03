@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${bebas.variable} ${outfit.variable} ${montserrat.variable} flex justify-center items-center flex-col`}
+        className={`${bebas.variable} ${outfit.variable} ${montserrat.variable} flex justify-center items-center flex-col bg-parts-gray-100`}
       >
         {children}
         <Footer />

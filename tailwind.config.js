@@ -18,6 +18,31 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "marquee-continuation": {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+        "marquee-reverse": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+        "marquee-continuation-reverse": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 30s linear infinite",
+        "marquee-continuation": "marquee-continuation 30s linear infinite",
+        "marquee-reverse": "marquee-reverse 30s linear infinite",
+        "marquee-continuation-reverse":
+          "marquee-continuation-reverse 30s linear infinite",
+      },
       colors: {
         parts: {
           black: "#000000",
