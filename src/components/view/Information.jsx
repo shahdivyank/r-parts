@@ -5,8 +5,8 @@ const Information = ({
   weight,
   manufacturer,
   country,
-  unit_price,
-  total_price,
+  unitPrice,
+  totalPrice,
 }) => {
   return (
     <div className="grid grid-cols-2 w-6/12 justify-start divide-y divide-gray-400 font-outfit mb-8">
@@ -21,9 +21,9 @@ const Information = ({
       <div className="bg-gray-200 px-8 py-2 font-semibold">Country</div>
       <div className="px-8 py-2">{country}</div>
       <div className="bg-gray-200 px-8 py-2 font-semibold">Unit Price</div>
-      <div className="px-8 py-2">{unit_price}</div>
+      <div className="px-8 py-2">{unitPrice}</div>
       <div className="bg-gray-200 px-8 py-2 font-semibold">Total Price</div>
-      <div className="px-8 py-2">{total_price}</div>
+      <div className="px-8 py-2">{totalPrice}</div>
     </div>
   );
 };
