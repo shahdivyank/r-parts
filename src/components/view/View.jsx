@@ -1,7 +1,6 @@
 import Information from "./Information";
 import Item from "./Item";
 
-// Sample values for the props
 const productInformation = {
   dimensions: "10x15",
   weight: "2 lbs",
