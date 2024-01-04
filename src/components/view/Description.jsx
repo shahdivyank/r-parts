@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaMinus, FaPlus, FaRegPaperPlane } from "react-icons/fa";
 import Link from "next/link";
 
-const ViewDescription = () => {
+const Description = () => {
   const [quantity, setQuantity] = useState(1);
 
   const selectedItem = {
@@ -80,4 +80,4 @@ const ViewDescription = () => {
   );
 };
 
-export default ViewDescription;
+export default Description;
