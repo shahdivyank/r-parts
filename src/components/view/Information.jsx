@@ -1,25 +1,29 @@
 import React from "react";
 
-const Information = ({ productInfo }) => {
+const Information = ({
+  dimensions,
+  weight,
+  manufacturer,
+  country,
+  unit_price,
+  total_price,
+}) => {
   return (
-    <div className="container mx-auto p-4">
-      <table className="table-auto w-full border-collapse border">
-        <thead>
-          <tr>
-            <th className="text-left font-bold py-2">Product Dimensions</th>
-            <th className="text-left font-bold py-2">Item Weight</th>
-            {/* Add remaining headers for other product information */}
-          </tr>
-        </thead>
-        <tbody>
-          {productInfo.map((item) => (
-            <tr key={item.label}>
-              <td className="text-left py-1 px-2">{item.label}</td>
-              <td className="text-left py-1 px-2">{item.value}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="grid grid-cols-2 w-6/12 justify-start divide-y divide-gray-400 font-outfit mb-8">
+      <div className="bg-gray-200 pb-2 px-8 py-2 font-semibold">
+        Product Dimensions
+      </div>
+      <div className="px-8 py-2">{dimensions}</div>
+      <div className="bg-gray-200 px-8 py-2 font-semibold">Weight</div>
+      <div className="px-8 py-2">{weight}</div>
+      <div className="bg-gray-200 px-8 py-2 font-semibold">Manufacturer</div>
+      <div className="px-8 py-2">{manufacturer}</div>
+      <div className="bg-gray-200 px-8 py-2 font-semibold">Country</div>
+      <div className="px-8 py-2">{country}</div>
+      <div className="bg-gray-200 px-8 py-2 font-semibold">Unit Price</div>
+      <div className="px-8 py-2">{unit_price}</div>
+      <div className="bg-gray-200 px-8 py-2 font-semibold">Total Price</div>
+      <div className="px-8 py-2">{total_price}</div>
     </div>
   );
 };

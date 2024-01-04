@@ -1,17 +1,21 @@
 import Information from "./Information";
 import Item from "./Item";
 
-const productInfo = [
-  { label: "Product Dimensions", value: "10 x 5 x 2 inches" },
-  { label: "Item Weight", value: "1 pound" },
-  // ... other product information items
-];
+// Sample values for the props
+const productInformation = {
+  dimensions: "10x15",
+  weight: "2 lbs",
+  manufacturer: "Example Manufacturer",
+  country: "Example Country",
+  unit_price: "$20.00",
+  total_price: "$40.00",
+};
 
 const View = () => {
   return (
     <div className="w-11/12">
       <Item />
-      <Information productInfo={productInfo} />
+      <Information {...productInformation} />
     </div>
   );
 };
