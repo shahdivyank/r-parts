@@ -12,6 +12,23 @@ const Item = () => {
         draggable={false}
         className="object-cover rounded-xl w-1/6 h-1/"
       />
+      {/* Title and description */}
+
+      <div>
+        <p>Lorem ipsum dolor</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscin elit. Vestibulum
+          convallis
+        </p>
+      </div>
+
+      {/* Price and Condition */}
+
+      <div className="flex flex-row">
+        <span>$0.00</span>
+        <span>$0.00</span>
+        <div>Condition: New</div>
+      </div>
     </div>
   );
 };
