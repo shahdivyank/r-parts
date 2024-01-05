@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import Reviews from "./Reviews";
 import Values from "./Values";
 import Works from "./Works";
+import FAQ from "../about/Faq";
 
 const Landing = () => {
   return (
@@ -12,6 +13,7 @@ const Landing = () => {
       <Works />
       <Reviews />
       <Values />
+      <FAQ />
     </>
   );
 };
