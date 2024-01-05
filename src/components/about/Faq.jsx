@@ -8,14 +8,18 @@ const Faq = ({ question, answer }) => {
   return (
     <>
       <div
-        className="flex flex-col w-11/12 rounded-xl cursor-pointer border-2 border-gray-400 p-3 m-3"
+        className="flex flex-col w-full rounded-xl cursor-pointer border border-gray-300 p-3 mx-1 my-3"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between items-center px-3">
           {question}
-          <FiChevronRight className={`text-3xl ${isOpen ? "rotate-90" : ""}`} />
+          <FiChevronRight
+            className={`text-3xl ${
+              isOpen ? "rotate-90 duration-300" : "duration-300"
+            }`}
+          />
         </div>
-        {isOpen && <div className="">{answer}</div>}
+        {isOpen && <div className="p-3">{answer}</div>}
       </div>
     </>
   );
