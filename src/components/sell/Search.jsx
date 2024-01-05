@@ -6,8 +6,8 @@ const Search = () => {
       <div className="flex w-full justify-between items-end py-2">
         <div className=" text-2xl font-medium">Find a Match</div>
         <div className=" text-gray-500 ">
-          <text> Don't see your item? </text>
-          <text className="underline font-medium">Click Here</text>
+          <text>{"Don't see your item?"}</text>
+          <text className="underline font-medium px-1">Click Here</text>
         </div>
       </div>
 
