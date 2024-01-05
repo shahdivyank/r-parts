@@ -1,3 +1,3 @@
-import Item from "@/components/view/Item";
+import Landing from "@/components/landing/Landing";
 
-export default Item;
+export default Landing;

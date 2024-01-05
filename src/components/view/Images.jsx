@@ -3,9 +3,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import placeholder from "/public/information-placeholder.webp";
 
-const Images = ({ images, first }) => {
-  first = placeholder;
-  const [image, setImage] = useState(first);
+const Images = ({ images }) => {
+  const [image, setImage] = useState(placeholder);
 
   return (
     <div className="md:grid grid-cols-3">
@@ -26,9 +25,11 @@ const Images = ({ images, first }) => {
           onClick={() => setImage(images[2])}
         />
       </div>
-      <div className="col-span-2">
-        <Image src={image} className="rounded-3xl m-auto w-full" alt="" />
-      </div>
+      <Image
+        src={image}
+        className="col-span-2 rounded-3xl m-auto w-full"
+        alt=""
+      />
     </div>
   );
 };

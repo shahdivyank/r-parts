@@ -8,7 +8,7 @@ const Item = () => {
       <p className="font-outfit text-parts-gray-500 mb-8">MARKET / PRODUCT</p>
       <div className="w-11/12 md:grid grid-cols-5 gap-8">
         <div className="col-span-3">
-          <Images images={null} first={null} />
+          <Images images={null} />
         </div>
         <div className="col-span-2">
           <Description />
