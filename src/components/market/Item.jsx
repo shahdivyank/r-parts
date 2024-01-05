@@ -13,14 +13,12 @@ const Item = () => {
           draggable={false}
           className="rounded-xl w-full"
         />
-        {/* Title and description */}
+
         <p className="text-black font-semibold text-lg">Lorem ipsum dolor</p>
         <p className="font-light text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscin elit. Vestibulum
           convallis
         </p>
-
-        {/* Price and Condition */}
 
         <div className="flex flex-row justify-between pt-2 text-sm">
           <div className="font-semibold ">
