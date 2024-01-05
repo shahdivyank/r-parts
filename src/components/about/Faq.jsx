@@ -1,15 +1,19 @@
 "use client";
-import React from "react";
+import { React, useState } from "react";
 
-const Faq = () => {
+const Faq = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="bg-blue-500 w-1/2 rounded-xl">
-      FAQ well
-      <hr className="gray" />
-      <div className="bg-red-500 w-3/4 rounded-xl">
-        Where does the money go?
+    <>
+      <div
+        className="bg-red-500 w-3/4 rounded-xl cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {question}
       </div>
-    </div>
+      {isOpen && <div>{answer}</div>}
+    </>
   );
 };
 

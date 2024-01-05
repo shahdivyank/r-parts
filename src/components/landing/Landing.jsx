@@ -4,6 +4,8 @@ import Reviews from "./Reviews";
 import Values from "./Values";
 import Works from "./Works";
 import FAQ from "../about/Faq";
+import Questions from "@/data/Questions.js";
+import React from "react";
 
 const Landing = () => {
   return (
@@ -13,7 +15,13 @@ const Landing = () => {
       <Works />
       <Reviews />
       <Values />
-      <FAQ />
+      <div className="bg-blue-500 w-1/2 rounded-xl">
+        FAQ well
+        <hr className="gray" />
+        {Questions.map(({ index, question, answer }) => (
+          <FAQ key={index} question={question} answer={answer} />
+        ))}
+      </div>
     </>
   );
 };
