@@ -28,7 +28,8 @@ const Item = () => {
             <span className="text-black">$00.00</span>
           </div>
           <p>
-            Condition: <span className="text-parts-green">New</span>
+            Condition:{" "}
+            <span className="text-parts-green font-semibold">New</span>
           </p>
         </div>
       </Link>
