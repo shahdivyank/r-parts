@@ -1,33 +1,28 @@
 import React from "react";
 import Image from "next/image";
-import PlaceHolder from "../../../public/svg/item.svg";
+import PlaceHolder from "../../../public/png/placeholder.png";
 
 const Item = () => {
   return (
-    <div className="bg-blue-500 w-1/4">
+    <div className="w-1/4 flex flex-col py-2 px-2">
       <Image
         src={PlaceHolder}
         alt={"Item"}
         draggable={false}
-        width={200}
-        height={50}
-        className="rounded-xl"
+        className="rounded-xl w-full"
       />
       {/* Title and description */}
-
-      <div>
-        <p className="text-black font-semibold">Lorem ipsum dolor</p>
-        <p className="font-light text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscin elit. Vestibulum
-          convallis
-        </p>
-      </div>
+      <p className="text-black font-semibold text-lg">Lorem ipsum dolor</p>
+      <p className="font-light text-sm">
+        Lorem ipsum dolor sit amet, consectetur adipiscin elit. Vestibulum
+        convallis
+      </p>
 
       {/* Price and Condition */}
 
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-between pt-2 text-sm">
         <div className="font-semibold ">
-          <span className="text-parts-gray-500 line-through">$00.00</span>
+          <span className="text-parts-gray-500 line-through pr-2">$00.00</span>
           <span className="text-black">$00.00</span>
         </div>
         <p>
