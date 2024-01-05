@@ -1,3 +1,3 @@
-import Works from "@/components/landing/Works";
+import Info from "@/components/info/Info.jsx";
 
-export default Works;
+export default Info;
