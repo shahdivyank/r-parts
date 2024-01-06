@@ -1,6 +1,8 @@
 import React from "react";
 import Item from "./Item";
 import image from "../../../public/svg/cartItem.svg";
+import { PiHandbagSimple } from "react-icons/pi";
+
 const Items = () => {
   const selectedItem = {
     item: {
@@ -14,37 +16,49 @@ const Items = () => {
   };
   return (
     <div>
-      <p className="font-bebas text-5xl">MY SHOPPING BAG</p>
-      <p className="font-outfit font-light text-parts-gray-500">
+      <p className="font-bebas text-3xl">MY SHOPPING BAG</p>
+      <p className="font-outfit text-sm font-light text-parts-gray-500">
         View current items in cart and finalize before checkout
       </p>
-      <div className="border-2 border-r-parts-gray-400 rounded-3xl flex justify-center items-center w-9/12 p-8 flex-col m-6">
-        <Item
-          name={selectedItem.item.name}
-          description={selectedItem.item.description}
-          condition={selectedItem.item.condition}
-          price={selectedItem.item.price}
-          image={image}
-          itemCount={selectedItem.item.available}
-        />
-        <hr className="w-full h-1 m-4" />
-        <Item
-          name={selectedItem.item.name}
-          description={selectedItem.item.description}
-          condition={selectedItem.item.condition}
-          price={selectedItem.item.price}
-          image={image}
-          itemCount={selectedItem.item.available}
-        />
-        <hr className="w-full h-1 m-4" />
-        <Item
-          name={selectedItem.item.name}
-          description={selectedItem.item.description}
-          condition={selectedItem.item.condition}
-          price={selectedItem.item.price}
-          image={image}
-          itemCount={selectedItem.item.available}
-        />
+
+      <div className="border-2 border-parts-gray-400 rounded-3xl flex justify-center items-center w-6/12 p-10 flex-col my-6">
+        {Object.keys(selectedItem).length ? (
+          <div>
+            <Item
+              name={selectedItem.item.name}
+              description={selectedItem.item.description}
+              condition={selectedItem.item.condition}
+              price={selectedItem.item.price}
+              image={image}
+              itemCount={selectedItem.item.available}
+            />
+            <hr className="w-full my-4 bg-parts-gray-400 h-0.5" />
+            <Item
+              name={selectedItem.item.name}
+              description={selectedItem.item.description}
+              condition={selectedItem.item.condition}
+              price={selectedItem.item.price}
+              image={image}
+              itemCount={selectedItem.item.available}
+            />
+            <hr className="w-full my-4 bg-parts-gray-400 h-0.5" />
+            <Item
+              name={selectedItem.item.name}
+              description={selectedItem.item.description}
+              condition={selectedItem.item.condition}
+              price={selectedItem.item.price}
+              image={image}
+              itemCount={selectedItem.item.available}
+            />
+          </div>
+        ) : (
+          <div className="flex justify-center items-center flex-col">
+            <PiHandbagSimple className="text-9xl text-parts-gray-400 " />
+            <p className="font-outfit font-light text-parts-gray-500 text-sm">
+              Shopping Bag is Empty
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
