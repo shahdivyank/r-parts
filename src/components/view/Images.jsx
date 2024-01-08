@@ -1,34 +1,37 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
+import placeholder from "/public/information-placeholder.webp";
 
-const ViewImages = ({ images, first }) => {
-  const [image, setImage] = useState(first);
+const Images = ({ images }) => {
+  const [image, setImage] = useState(placeholder);
 
   return (
-    <div className="md:grid grid-cols-3 gap-4">
-      <div className="flex flex-col items-center col-span-1 bg-blue-100">
-        <div>
-          <Image onClick={() => setImage(images[0])} />
-          image[0]
-        </div>
-
-        <div>
-          <Image onClick={() => setImage(images[1])} />
-          image[1]
-        </div>
-
-        <div>
-          <Image onClick={() => setImage(images[2])} />
-          image[2]
-        </div>
+    <div className="md:grid grid-cols-3">
+      <div className="flex flex-col items-center col-span-1 gap-4">
+        <Image
+          src={placeholder}
+          className="w-1/3 rounded-xl"
+          onClick={() => setImage(images[0])}
+        />
+        <Image
+          src={placeholder}
+          className="w-1/3 rounded-xl"
+          onClick={() => setImage(images[1])}
+        />
+        <Image
+          src={placeholder}
+          className="w-1/3 rounded-xl"
+          onClick={() => setImage(images[2])}
+        />
       </div>
-      <div className="col-span-2 bg-blue-100">
-        <img src={image} />
-        hero
-      </div>
+      <Image
+        src={image}
+        className="col-span-2 rounded-3xl m-auto w-full"
+        alt=""
+      />
     </div>
   );
 };
 
-export default ViewImages;
+export default Images;
