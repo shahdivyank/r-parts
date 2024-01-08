@@ -1,6 +1,6 @@
 import Information from "./Information";
 import Item from "./Item";
-
+import Items from "../cart/Items";
 const productInformation = {
   dimensions: "10x15",
   weight: "2 lbs",
@@ -15,6 +15,7 @@ const View = () => {
     <div className="w-11/12">
       <Item />
       <Information {...productInformation} />
+      <Items />
     </div>
   );
 };
