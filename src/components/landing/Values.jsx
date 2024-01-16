@@ -8,59 +8,55 @@ import Image from "next/image";
 
 const Values = () => {
   return (
-    <div className="w-full">
-      <div className="font-outfit text-xl w-1/5  flex justify-end font-semibold my-6">
-        {" "}
-        We Stand For
-      </div>
-      <div className="flex  w-full   justify-center">
-        <div className="w-1/5 flex flex-col gap-y-6  items-center">
-          <Image src={Community} className=" w-4/6 " />
-          <div className=" w-4/6 flex font-bebas text-4xl justify-between items-center">
+    <div className="w-11/12 my-4">
+      <div className="font-outfit text-xl font-semibold my-6">We Stand For</div>
+      <div className="flex w-full justify-center">
+        <div className="w-1/4 flex flex-col gap-y-6 items-center">
+          <Image src={Community} className="w-5/6" />
+          <div className="w-5/6 flex font-bebas text-4xl justify-between items-center">
             Community
-            <Image src={CommunityIcon} className="" />
+            <Image src={CommunityIcon} />
           </div>
-          <div className=" w-4/6 font-outfit">
+          <div className="w-5/6 font-outfit">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
             convallis mi ut velit porttitor placerat. Nulla egestas magna.
           </div>
         </div>
-        <div className="w-1/5 flex flex-col gap-y-6  items-center">
-          <Image src={Sustainability} className=" w-4/6" />
-          <div className=" w-4/6 flex font-bebas text-4xl justify-between items-center">
+        <div className="w-1/4 flex flex-col gap-y-6 items-center">
+          <Image src={Sustainability} className="w-5/6" />
+          <div className="w-5/6 flex font-bebas text-4xl justify-between items-center">
             Sustainability
-            <Image src={CommunityIcon} className="" />
+            <Image src={CommunityIcon} />
           </div>
-          <div className=" w-4/6 font-outfit">
+          <div className="w-5/6 font-outfit">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
             convallis mi ut velit porttitor placerat. Nulla egestas magna.
           </div>
         </div>
-        <div className="w-1/5 flex flex-col gap-y-6  items-center">
-          <Image src={Innovation} className=" w-4/6" />
-          <div className=" w-4/6 flex font-bebas text-4xl justify-between items-center">
+        <div className="w-1/4 flex flex-col gap-y-6 items-center">
+          <Image src={Innovation} className="w-5/6" />
+          <div className="w-5/6 flex font-bebas text-4xl justify-between items-center">
             Innovation
-            <Image src={CommunityIcon} className="" />
+            <Image src={CommunityIcon} />
           </div>
-          <div className=" w-4/6 font-outfit">
+          <div className="w-5/6 font-outfit">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
             convallis mi ut velit porttitor placerat. Nulla egestas magna.
           </div>
         </div>
-        <div className="w-1/5 flex flex-col gap-y-6  items-center">
-          <Image src={Growth} className=" w-4/6" />
-          <div className=" w-4/6 flex font-bebas text-4xl justify-between items-center">
+        <div className="w-1/4 flex flex-col gap-y-6 items-center">
+          <Image src={Growth} className="w-5/6" />
+          <div className="w-5/6 flex font-bebas text-4xl justify-between items-center">
             Growth
-            <Image src={CommunityIcon} className="" />
+            <Image src={CommunityIcon} />
           </div>
-          <div className=" w-4/6 font-outfit ">
+          <div className="w-5/6 font-outfit">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
             convallis mi ut velit porttitor placerat. Nulla egestas magna.
           </div>
-          <div className=" w-3/4 flex justify-end my-2">
+          <div className="w-3/4 flex justify-end my-2">
             <button className="bg-parts-orange rounded-3xl text-white font-outfit py-2 px-6">
-              {" "}
-              LEARN MORE{" "}
+              LEARN MORE
             </button>
           </div>
         </div>

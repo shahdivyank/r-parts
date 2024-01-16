@@ -20,11 +20,11 @@ const Footer = () => {
   };
 
   return (
-    <div className="bg-parts-blue text-white p-14 flex justify-evenly font-outfit w-full">
+    <div className="bg-parts-blue text-white p-12 flex justify-evenly font-outfit w-full">
       <div className="flex flex-col h-full justify-between">
         <div className="space-y-2">
           <p className="flex items-center text-2xl mb-5 font-montserrat">
-            <BsGear className="stroke-[0.5px] rotate-12 mr-2" />{" "}
+            <BsGear className="stroke-[0.5px] rotate-12 mr-2" />
             <span>{" R'P"}</span>
             <span className="italic">A</span>RTS
           </p>
@@ -47,7 +47,6 @@ const Footer = () => {
           © ACM - UC Riverside. All Rights Reserved.
         </p>
       </div>
-
       <div className="flex flex-col justify-between gap-y-5">
         <div>
           <p className="text-xl font-semibold">Give Us your Feedback!</p>
@@ -61,7 +60,7 @@ const Footer = () => {
           type="textarea"
           value={message}
           placeholder="Type your message here..."
-          className="h-full rounded-3xl text-black p-3 focus:outline-parts-orange text-sm"
+          className="h-full rounded-xl text-black p-3 text-sm focus:outline-none"
           style={{ resize: "none" }}
           onChange={(e) => setMessage(e.target.value)}
         />

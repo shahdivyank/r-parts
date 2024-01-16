@@ -6,7 +6,7 @@ const Market = () => {
   return (
     <div className="w-11/12">
       <Header title="MARKET" />
-      <div className="flex mt-8 h-screen gap-2">
+      <div className="flex mt-8 min-h-screen gap-2">
         <Filters />
         <Items />
       </div>

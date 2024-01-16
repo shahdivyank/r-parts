@@ -5,7 +5,7 @@ import PlaceHolder from "../../../public/png/placeholder.png";
 
 const Item = () => {
   return (
-    <div className="w-1/4 flex flex-col py-2 px-2">
+    <div className="p-2">
       <Link href="/view">
         <Image
           src={PlaceHolder}
@@ -21,7 +21,7 @@ const Item = () => {
         </p>
 
         <div className="flex flex-row justify-between pt-2 text-sm">
-          <div className="font-semibold ">
+          <div className="font-semibold">
             <span className="text-parts-gray-500 line-through pr-2">
               $00.00
             </span>

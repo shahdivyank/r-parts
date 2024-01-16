@@ -2,6 +2,7 @@
 import { Bebas_Neue, Outfit, Montserrat } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 
 // eslint-disable-next-line new-cap
 const bebas = Bebas_Neue({
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${bebas.variable} ${outfit.variable} ${montserrat.variable} flex justify-center items-center flex-col bg-parts-gray-100`}
       >
+        <Navigation />
         {children}
         <Footer />
       </body>
