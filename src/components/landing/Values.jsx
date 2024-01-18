@@ -55,9 +55,11 @@ const Values = () => {
             convallis mi ut velit porttitor placerat. Nulla egestas magna.
           </div>
           <div className="w-3/4 flex justify-end my-2">
-            <button className="bg-parts-orange rounded-3xl text-white font-outfit py-2 px-6">
-              LEARN MORE
-            </button>
+            <a href="/info">
+              <button className="bg-parts-orange rounded-3xl text-white font-outfit py-2 px-6 hover:bg-[#FFA34F]">
+                LEARN MORE
+              </button>
+            </a>
           </div>
         </div>
       </div>
