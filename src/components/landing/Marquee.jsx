@@ -6,7 +6,7 @@ const Marquee = ({ reverse }) => {
       <div
         className={`${
           reverse ? "animate-marquee-reverse" : "animate-marquee"
-        }  flex justify-evenly w-full gap-8 mx-8`}
+        }  flex justify-evenly w-full`}
       >
         <Review />
         <Review />
@@ -18,7 +18,7 @@ const Marquee = ({ reverse }) => {
           reverse
             ? "animate-marquee-continuation-reverse"
             : "animate-marquee-continuation"
-        } flex justify-between w-full absolute h-full gap-8 mx-8`}
+        } flex justify-between w-full absolute h-full`}
       >
         <Review />
         <Review />

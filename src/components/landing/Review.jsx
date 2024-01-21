@@ -4,7 +4,7 @@ import Stars from "./Stars";
 
 const Review = () => {
   return (
-    <div className="flex bg-white rounded-lg p-8 font-outfit">
+    <div className="flex bg-white mx-3 rounded-lg p-8 font-outfit">
       <div className="w-1/4 flex flex-col items-center justify-center">
         <Image src={profile} className="rounded-full w-16" />
         <p className="font-semibold">Bobby Lerias</p>
