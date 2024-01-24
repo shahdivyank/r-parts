@@ -6,7 +6,7 @@ const productInformation = {
   weight: "2 lbs",
   manufacturer: "Example Manufacturer",
   country: "Example Country",
-  unit_price: "$20.00",
+  unit_price: "example price",
   total_price: "$40.00",
 };
 

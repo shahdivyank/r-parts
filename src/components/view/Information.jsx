@@ -8,22 +8,35 @@ const Information = ({
   unitPrice,
   totalPrice,
 }) => {
+  const renderField = (label, value) => {
+    if (value == null || value == undefined) {
+      return (
+        <>
+          <div className="bg-gray-200 pb-2 px-8 py-2 font-semibold">
+            {label}
+          </div>
+          <div className="px-8 py-2">Not Available</div>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <div className="bg-gray-200 pb-2 px-8 py-2 font-semibold">
+            {label}
+          </div>
+          <div className="px-8 py-2">{value}</div>
+        </>
+      );
+    }
+  };
   return (
     <div className="grid grid-cols-2 w-6/12 justify-start divide-y divide-gray-400 font-outfit mb-8">
-      <div className="bg-gray-200 pb-2 px-8 py-2 font-semibold">
-        Product Dimensions
-      </div>
-      <div className="px-8 py-2">{dimensions}</div>
-      <div className="bg-gray-200 px-8 py-2 font-semibold">Weight</div>
-      <div className="px-8 py-2">{weight}</div>
-      <div className="bg-gray-200 px-8 py-2 font-semibold">Manufacturer</div>
-      <div className="px-8 py-2">{manufacturer}</div>
-      <div className="bg-gray-200 px-8 py-2 font-semibold">Country</div>
-      <div className="px-8 py-2">{country}</div>
-      <div className="bg-gray-200 px-8 py-2 font-semibold">Unit Price</div>
-      <div className="px-8 py-2">{unitPrice}</div>
-      <div className="bg-gray-200 px-8 py-2 font-semibold">Total Price</div>
-      <div className="px-8 py-2">{totalPrice}</div>
+      {renderField("Product Dimensions", dimensions)}
+      {renderField("Weight", weight)}
+      {renderField("Manufacturer", manufacturer)}
+      {renderField("Country", country)}
+      {renderField("Unit Price", unitPrice)}
+      {renderField("Total Price", totalPrice)}
     </div>
   );
 };
