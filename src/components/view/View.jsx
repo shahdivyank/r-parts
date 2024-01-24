@@ -4,10 +4,10 @@ import Item from "./Item";
 const productInformation = {
   dimensions: "10x15",
   weight: "2 lbs",
-  manufacturer: "Example Manufacturer",
-  country: "Example Country",
-  unit_price: "example price",
-  total_price: "$40.00",
+  manufacturer: null,
+  country: null,
+  unitPrice: "example price",
+  totalPrice: "example total price",
 };
 
 const View = () => {
