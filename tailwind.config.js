@@ -11,7 +11,7 @@ module.exports = {
       fontFamily: {
         bebas: ["var(--font-bebas)"],
         outfit: ["var(--font-outfit)"],
-        montserrat: ["var(--font-outfit)"],
+        montserrat: ["var(--font-montserrat)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
