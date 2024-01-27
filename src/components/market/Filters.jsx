@@ -5,7 +5,7 @@ import { BiCategoryAlt } from "react-icons/bi";
 import { LuSettings } from "react-icons/lu";
 
 const Filters = () => {
-  const [selected, setSelected] = useState("all_itemsg");
+  const [selected, setSelected] = useState("all_items");
 
   const handleSelectedFilter = (item) => {
     setSelected(item);
