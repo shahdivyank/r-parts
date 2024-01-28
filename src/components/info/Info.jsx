@@ -1,4 +1,4 @@
-import FAQ from "../about/Faq";
+import FAQ from "./Faq";
 import Questions from "@/data/Questions.js";
 
 const Info = () => {

@@ -6,8 +6,9 @@ import { RxTrash } from "react-icons/rx";
 
 const Item = ({ name, description, condition, price, image, itemCount }) => {
   const [quantity, setQuantity] = useState(1);
+
   return (
-    <div className="grid grid-cols-5 ">
+    <div className="grid grid-cols-5">
       <div className="flex col-span-1 row-span-full justify-center items-center aspect-square">
         <Image src={image} width={150} />
       </div>

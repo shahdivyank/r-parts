@@ -4,26 +4,23 @@ const Banner = () => {
   const professors = "5M";
 
   return (
-    <div className="w-full flex justify-evenly px-[10%] py-7 bg-parts-navy text-white font-outfit">
+    <div className="w-full flex justify-evenly py-7 bg-parts-navy text-white font-outfit my-10">
       <div className="flex items-center">
         <p className="font-bold text-5xl">{years}+</p>
         <div className="ml-2 text-sm font-light">
-          <p>YEARS</p>
-          <p>OF SERVICE</p>
+          YEARS <br /> OF SERVICE
         </div>
       </div>
       <div className="flex items-center">
         <p className="font-bold text-5xl">{parts}+</p>
         <div className="ml-2 text-sm font-light">
-          <p>PARTS</p>
-          <p>REFURBISHED</p>
+          PARTS <br /> REFURBISHED
         </div>
       </div>
       <div className="flex items-center">
         <p className="font-bold text-5xl">{professors}+</p>
         <div className="ml-2 text-sm font-light">
-          <p>ACTIVE</p>
-          <p>PROFESSORS</p>
+          ACTIVE <br /> PROFESSORS
         </div>
       </div>
     </div>
