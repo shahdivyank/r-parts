@@ -1,10 +1,12 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import Item from "./Item";
 import image from "../../../public/svg/cartItem.svg";
 import { PiHandbagSimple } from "react-icons/pi";
 
-const items = [
+const mock = [
   {
+    id: "1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis mi ut velit porttitor placerat.",
     name: "ESP8266 WiFi Bee",
@@ -13,6 +15,7 @@ const items = [
     price: 59,
   },
   {
+    id: "2",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis mi ut velit porttitor placerat.",
     name: "ESP8266 WiFi Bee",
@@ -21,6 +24,7 @@ const items = [
     price: 59,
   },
   {
+    id: "3",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis mi ut velit porttitor placerat.",
     name: "ESP8266 WiFi Bee",
@@ -31,6 +35,7 @@ const items = [
 ];
 
 const Items = () => {
+  const [items, setItems] = useState(mock);
   return (
     <div>
       <p className="font-bebas text-3xl">MY SHOPPING BAG</p>
@@ -39,18 +44,20 @@ const Items = () => {
       </p>
 
       <div className="border-2 border-parts-gray-400 rounded-3xl flex justify-center items-center w-6/12 p-10 flex-col my-6">
-        {items.map(({ name, description, condition, price, available }) => (
-          <>
+        {items.map(({ id, name, description, condition, price, available }) => (
+          <div key={id}>
             <Item
+              id={id}
               name={name}
               description={description}
               condition={condition}
               price={price}
               image={image}
               itemCount={available}
+              setItems={setItems}
             />
             <hr className="w-full my-4 bg-parts-gray-400 h-0.5" />
-          </>
+          </div>
         ))}
 
         {items.length === 0 && (

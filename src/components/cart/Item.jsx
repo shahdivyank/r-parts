@@ -4,7 +4,16 @@ import Image from "next/image";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { RxTrash } from "react-icons/rx";
 
-const Item = ({ name, description, condition, price, image, itemCount }) => {
+const Item = ({
+  id,
+  name,
+  description,
+  condition,
+  price,
+  image,
+  itemCount,
+  setItems,
+}) => {
   const [quantity, setQuantity] = useState(1);
 
   return (
@@ -44,8 +53,10 @@ const Item = ({ name, description, condition, price, image, itemCount }) => {
           ${price}.00
         </p>
         <RxTrash
-          onClick={null}
-          className=" text-xl hover:text-red-500 cursor-pointer"
+          onClick={() =>
+            setItems((prev) => prev.filter((item) => item.id !== id))
+          }
+          className=" text-xl hover:text-red-500 hover:cursor-pointer"
         />
       </div>
     </div>
