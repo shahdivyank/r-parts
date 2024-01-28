@@ -3,17 +3,34 @@ import Item from "./Item";
 import image from "../../../public/svg/cartItem.svg";
 import { PiHandbagSimple } from "react-icons/pi";
 
+const items = [
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis mi ut velit porttitor placerat.",
+    name: "ESP8266 WiFi Bee",
+    condition: "New",
+    available: 12,
+    price: 59,
+  },
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis mi ut velit porttitor placerat.",
+    name: "ESP8266 WiFi Bee",
+    condition: "New",
+    available: 12,
+    price: 59,
+  },
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis mi ut velit porttitor placerat.",
+    name: "ESP8266 WiFi Bee",
+    condition: "New",
+    available: 12,
+    price: 59,
+  },
+];
+
 const Items = () => {
-  const selectedItem = {
-    item: {
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis mi ut velit porttitor placerat.",
-      name: "ESP8266 WiFi Bee",
-      condition: "New",
-      available: 12,
-      price: 59,
-    },
-  };
   return (
     <div>
       <p className="font-bebas text-3xl">MY SHOPPING BAG</p>
@@ -22,36 +39,21 @@ const Items = () => {
       </p>
 
       <div className="border-2 border-parts-gray-400 rounded-3xl flex justify-center items-center w-6/12 p-10 flex-col my-6">
-        {Object.keys(selectedItem).length ? (
-          <div>
+        {items.map(({ name, description, condition, price, available }) => (
+          <>
             <Item
-              name={selectedItem.item.name}
-              description={selectedItem.item.description}
-              condition={selectedItem.item.condition}
-              price={selectedItem.item.price}
+              name={name}
+              description={description}
+              condition={condition}
+              price={price}
               image={image}
-              itemCount={selectedItem.item.available}
+              itemCount={available}
             />
             <hr className="w-full my-4 bg-parts-gray-400 h-0.5" />
-            <Item
-              name={selectedItem.item.name}
-              description={selectedItem.item.description}
-              condition={selectedItem.item.condition}
-              price={selectedItem.item.price}
-              image={image}
-              itemCount={selectedItem.item.available}
-            />
-            <hr className="w-full my-4 bg-parts-gray-400 h-0.5" />
-            <Item
-              name={selectedItem.item.name}
-              description={selectedItem.item.description}
-              condition={selectedItem.item.condition}
-              price={selectedItem.item.price}
-              image={image}
-              itemCount={selectedItem.item.available}
-            />
-          </div>
-        ) : (
+          </>
+        ))}
+
+        {items.length === 0 && (
           <div className="flex justify-center items-center flex-col">
             <PiHandbagSimple className="text-9xl text-parts-gray-400 " />
             <p className="font-outfit font-light text-parts-gray-500 text-sm">
