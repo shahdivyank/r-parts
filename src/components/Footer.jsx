@@ -60,6 +60,7 @@ const Footer = () => {
           placeholder="Type your message here..."
           className="h-full rounded-xl text-black p-3 text-sm focus:outline-none"
           style={{ resize: "none" }}
+          maxLength={200}
           onChange={(e) => setMessage(e.target.value)}
         />
         <div className="self-end">

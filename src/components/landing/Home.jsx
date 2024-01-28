@@ -30,7 +30,7 @@ const Home = () => {
           sollicitudin eros in, consequat neque. Suspendisse potenti.
         </p>
         <Image src={arrow} alt="arrow" className="mx-5" />
-        <div className="flex items-center">
+        <div className="flex items-center space-x-4">
           <Link href="/market">
             <Button
               text="GO TO MARKET"
