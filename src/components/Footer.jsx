@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <div className="bg-parts-blue text-white p-12 flex justify-evenly font-outfit w-full">
-      <div className="flex flex-col h-full justify-between">
+      <div className="flex flex-col h-full w-11/12 justify-between">
         <div className="space-y-2">
           <p className="flex items-center text-2xl mb-5 font-montserrat">
             <BsGear className="stroke-[0.5px] rotate-12 mr-2" />
@@ -42,12 +42,12 @@ const Footer = () => {
             <HiOutlineMail className="text-xl stroke-2" />
             <p className="font-medium">contact@rparts.com</p>
           </div>
+          <p className="text-sm font-light">
+            © ACM - UC Riverside. All Rights Reserved.
+          </p>
         </div>
-        <p className="text-sm font-light">
-          © ACM - UC Riverside. All Rights Reserved.
-        </p>
       </div>
-      <div className="flex flex-col justify-between gap-y-5">
+      <div className="flex flex-col justify-between gap-y-5 w-10/12">
         <div>
           <p className="text-xl font-semibold">Give Us your Feedback!</p>
           <span className="text-sm">
