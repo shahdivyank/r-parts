@@ -1,4 +1,7 @@
 import Image from "next/image";
+import iPhone12TopHalf from "../../../public/Works/iPhone12_tophalf.webp";
+import iPhone12TopLeft from "../../../public/Works/iPhone12_topleft.webp";
+import iPhone12BottomHalf from "../../../public/Works/iPhone12_bottomhalf.webp";
 import React from "react";
 import { FaCircle, FaRegCircle } from "react-icons/fa";
 import Button from "../Button";
@@ -31,14 +34,13 @@ const Works = () => {
             </Link>
             <div className="bg-blue-100 col-span-1 rounded-xl mt-[-14rem] mb-[-3rem] text-center">
               image here
-              <Image />
+              <Image src={iPhone12TopHalf} className="w-full mb-[rem]" />
             </div>
           </div>
         </div>
         <div className="bg-parts-gray-200 col-span-1 rounded-xl pl-8 pr-8">
-          <div className="bg-blue-100 mb-5 mr-[-1rem] pb-52 col-span-1 rounded-xl max-w-[24rem] text-center">
-            image here
-            <Image />
+          <div className="mb-5 col-span-1 rounded-xl max-w-[24rem] ml-10">
+            <Image src={iPhone12BottomHalf} className="" />
           </div>
           <div className="flex gap-1 text-[0.8rem]">
             <FaCircle className="text-parts-orange" />
@@ -78,7 +80,7 @@ const Works = () => {
             </Link>
             <div className="bg-blue-100 col-span-1 rounded-xl mt-[-14rem] mb-[-1rem] mr-[-2rem] text-center">
               image here
-              <Image />
+              <Image src={iPhone12TopLeft} />
             </div>
           </div>
         </div>
