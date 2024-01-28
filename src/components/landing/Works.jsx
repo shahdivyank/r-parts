@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { FaCircle, FaRegCircle } from "react-icons/fa";
+import Button from "../Button";
 
 const Works = () => {
   return (
@@ -63,9 +64,12 @@ const Works = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>
           <div className="m-auto md:grid grid-cols-2 gap-8 mb-[-7rem] pt-[15rem]">
-            <button className="bg-parts-orange text-white col-span-1 py-2 px-2 w-[8rem] rounded-full cursor-pointer">
-              SHOP NOW
-            </button>
+            <Button
+              text="SHOP NOW"
+              color="bg-orange"
+              rounded="full"
+              size="sm"
+            />
             <div className="bg-blue-100 col-span-1 rounded-xl mt-[-14rem] mb-[-1rem] mr-[-2rem] text-center">
               image here
               <Image />
