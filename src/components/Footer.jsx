@@ -23,24 +23,22 @@ const Footer = () => {
     <div className="bg-parts-blue text-white p-12 flex justify-evenly font-outfit w-full">
       <div className="flex flex-col h-full w-11/12 justify-between">
         <div className="space-y-2">
-          <p className="flex items-center text-2xl mb-5 font-montserrat">
+          <p className="flex items-center text-2xl mb-5 font-montserrat font-medium">
             <BsGear className="stroke-[0.5px] rotate-12 mr-2" />
             <span>{" R'P"}</span>
             <span className="italic">A</span>RTS
           </p>
           <div className="flex items-center gap-x-5">
             <HiOutlineLocationMarker className="text-xl stroke-2" />
-            <p className="font-medium">
-              900 University Ave, Riverside, CA 92521
-            </p>
+            <p>900 University Ave, Riverside, CA 92521</p>
           </div>
           <div className="flex items-center gap-x-5">
             <HiOutlinePhone className="text-xl stroke-2" />
-            <p className="font-medium">+1 (123) 456-7890</p>
+            <p>+1 (123) 456-7890</p>
           </div>
           <div className="flex items-center gap-x-5">
             <HiOutlineMail className="text-xl stroke-2" />
-            <p className="font-medium">contact@rparts.com</p>
+            <p>contact@rparts.com</p>
           </div>
           <p className="text-sm font-light">
             © ACM - UC Riverside. All Rights Reserved.
