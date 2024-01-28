@@ -5,19 +5,15 @@ import { BiCategoryAlt } from "react-icons/bi";
 import { LuSettings } from "react-icons/lu";
 
 const Filters = () => {
-  const [selected, setSelected] = useState("all_items");
-
-  const handleSelectedFilter = (item) => {
-    setSelected(item);
-  };
+  const [selected, setSelected] = useState("all");
 
   return (
     <div className="flex flex-col text-parts-gray-500 border-r border-parts-gray-400">
       <div className="py-3 pl-7 w-full ">Filter</div>
       <div
-        onClick={() => handleSelectedFilter("all_items")}
+        onClick={() => setSelected("all")}
         className={`${
-          selected === "all_items" &&
+          selected === "all" &&
           `bg-parts-orange text-white  rounded-l-2xl rounded-r-none`
         } py-3 gap-4 pl-7 items-center flex cursor-pointer`}
       >
@@ -25,7 +21,7 @@ const Filters = () => {
         All Items
       </div>
       <div
-        onClick={() => handleSelectedFilter("kits")}
+        onClick={() => setSelected("kits")}
         className={`${
           selected === "kits" &&
           `bg-parts-orange text-white  rounded-l-2xl rounded-r-none`
@@ -35,9 +31,9 @@ const Filters = () => {
         Kits
       </div>
       <div
-        onClick={() => handleSelectedFilter("individual_parts")}
+        onClick={() => setSelected("individual")}
         className={`${
-          selected === "individual_parts" &&
+          selected === "individual" &&
           `bg-parts-orange text-white  rounded-l-2xl rounded-r-none`
         } flex items-center gap-4 w-full py-3 pl-7 cursor-pointer`}
       >
