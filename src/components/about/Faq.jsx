@@ -20,9 +20,11 @@ const Faq = ({ question, answer }) => {
           />
         </div>
         <div
-          className={`transition-opacity duration-700 ease-in-out ${
-            isOpen ? "opacity-100 " : "opacity-0 "
-          }`}
+          style={{
+            maxHeight: isOpen ? "500px" : "0",
+            transition: "max-height 700ms ease-in-out",
+          }}
+          className="overflow-hidden"
         >
           {isOpen && <div className="p-3 ">{answer}</div>}
         </div>
