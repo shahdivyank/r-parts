@@ -3,7 +3,7 @@ import Community from "../../../public/png/Community.png";
 import Sustainability from "../../../public/png/Sustainability.png";
 import Innovation from "../../../public/png/Innovation.png";
 import Growth from "../../../public/png/Growth.png";
-import CommunityIcon from "../../../public/png/CommunityIcon.png";
+import { HiOutlineUserGroup } from "react-icons/hi2";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,7 +16,7 @@ const Values = () => {
           <Image src={Community} className="w-5/6" />
           <div className="w-5/6 flex font-bebas text-4xl justify-between items-center">
             Community
-            <Image src={CommunityIcon} />
+            <HiOutlineUserGroup />
           </div>
           <div className="w-5/6 font-outfit">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
@@ -27,7 +27,7 @@ const Values = () => {
           <Image src={Sustainability} className="w-5/6" />
           <div className="w-5/6 flex font-bebas text-4xl justify-between items-center">
             Sustainability
-            <Image src={CommunityIcon} />
+            <HiOutlineUserGroup />
           </div>
           <div className="w-5/6 font-outfit">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
@@ -38,7 +38,7 @@ const Values = () => {
           <Image src={Innovation} className="w-5/6" />
           <div className="w-5/6 flex font-bebas text-4xl justify-between items-center">
             Innovation
-            <Image src={CommunityIcon} />
+            <HiOutlineUserGroup />
           </div>
           <div className="w-5/6 font-outfit">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
@@ -49,7 +49,7 @@ const Values = () => {
           <Image src={Growth} className="w-5/6" />
           <div className="w-5/6 flex font-bebas text-4xl justify-between items-center">
             Growth
-            <Image src={CommunityIcon} />
+            <HiOutlineUserGroup />
           </div>
           <div className="w-5/6 font-outfit">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
