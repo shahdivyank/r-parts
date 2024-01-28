@@ -10,17 +10,17 @@ const Images = ({ images }) => {
     <div className="md:grid grid-cols-3">
       <div className="flex flex-col items-center col-span-1 gap-4">
         <Image
-          src={placeholder}
+          src={images[0]}
           className="w-1/3 rounded-xl"
           onClick={() => setImage(images[0])}
         />
         <Image
-          src={placeholder}
+          src={images[1]}
           className="w-1/3 rounded-xl"
           onClick={() => setImage(images[1])}
         />
         <Image
-          src={placeholder}
+          src={images[2]}
           className="w-1/3 rounded-xl"
           onClick={() => setImage(images[2])}
         />
