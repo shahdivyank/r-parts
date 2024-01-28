@@ -10,7 +10,6 @@ const productInformation = {
   totalPrice: "example total price",
   manufacturer: "Example Manufacturer",
   ASIN: "SH28JFI2J8",
-  country: "Example Country",
   modelNum: "BFJ3U4209",
   date: "1/1/2024",
   frequency: "2",

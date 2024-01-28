@@ -20,7 +20,7 @@ const Information = ({
         {" "}
         Product Information
       </div>
-      <div className="grid grid-cols-2 w-6/12 justify-start divide-y divide-gray-300 font-outfit font-medium mb-8">
+      <div className="grid grid-cols-2 w-6/12 justify-start divide-y divide-gray-300 font-outfit mb-8">
         {renderField("Product Dimensions", dimensions)}
         {renderField("Weight", weight)}
         {renderField("Manufacturer", manufacturer)}
