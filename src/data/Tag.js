@@ -12,7 +12,8 @@ export const COLORS = {
     bg: "bg-tag-red-bg",
   },
 };
-export const TAGMAP = {
+
+export const TAGS = {
   SOLVED: "green",
   UNSOLVED: "red",
   "IN PROGRESS": "yellow",

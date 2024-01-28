@@ -1,13 +1,13 @@
-import { TAGMAP, COLORS } from "@/data/Tag";
+import { TAGS, COLORS } from "@/data/Tag";
+
 const Tag = ({ text }) => {
-  const upeer = text.toUpperCase();
   return (
     <div
-      className={`${COLORS[TAGMAP[upeer]].text} ${
-        COLORS[TAGMAP[upeer]].bg
+      className={`${COLORS[TAGS[upeer]].text} ${
+        COLORS[TAGS[upeer]].bg
       } px-2 text-sm rounded`}
     >
-      {upeer}
+      {text.toUpperCase()}
     </div>
   );
 };
