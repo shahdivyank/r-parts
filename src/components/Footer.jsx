@@ -58,8 +58,7 @@ const Footer = () => {
           type="textarea"
           value={message}
           placeholder="Type your message here..."
-          className="h-full rounded-xl text-black p-3 text-sm focus:outline-none"
-          style={{ resize: "none" }}
+          className="h-full rounded-xl text-black p-3 text-sm focus:outline-none resize-none"
           maxLength={200}
           onChange={(e) => setMessage(e.target.value)}
         />
