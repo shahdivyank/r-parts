@@ -1,4 +1,7 @@
 import Image from "next/image";
+import iPhone12TopHalf from "../../../public/Works/iPhone12_tophalf.webp";
+import iPhone12TopLeft from "../../../public/Works/iPhone12_topleft.webp";
+import iPhone12BottomHalf from "../../../public/Works/iPhone12_bottomhalf.webp";
 import React from "react";
 import { FaCircle, FaRegCircle } from "react-icons/fa";
 import Button from "../Button";
@@ -22,19 +25,17 @@ const Works = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua
           </div>
           <div className="m-auto md:grid grid-cols-2 gap-4 mb-[-7rem] pt-[15rem] ">
-            <button className="font-outfit bg-white text-parts-orange col-span-1 py-2 px-2 w-[200px] rounded-full cursor-pointer">
+            <button className="font-outfit bg-white text-parts-orange col-span-1 py-2 px-2 w-[200px] mb-[3rem] rounded-full cursor-pointer">
               LIST YOUR PART
             </button>
-            <div className="bg-blue-100 col-span-1 rounded-xl mt-[-14rem] mb-[-3rem] text-center">
-              image here
-              <Image />
+            <div className="col-span-1 rounded-xl mt-[-14rem] mb-[-3rem]">
+              <Image src={iPhone12TopHalf} className="w-full mb-[rem]" />
             </div>
           </div>
         </div>
         <div className="bg-parts-gray-200 col-span-1 rounded-xl pl-8 pr-8">
-          <div className="bg-blue-100 mb-5 mr-[-1rem] pb-52 col-span-1 rounded-xl max-w-[24rem] text-center">
-            image here
-            <Image />
+          <div className="mb-5 col-span-1 rounded-xl max-w-[24rem] ml-10">
+            <Image src={iPhone12BottomHalf} className="" />
           </div>
           <div className="flex gap-1 text-[0.8rem]">
             <FaCircle className="text-parts-orange" />
@@ -64,15 +65,16 @@ const Works = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>
           <div className="m-auto md:grid grid-cols-2 gap-8 mb-[-7rem] pt-[15rem]">
-            <Button
-              text="SHOP NOW"
-              color="bg-orange"
-              rounded="full"
-              size="sm"
-            />
-            <div className="bg-blue-100 col-span-1 rounded-xl mt-[-14rem] mb-[-1rem] mr-[-2rem] text-center">
-              image here
-              <Image />
+            <div className="">
+              <Button
+                text="SHOP NOW"
+                color="bg-orange"
+                rounded="full"
+                size="sm"
+              />
+            </div>
+            <div className=" col-span-1 rounded-xl mt-[-10rem] mr-[-2rem]">
+              <Image src={iPhone12TopLeft} className="" />
             </div>
           </div>
         </div>
