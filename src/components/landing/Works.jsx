@@ -5,6 +5,7 @@ import iPhone12BottomHalf from "../../../public/Works/iPhone12_bottomhalf.webp";
 import React from "react";
 import { FaCircle, FaRegCircle } from "react-icons/fa";
 import Button from "../Button";
+import Link from "next/link";
 
 const Works = () => {
   return (
@@ -25,10 +26,14 @@ const Works = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua
           </div>
           <div className="m-auto md:grid grid-cols-2 gap-4 mb-[-7rem] pt-[15rem] ">
-            <button className="font-outfit bg-white text-parts-orange col-span-1 py-2 px-2 w-[200px] mb-[3rem] rounded-full cursor-pointer">
+            <Link
+              href="/sell"
+              className="font-outfit bg-white text-parts-orange col-span-1 py-2 px-2 w-[200px] text-center rounded-full cursor-pointer"
+            >
               LIST YOUR PART
-            </button>
-            <div className="col-span-1 rounded-xl mt-[-14rem] mb-[-3rem]">
+            </Link>
+            <div className="bg-blue-100 col-span-1 rounded-xl mt-[-14rem] mb-[-3rem] text-center">
+              image here
               <Image src={iPhone12TopHalf} className="w-full mb-[rem]" />
             </div>
           </div>
@@ -65,16 +70,17 @@ const Works = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>
           <div className="m-auto md:grid grid-cols-2 gap-8 mb-[-7rem] pt-[15rem]">
-            <div className="">
+            <Link href="/market">
               <Button
                 text="SHOP NOW"
                 color="bg-orange"
                 rounded="full"
                 size="sm"
               />
-            </div>
-            <div className=" col-span-1 rounded-xl mt-[-10rem] mr-[-2rem]">
-              <Image src={iPhone12TopLeft} className="" />
+            </Link>
+            <div className="bg-blue-100 col-span-1 rounded-xl mt-[-14rem] mb-[-1rem] mr-[-2rem] text-center">
+              image here
+              <Image src={iPhone12TopLeft} />
             </div>
           </div>
         </div>
