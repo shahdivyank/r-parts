@@ -7,7 +7,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 
 const Navigation = () => {
   return (
-    <div className="flex w-full justify-between items-center font-outfit px-20 my-10 mb-16">
+    <div className="flex w-full justify-between items-center font-outfit px-20 my-6">
       <div className="flex gap-x-10 w-1/2 ">
         <Link
           href={"/"}

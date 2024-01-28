@@ -6,8 +6,10 @@ import { products } from "@/data/productImages";
 const Item = () => {
   return (
     <>
-      <p className="font-outfit text-parts-gray-500 mb-8">MARKET / PRODUCT</p>
-      <div className="md:grid grid-cols-5 gap-8">
+      <p className="font-outfit text-parts-gray-500 border-b-[1px] border-gray-300 pb-2">
+        MARKET / PRODUCT
+      </p>
+      <div className="md:grid grid-cols-5 gap-8 mt-8">
         <div className="col-span-3">
           <Images images={products} />
         </div>

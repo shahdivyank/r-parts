@@ -44,6 +44,14 @@ module.exports = {
           "marquee-continuation-reverse 30s linear infinite",
       },
       colors: {
+        tag: {
+          "green-text": "#6EAB64",
+          "green-bg": "#DAF0D7",
+          "yellow-text": "#928025",
+          "yellow-bg": "#F1E7B0",
+          "red-text": "#B13636",
+          "red-bg": "#F99E9E",
+        },
         parts: {
           black: "#000000",
           navy: "#123666",
