@@ -15,11 +15,17 @@ const Faq = ({ question, answer }) => {
           {question}
           <FiChevronRight
             className={`text-3xl ${
-              isOpen ? "rotate-90 duration-300" : "duration-300"
+              isOpen ? "rotate-90 duration-500" : "duration-300"
             }`}
           />
         </div>
-        {isOpen && <div className="p-3">{answer}</div>}
+        <div
+          className={`transition-opacity duration-700 ease-in-out ${
+            isOpen ? "opacity-100 " : "opacity-0 "
+          }`}
+        >
+          {isOpen && <div className="p-3 ">{answer}</div>}
+        </div>
       </div>
     </>
   );
