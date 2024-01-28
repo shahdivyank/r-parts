@@ -5,6 +5,7 @@ import Innovation from "../../../public/png/Innovation.png";
 import Growth from "../../../public/png/Growth.png";
 import CommunityIcon from "../../../public/png/CommunityIcon.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Values = () => {
   return (
@@ -54,13 +55,12 @@ const Values = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
             convallis mi ut velit porttitor placerat. Nulla egestas magna.
           </div>
-          <div className="w-3/4 flex justify-end my-2">
-            <a href="/info">
-              <button className="bg-parts-orange rounded-3xl text-white font-outfit py-2 px-6 hover:bg-[#FFA34F]">
-                LEARN MORE
-              </button>
-            </a>
-          </div>
+          <Link
+            href="/info"
+            className="bg-parts-orange rounded-3xl text-white font-outfit py-2 px-6 hover:bg-[#FFA34F] my-2"
+          >
+            LEARN MORE
+          </Link>
         </div>
       </div>
     </div>
