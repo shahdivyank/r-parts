@@ -6,6 +6,7 @@ import Growth from "../../../public/png/Growth.png";
 import { HiOutlineUserGroup } from "react-icons/hi2";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "../Button";
 
 const Values = () => {
   return (
@@ -55,11 +56,13 @@ const Values = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
             convallis mi ut velit porttitor placerat. Nulla egestas magna.
           </div>
-          <Link
-            href="/info"
-            className="bg-parts-orange rounded-3xl text-white font-outfit py-2 px-6 hover:bg-[#FFA34F] my-2"
-          >
-            LEARN MORE
+          <Link href="/info">
+            <Button
+              text="Learn More"
+              color="bg-orange"
+              rounded="full"
+              size="sm"
+            />
           </Link>
         </div>
       </div>
