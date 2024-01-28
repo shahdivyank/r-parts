@@ -4,6 +4,8 @@ import Sustainability from "../../../public/png/Sustainability.png";
 import Innovation from "../../../public/png/Innovation.png";
 import Growth from "../../../public/png/Growth.png";
 import { HiOutlineUserGroup } from "react-icons/hi2";
+import { IoEarthOutline, IoBulbOutline } from "react-icons/io5";
+import { MdOutlineTrendingUp } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button";
@@ -28,7 +30,7 @@ const Values = () => {
           <Image src={Sustainability} className="w-5/6" />
           <div className="w-5/6 flex font-bebas text-4xl justify-between items-center">
             Sustainability
-            <HiOutlineUserGroup />
+            <IoEarthOutline />
           </div>
           <div className="w-5/6 font-outfit">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
@@ -39,7 +41,7 @@ const Values = () => {
           <Image src={Innovation} className="w-5/6" />
           <div className="w-5/6 flex font-bebas text-4xl justify-between items-center">
             Innovation
-            <HiOutlineUserGroup />
+            <IoBulbOutline />
           </div>
           <div className="w-5/6 font-outfit">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
@@ -50,7 +52,7 @@ const Values = () => {
           <Image src={Growth} className="w-5/6" />
           <div className="w-5/6 flex font-bebas text-4xl justify-between items-center">
             Growth
-            <HiOutlineUserGroup />
+            <MdOutlineTrendingUp />
           </div>
           <div className="w-5/6 font-outfit">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
