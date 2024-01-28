@@ -43,9 +43,10 @@ const Item = ({ name, description, condition, price, image, itemCount }) => {
         <p className="font-outfit font-base text-base mt-2  h-2/3">
           ${price}.00
         </p>
-        <button className="hover:text-red-500 cursor-pointer" onClick={null}>
-          <RxTrash className=" text-xl" />
-        </button>
+        <RxTrash
+          onClick={null}
+          className=" text-xl hover:text-red-500 cursor-pointer"
+        />
       </div>
     </div>
   );
