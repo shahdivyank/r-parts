@@ -40,9 +40,6 @@ const Footer = () => {
             <HiOutlineMail className="text-xl stroke-2" />
             <p>contact@rparts.com</p>
           </div>
-          <p className="text-sm font-light">
-            © ACM - UC Riverside. All Rights Reserved.
-          </p>
         </div>
       </div>
       <div className="flex flex-col justify-between gap-y-5 w-10/12">
