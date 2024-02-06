@@ -1,4 +1,5 @@
 import FAQ from "./Faq";
+import Header from "../Header";
 import Questions from "@/data/Questions.js";
 import WhatIs from "@/components/info/WhatIs.jsx";
 import HowItWorks from "@/components/info/HowItWorks.jsx";
