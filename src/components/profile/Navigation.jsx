@@ -1,10 +1,4 @@
-"use client";
-
-import { useState } from "react";
-
-const Navigation = () => {
-  const [activeButton, setActiveButton] = useState("Orders");
-
+const Navigation = ({ activeButton, setActiveButton }) => {
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
