@@ -1,18 +1,12 @@
-"use client";
-import { useState } from "react";
 import Dashboard from "./Dashboard";
 import Navigation from "./Navigation";
+import { links } from "@/data/profile/Links";
 
-const Data = () => {
-  const [activeButton, setActiveButton] = useState("Orders");
-
+const Data = ({ current }) => {
   return (
     <div className="w-full">
-      <Navigation
-        activeButton={activeButton}
-        setActiveButton={setActiveButton}
-      />
-      <Dashboard activeButton={activeButton} />
+      <Navigation current={current ?? "orders"} />
+      <Dashboard current={links[current]} />
     </div>
   );
 };

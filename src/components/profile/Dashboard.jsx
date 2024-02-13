@@ -11,7 +11,7 @@ import Table from "./Table";
 import { items } from "@/data/mock/Data";
 import { columns } from "@/data/Columns";
 
-const Dashboard = ({ activeButton, empty }) => {
+const Dashboard = ({ current, empty }) => {
   const data = items;
   const [filters, setFilters] = useState([{ id: "name", value: "" }]);
   const [selected, setSelected] = useState([]);
@@ -42,7 +42,7 @@ const Dashboard = ({ activeButton, empty }) => {
 
   return (
     <div className="w-full p-3">
-      <p className="font-medium text-2xl my-3 font-outfit">{activeButton}</p>
+      <p className="font-medium text-2xl my-3 font-outfit">{current}</p>
       <Table
         setFilters={setFilters}
         getHeaderGroups={getHeaderGroups}
