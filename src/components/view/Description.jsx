@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { FaMinus, FaPlus, FaRegPaperPlane } from "react-icons/fa";
-import Link from "next/link";
+import { FaMinus, FaPlus } from "react-icons/fa";
 
 const Description = () => {
   const [quantity, setQuantity] = useState(1);
@@ -63,19 +62,6 @@ const Description = () => {
       >
         ADD TO CART
       </button>
-
-      <div className="border-2 border-parts-gray-400 rounded w-fit p-3 flex items-center mt-4">
-        <FaRegPaperPlane className="mx-3 text-2xl" />
-        <div className="font-outfit">
-          <p className="font-semibold">Free Pickup at WCH127</p>
-          <p>
-            Schedule Pickup Time at Checkout.{" "}
-            <Link href="/" className="underline">
-              Details.
-            </Link>
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
