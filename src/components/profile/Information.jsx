@@ -4,7 +4,7 @@ import ProfileImage from "../../../public/information-placeholder.webp";
 
 const Information = () => {
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-1/4">
       <Image className="w-full rounded-3xl" src={ProfileImage} />
       <div className="flex flex-col w-full">
         <div className="w-full flex flex-col">
