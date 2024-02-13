@@ -1,4 +1,4 @@
-const Input = ({ object, setObject, field, text, placeholder }) => {
+const Input = ({ object, setObject, field, text, placeholder, onChange }) => {
   return (
     <div className="w-full">
       <div className="font-medium text-sm mb-1">{text}</div>
@@ -7,7 +7,7 @@ const Input = ({ object, setObject, field, text, placeholder }) => {
         type="text"
         placeholder={placeholder}
         value={object[field]}
-        onChange={(e) => setObject({ ...object, [field]: e.target.value })}
+        onChange={onChange}
       />
     </div>
   );

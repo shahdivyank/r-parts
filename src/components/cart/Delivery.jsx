@@ -22,6 +22,9 @@ const Delivery = ({ state, deliveryInfo, setDeliveryInfo }) => {
               className={`w-full flex flex-col mb-6 md:mb-0 ${span}`}
             >
               <Input
+                onChange={(e) =>
+                  setDeliveryInfo({ ...deliveryInfo, [field]: e.target.value })
+                }
                 object={deliveryInfo}
                 setObject={setDeliveryInfo}
                 field={field}
