@@ -38,13 +38,13 @@ const Gallery = () => {
       <ProductImage item={products.item1} />
 
       {/* STACK */}
-      <div className="w-1/4 flex flex-col gap-y-6 bg-red-500">
+      <div className="w-1/4 flex flex-col gap-y-4 font-outfit">
         <ProductImage item={products.item2} />
         <ProductInfo item={products.item2} />
       </div>
 
       {/* STACK */}
-      <div className="w-1/4 flex flex-col gap-y-6">
+      <div className="w-1/4 flex flex-col gap-y-4 font-outfit">
         <ProductInfo item={products.item3} />
         <ProductImage item={products.item3} />
       </div>
