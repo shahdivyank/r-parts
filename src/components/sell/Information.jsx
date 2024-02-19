@@ -6,7 +6,7 @@ const Information = ({ setState }) => {
         name="name"
         //  onChange={handleTyping}
         type="text"
-        className="focus:outline-none font-outfit resize-none text-3xl w-full py-3 border-b mt-3 mb-10 text-parts-gray-500 bg-parts-gray-100"
+        className="focus:outline-none font-outfit resize-none text-3xl w-full py-3 border-b my-6 placeholder:text-parts-gray-500 bg-parts-gray-100"
         placeholder="Enter Name of Product Here"
       />
 
@@ -15,7 +15,7 @@ const Information = ({ setState }) => {
           <div className="text-xl font-outfit font-medium mb-2">Condition</div>
           <select
             name="condition"
-            className="focus:outline-none w-full border rounded-2xl px-4 py-3 bg-transparent"
+            className="focus:outline-none w-full border rounded-2xl p-4 bg-transparent"
           >
             <option value=""></option>
             <option value="new">New</option>
@@ -25,10 +25,10 @@ const Information = ({ setState }) => {
           </select>
         </div>
         <div className="w-5/12 ml-2">
-          <div className="text-xl font-outfit font-medium mb-2">Brand</div>
+          <div className="text-xl font-outfit font-medium mb-4">Brand</div>
           <select
             name="brand"
-            className="focus:outline-none w-full border rounded-2xl px-4 py-3 bg-transparent"
+            className="focus:outline-none w-full border rounded-2xl px-4 py-3 bg-parts-gray-100"
           >
             <option value=""></option>
             <option value="brand1">Brand 1</option>
@@ -38,35 +38,33 @@ const Information = ({ setState }) => {
       </div>
 
       <div>
-        <div className="text-xl font-outfit font-medium mt-4 mb-2">
-          Description
-        </div>
+        <div className="text-xl font-outfit font-medium my-2">Description</div>
         <textarea
           // value={data.description}
           name="description"
           // onChange={handleTyping}
-          className="focus:outline-none w-full h-[15vh] border rounded-2xl px-4 py-3 resize-none  placeholder:font-light placeholder:text-parts-gray-500 placeholder:font-outfit placeholder:font-regular bg-parts-gray-100"
+          className="focus:outline-none w-full h-[15vh] border rounded-2xl p-4 resize-none  placeholder:font-light placeholder:text-parts-gray-500 placeholder:font-outfit bg-parts-gray-100"
           placeholder="Enter product information (utility, usage history, background, etc.)"
         />
       </div>
 
       <div>
-        <div className="text-xl font-outfit font-medium mt-4 mb-2">
+        <div className="text-xl font-outfit font-medium my-2">
           Additional Information
         </div>
         <textarea
           //  value={data.specifications}
           name="specifications"
           // onChange={handleTyping}
-          className="focus:outline-none w-full h-[15vh] border rounded-2xl px-4 py-3 resize-none placeholder:font-light placeholder:text-parts-gray-500 placeholder:font-outfit placeholder:font-regular bg-parts-gray-100"
+          className="focus:outline-none w-full h-[15vh] border rounded-2xl p-4 resize-none placeholder:font-light placeholder:text-parts-gray-500 placeholder:font-outfit bg-parts-gray-100"
           placeholder="Type product specifications here (model, color, content, etc.)"
         />
       </div>
 
-      <div className="flex justify-center mt-5">
+      <div className="flex justify-center my-28">
         <button
           onClick={() => setState(2)}
-          className="w-1/2 bg-parts-orange text-white rounded-full py-2 mb-32 font-outfit"
+          className="w-2/5 bg-parts-orange text-white rounded-full py-2 font-outfit"
         >
           LIST PART
         </button>
