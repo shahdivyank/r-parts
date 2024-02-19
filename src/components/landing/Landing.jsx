@@ -6,7 +6,7 @@ import Works from "./Works";
 
 const Landing = () => {
   return (
-    <div className= "bg-red-500 flex items-center flex-col">
+    <div className=" flex items-center flex-col">
       <Home />
       <Banner />
       <Works />

@@ -12,10 +12,10 @@ import Button from "../Button";
 
 const Values = () => {
   return (
-    <div className="w-11/12 my-4 bg-blue-500">
+    <div className="w-11/12 my-4">
       <div className="font-outfit text-xl font-semibold my-6">We Stand For</div>
       <div className="flex w-full justify-center space-x-7">
-        <div className="bg-yellow-500 flex flex-col gap-y-6 items-center">
+        <div className="flex flex-col gap-y-6 items-center">
           <Image src={Community} className="w-full" />
           <div className="w-full flex font-bebas text-4xl justify-between items-center">
             Community

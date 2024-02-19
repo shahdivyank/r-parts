@@ -67,6 +67,12 @@ module.exports = {
           "gray-600": "#434343",
         },
       },
+      borderWidth: {
+        1: "1px",
+      },
+      fontSize: {
+        6.5: ["67px", "4rem"],
+      },
     },
   },
   plugins: [],
