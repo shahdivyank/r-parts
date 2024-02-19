@@ -10,12 +10,12 @@ const Header = ({ state }) => {
       </div>
       <div className="flex items-center gap-1">
         <div className="bg-parts-orange p-1.5 rounded-full" />
+        <div className="bg-parts-orange p-1.5 rounded-full" />
         <div
           className={`${state == 1 && "border border-parts-gray-400"} ${
             state == 2 && "bg-parts-orange"
           } p-1.5 rounded-full`}
         />
-        <div className="border border-parts-gray-400 p-1.5 rounded-full" />
       </div>
     </div>
   );
