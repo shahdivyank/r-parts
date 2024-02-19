@@ -1,10 +1,8 @@
 "use client";
-import React, { useState } from "react";
-import { FaMinus, FaPlus } from "react-icons/fa";
+import React from "react";
+import Quantity from "../Quantity";
 
 const Description = () => {
-  const [quantity, setQuantity] = useState(1);
-
   const selectedItem = {
     data: {
       description:
@@ -30,25 +28,7 @@ const Description = () => {
       <hr className="w-full h-1 mt-4" />
 
       <div className="flex items-center">
-        <div className="flex justify-evenly items-center rounded-full border-2 border-parts-gray-400 w-fit p-2 mt-2">
-          <FaMinus
-            onClick={() => {
-              if (quantity > 1) {
-                setQuantity(quantity - 1);
-              }
-            }}
-            className="mr-2 hover:cursor-pointer"
-          />
-          <p className="mb-0 mx-4">{quantity}</p>
-          <FaPlus
-            onClick={() => {
-              if (quantity < parseInt(selectedItem.data.available, 10)) {
-                setQuantity(quantity + 1);
-              }
-            }}
-            className="ml-2 hover:cursor-pointer"
-          />
-        </div>
+        <Quantity />
         <p className="text-parts-orange font-semibold mx-4">
           {selectedItem.data.available} AVAILABLE
         </p>
