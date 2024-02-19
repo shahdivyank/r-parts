@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Works = () => {
   return (
-    <div className="w-11/12">
+    <div className="w-10/12">
       <div className="text-2xl font-outfit font-normal">How It Works</div>
       <div className="mt-8 md:grid grid-cols-4 gap-8">
         <div className="bg-parts-orange col-span-2 rounded-3xl pb-[10rem] pl-16 pr-8 pt-14">
