@@ -33,7 +33,7 @@ const ProductInfo = ({ item }) => (
 
 const Gallery = () => {
   return (
-    <div className="flex gap-x-6 w-10/12 justify-between h-[350px]">
+    <div className="flex gap-x-6 w-[80%] justify-between h-[350px]">
       {/* FULL IMAGE */}
       <ProductImage item={products.item1} />
 

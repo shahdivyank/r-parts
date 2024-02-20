@@ -8,7 +8,7 @@ import arrow from "../../../public/svg/arrow.svg";
 const Home = () => {
   return (
     <>
-      <div className="w-10/12 font-outfit mb-10 mt-10">
+      <div className="w-[80%] font-outfit mb-10 mt-10">
         <p className="text-parts-gray-500 font-light text-xs">
           SECOND-HAND HARDWARE
         </p>
@@ -24,7 +24,7 @@ const Home = () => {
         </p>
 
         <div className="flex justify-center items-center my-5">
-          <p className="font-light text-xs ">
+          <p className="font-light text-sm">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
             convallis mi ut velit porttitor placerat. Nulla egestas mattis
             magna, ut luctus ligula mollis sit amet. Nam vitae leo dignissim.

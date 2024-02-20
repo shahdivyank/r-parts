@@ -12,7 +12,7 @@ import Button from "../Button";
 
 const Values = () => {
   return (
-    <div className="w-10/12 my-4">
+    <div className="w-[80%] my-4">
       <div className="font-outfit text-xl font-semibold my-6">We Stand For</div>
       <div className="flex w-full justify-center space-x-7">
         <div className="flex flex-col gap-y-6 items-center">
