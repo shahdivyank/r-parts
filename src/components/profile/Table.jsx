@@ -14,10 +14,39 @@ const Table = ({
   getCanNextPage,
   getPageCount,
   empty,
+  totalNumItems,
 }) => {
+  const pageIndex = getState().pagination.pageIndex;
+  const pageSize = 10;
+  const startItem = pageIndex * pageSize + 1;
+  const endItem = Math.min((pageIndex + 1) * pageSize, totalNumItems);
   return (
     <div className="border-2 border-parts-gray-400 rounded-xl">
-      <Toolbar setFilters={setFilters} />
+      <div className="flex items-center justify-between">
+        <Toolbar setFilters={setFilters} />
+        <div className="flex items-center ">
+          <div className=" font-outfit text-lg flex-grow whitespace-nowrap ">
+            {startItem}-{endItem} OF {totalNumItems}
+          </div>
+          <div className="flex gap-3 items-center p-4 text-2xl w-full rounded-b-lg">
+            <button
+              onClick={() => previousPage()}
+              disabled={!getCanPreviousPage()}
+              className="mx-2 disabled:text-parts-gray-400"
+            >
+              <FaChevronLeft className=" text-2xl" />
+            </button>
+
+            <button
+              onClick={() => nextPage()}
+              disabled={!getCanNextPage()}
+              className="mx-2 disabled:text-parts-gray-400"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+        </div>
+      </div>
       <div className="h-[70vh] w-full overflow-y-scroll flex flex-col justify-between">
         <div>
           {getHeaderGroups().map(({ headers, id }) => (
@@ -40,26 +69,6 @@ const Table = ({
             <Row key={id} id={id} getVisibleCells={getVisibleCells} />
           ))}
         </div>
-      </div>
-      <div className="flex justify-end items-center p-4 text-lg w-full rounded-b-lg">
-        <div className="mx-2">{getRowModel().rows.length} row(s)</div>
-        <button
-          onClick={() => previousPage()}
-          disabled={!getCanPreviousPage()}
-          className="mx-2 disabled:text-parts-gray-400"
-        >
-          <FaChevronLeft />
-        </button>
-        <div>
-          Page {getState().pagination.pageIndex + 1} of {getPageCount()}
-        </div>
-        <button
-          onClick={() => nextPage()}
-          disabled={!getCanNextPage()}
-          className="mx-2 disabled:text-parts-gray-400"
-        >
-          <FaChevronRight />
-        </button>
       </div>
     </div>
   );

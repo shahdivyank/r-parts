@@ -54,6 +54,7 @@ const Dashboard = ({ current, empty }) => {
         getCanNextPage={getCanNextPage}
         getPageCount={getPageCount}
         empty={empty}
+        totalNumItems={data.length}
       />
     </div>
   );
