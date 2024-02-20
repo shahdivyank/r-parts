@@ -12,8 +12,8 @@ import Button from "../Button";
 
 const Values = () => {
   return (
-    <div className="w-[80%] my-4">
-      <div className="font-outfit text-xl font-semibold my-6">We Stand For</div>
+    <div className="w-[80%] mb-[8%]">
+      <div className="font-outfit text-xl font-medium mb-8">We Stand For</div>
       <div className="flex w-full justify-center space-x-7">
         <div className="flex flex-col gap-y-6 items-center">
           <Image src={Community} className="w-full" />
@@ -21,7 +21,7 @@ const Values = () => {
             Community
             <HiOutlineUserGroup />
           </div>
-          <div className="w-full font-outfit">
+          <div className="w-full font-outfit text-sm font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
             convallis mi ut velit porttitor placerat. Nulla egestas magna.
           </div>
@@ -32,7 +32,7 @@ const Values = () => {
             Sustainability
             <IoEarthOutline />
           </div>
-          <div className="w-full font-outfit">
+          <div className="w-full font-outfit text-sm font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
             convallis mi ut velit porttitor placerat. Nulla egestas magna.
           </div>
@@ -43,29 +43,33 @@ const Values = () => {
             Innovation
             <IoBulbOutline />
           </div>
-          <div className="w-full font-outfit">
+          <div className="w-full font-outfit text-sm font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
             convallis mi ut velit porttitor placerat. Nulla egestas magna.
           </div>
         </div>
-        <div className="flex flex-col gap-y-6 items-center">
-          <Image src={Growth} className="w-full" />
-          <div className="w-full flex font-bebas text-4xl justify-between items-center">
-            Growth
-            <MdOutlineTrendingUp />
+        <div className="flex flex-col">
+          <div className="flex flex-col gap-y-6 items-center">
+            <Image src={Growth} className="w-full" />
+            <div className="w-full flex font-bebas text-4xl justify-between items-center">
+              Growth
+              <MdOutlineTrendingUp />
+            </div>
+            <div className="w-full font-outfit text-sm font-light">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
+              convallis mi ut velit porttitor placerat. Nulla egestas magna.
+            </div>
           </div>
-          <div className="w-full font-outfit">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestilum
-            convallis mi ut velit porttitor placerat. Nulla egestas magna.
+          <div className=" w-full flex mt-7 justify-end">
+            <Link href="/info">
+              <Button
+                text="LEARN MORE"
+                color="bg-orange"
+                rounded="full"
+                size="sm"
+              />
+            </Link>
           </div>
-          <Link href="/info">
-            <Button
-              text="Learn More"
-              color="bg-orange"
-              rounded="full"
-              size="sm"
-            />
-          </Link>
         </div>
       </div>
     </div>

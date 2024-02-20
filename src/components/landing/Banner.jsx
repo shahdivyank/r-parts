@@ -4,7 +4,7 @@ const Banner = () => {
   const professors = 120;
 
   return (
-    <div className="w-full flex justify-center space-x-[10%] py-12 bg-parts-navy text-white font-outfit my-10">
+    <div className="w-full flex justify-center space-x-[10%] py-12 bg-parts-navy text-white font-outfit my-[8%]">
       <div className="flex items-center">
         <p className="font-bold text-6xl">{years}+</p>
         <div className="ml-2 text-sm font-light">

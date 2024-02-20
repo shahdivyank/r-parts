@@ -10,8 +10,8 @@ import Link from "next/link";
 const Works = () => {
   return (
     <div className="w-[80%]">
-      <div className="text-xl font-outfit font-normal">How It Works</div>
-      <div className="mt-4 md:grid grid-cols-4 gap-7">
+      <div className="text-xl font-outfit font-medium">How It Works</div>
+      <div className="mt-7 md:grid grid-cols-4 gap-7">
         <div className="bg-parts-orange col-span-2 rounded-3xl pb-[10rem] pl-12 pr-8 pt-12">
           <div className="flex gap-1 text-[0.8rem]">
             <FaCircle className="text-white" />
