@@ -1,6 +1,12 @@
 const Information = ({ setState }) => {
   return (
     <div>
+      <div className="flex justify-between my-10">
+        <div className="border rounded-2xl border-gray-400 flex-grow mr-2 h-28"></div>{" "}
+        <div className="border rounded-2xl border-gray-400 flex-grow mx-1 h-28"></div>{" "}
+        <div className="border rounded-2xl border-gray-400 flex-grow ml-2 h-28"></div>{" "}
+      </div>
+
       <input
         // value={data.name}
         name="name"
@@ -15,7 +21,7 @@ const Information = ({ setState }) => {
           <div className="text-xl font-outfit font-medium mb-2">Condition</div>
           <select
             name="condition"
-            className="focus:outline-none w-full border rounded-2xl p-4 bg-transparent"
+            className="focus:outline-none w-full border rounded-2xl p-4 bg-parts-gray-100"
           >
             <option value=""></option>
             <option value="new">New</option>
