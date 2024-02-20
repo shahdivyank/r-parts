@@ -17,9 +17,8 @@ const productInformation = {
 
 const View = () => {
   return (
-    <div className="w-11/12">
+    <div className="w-[80%]">
       <Item />
-
       <Information {...productInformation} />
     </div>
   );
