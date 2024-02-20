@@ -50,7 +50,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mb-5">
+      <div className="flex justify-center mb-5 w-[80%]">
         <Gallery />
       </div>
     </>
