@@ -1,4 +1,8 @@
+import AddPhoto from "./AddPhoto.jsx";
+import { useState } from "react";
+
 const Information = ({ setState }) => {
+  const [images, setImages] = useState([]);
   return (
     <div>
       <div className="flex justify-between my-10">
@@ -21,7 +25,7 @@ const Information = ({ setState }) => {
           <div className="text-xl font-outfit font-medium mb-2">Condition</div>
           <select
             name="condition"
-            className="focus:outline-none w-full border rounded-2xl p-4 bg-parts-gray-100"
+            className="focus:outline-none w-full border rounded-2xl px-4 py-3 bg-parts-gray-100"
           >
             <option value=""></option>
             <option value="new">New</option>
@@ -31,7 +35,7 @@ const Information = ({ setState }) => {
           </select>
         </div>
         <div className="w-5/12 ml-2">
-          <div className="text-xl font-outfit font-medium mb-4">Brand</div>
+          <div className="text-xl font-outfit font-medium mb-2">Brand</div>
           <select
             name="brand"
             className="focus:outline-none w-full border rounded-2xl px-4 py-3 bg-parts-gray-100"
@@ -42,6 +46,8 @@ const Information = ({ setState }) => {
           </select>
         </div>
       </div>
+
+      <AddPhoto setImages={setImages} images={images} />
 
       <div>
         <div className="text-xl font-outfit font-medium my-2">Description</div>
