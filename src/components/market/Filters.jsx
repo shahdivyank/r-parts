@@ -8,7 +8,7 @@ const Filters = () => {
   const [selected, setSelected] = useState("all");
 
   return (
-    <div className="flex flex-col text-parts-gray-500 border-r border-parts-gray-400">
+    <div className="flex flex-col font-outfit text-parts-gray-500 border-r border-parts-gray-400 w-3/12">
       <div className="py-3 pl-7 w-full ">Filter</div>
       <div
         onClick={() => setSelected("all")}
