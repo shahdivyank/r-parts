@@ -16,6 +16,6 @@ export async function POST(req) {
   } catch (err) {
     return new Response(`Webhook Error: ${err}`, { status: 400 });
   }
-  console.log(event.data.object);
+
   return new Response(event.data.object, { status: 200 });
 }
