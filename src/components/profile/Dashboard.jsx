@@ -24,7 +24,6 @@ const Dashboard = ({ current, empty }) => {
     getCanPreviousPage,
     nextPage,
     getCanNextPage,
-    getPageCount,
   } = useReactTable({
     data,
     columns,
@@ -52,7 +51,6 @@ const Dashboard = ({ current, empty }) => {
         getCanPreviousPage={getCanPreviousPage}
         nextPage={nextPage}
         getCanNextPage={getCanNextPage}
-        getPageCount={getPageCount}
         empty={empty}
         totalNumItems={data.length}
       />
