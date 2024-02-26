@@ -11,11 +11,11 @@ const Header = ({ state }) => {
         </div>
       </div>
       <div className="flex gap-1">
-        {Array.from({ length: state + 1 }).map((index) => (
+        {Array.from({ length: state + 1 }).map((_, index) => (
           <FaCircle key={index} className="text-parts-orange" />
         ))}
-        {Array.from({ length: 2 - state }).map((index) => (
-          <FaRegCircle key={index} className="text-parts-gray-400" />
+        {Array.from({ length: 2 - state }).map((_, index) => (
+          <FaRegCircle key={3 - index} className="text-parts-gray-400" />
         ))}
       </div>
     </div>
