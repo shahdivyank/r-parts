@@ -29,6 +29,7 @@ const Delivery = ({ state, delivery, setDelivery }) => {
                 setObject={setDelivery}
                 field={field}
                 text={text}
+                value={delivery[field]}
               />
             </div>
           ))}
@@ -39,6 +40,9 @@ const Delivery = ({ state, delivery, setDelivery }) => {
               field="deliveryMethod"
               text="Delivery Method"
               options={DELIVERY_METHOD}
+              onClick={(option) =>
+                setDelivery({ ...delivery, deliveryMethod: option })
+              }
             />
           </div>
         </div>

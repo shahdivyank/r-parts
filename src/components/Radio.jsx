@@ -1,6 +1,6 @@
 import { FaCircle, FaRegCircle } from "react-icons/fa";
 
-const Radio = ({ object, setObject, field, text, options }) => {
+const Radio = ({ object, setObject, field, text, options, onClick }) => {
   return (
     <div className="w-full">
       <div className="font-medium text-sm mb-1">{text}</div>
@@ -9,7 +9,7 @@ const Radio = ({ object, setObject, field, text, options }) => {
           <div
             key={index}
             className="border border-parts-gray-400 rounded w-full bg-transparent cursor-pointer flex justify-between items-start p-4"
-            onClick={() => setObject({ ...object, [field]: option.text })}
+            onClick={() => onClick(option.text)}
           >
             <div>
               <div className="text-sm font-medium">{option.text}</div>
