@@ -14,7 +14,7 @@ const Cart = () => {
         <Items />
       </div>
 
-      <Total state={state} setState={setState} className="w-full" />
+      <Total state={state} setState={setState} />
     </div>
   );
 };
