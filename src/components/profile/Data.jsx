@@ -1,10 +1,12 @@
+import Dashboard from "./Dashboard";
 import Navigation from "./Navigation";
+import { links } from "@/data/profile/Links";
 
-const Data = () => {
+const Data = ({ current }) => {
   return (
-    <div className="cols-span-3">
-      <Navigation />
-      data
+    <div className="w-full">
+      <Navigation current={current ?? "orders"} />
+      <Dashboard current={links[current]} />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import Items from "./Items";
 
 const Market = () => {
   return (
-    <div className="w-11/12">
+    <div className="w-[80%]">
       <Header title="MARKET" />
       <div className="flex mt-8 min-h-screen gap-2">
         <Filters />

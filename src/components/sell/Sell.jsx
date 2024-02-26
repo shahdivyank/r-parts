@@ -5,9 +5,9 @@ import Confirmation from "./Confirmation";
 import Header from "./Header";
 
 const Sell = () => {
-  const [state, setState] = useState(1);
+  const [state, setState] = useState(2);
   return (
-    <div className="bg-gray-200 w-full h-full justify-center">
+    <div className="bg-gray-100 w-3/4 h-full justify-center">
       <Header state={state} />
       {state === 1 && <Information setState={setState} />}
       {state === 2 && <Confirmation />}

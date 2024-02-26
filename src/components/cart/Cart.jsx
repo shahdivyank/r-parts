@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Items from "./Items";
 import Total from "./Total";
 import Delivery from "./Delivery";
@@ -7,8 +7,17 @@ import Header from "./Header";
 import { DELIVERY_FIELDS } from "@/data/cart";
 import { ITEMS } from "@/mock/items";
 
+import { loadStripe } from "@stripe/stripe-js";
+
 const Cart = () => {
   const [items, setItems] = useState(ITEMS);
+  useEffect(() => {
+    const stripe = loadStripe(`${process.env.NEXT_STRIPE_PUBLIC_KEY}`);
+
+    if (!stripe) {
+      return;
+    }
+  }, []);
   const [state, setState] = useState(0);
   const [delivery, setDelivery] = useState({
     ...Object.fromEntries(DELIVERY_FIELDS.map((k) => [[k.field], ""])),
