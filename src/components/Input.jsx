@@ -1,4 +1,4 @@
-const Input = ({ object, setObject, field, text, placeholder, onChange }) => {
+const Input = ({ object, field, text, placeholder, onChange }) => {
   return (
     <div className="w-full">
       <div className="font-medium text-sm mb-1">{text}</div>

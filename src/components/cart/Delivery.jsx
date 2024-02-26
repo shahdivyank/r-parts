@@ -4,7 +4,7 @@ import { DELIVERY_FIELDS } from "@/data/cart";
 import Radio from "../Radio";
 import { DELIVERY_METHOD } from "@/data/cart";
 
-const Delivery = ({ state, deliveryInfo, setDeliveryInfo }) => {
+const Delivery = ({ state, delivery, setDelivery }) => {
   return (
     state === 1 && (
       <div className="w-full">
@@ -23,10 +23,10 @@ const Delivery = ({ state, deliveryInfo, setDeliveryInfo }) => {
             >
               <Input
                 onChange={(e) =>
-                  setDeliveryInfo({ ...deliveryInfo, [field]: e.target.value })
+                  setDelivery({ ...delivery, [field]: e.target.value })
                 }
-                object={deliveryInfo}
-                setObject={setDeliveryInfo}
+                object={delivery}
+                setObject={setDelivery}
                 field={field}
                 text={text}
               />
@@ -34,8 +34,8 @@ const Delivery = ({ state, deliveryInfo, setDeliveryInfo }) => {
           ))}
           <div className="col-span-2 border-gray-300 border-t mt-6 pt-6">
             <Radio
-              object={deliveryInfo}
-              setObject={setDeliveryInfo}
+              object={delivery}
+              setObject={setDelivery}
               field="deliveryMethod"
               text="Delivery Method"
               options={DELIVERY_METHOD}

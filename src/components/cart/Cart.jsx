@@ -10,13 +10,13 @@ import { ITEMS } from "@/mock/items";
 const Cart = () => {
   const [items, setItems] = useState(ITEMS);
   const [state, setState] = useState(0);
-  const [deliveryInfo, setDeliveryInfo] = useState({
+  const [delivery, setDelivery] = useState({
     ...Object.fromEntries(DELIVERY_FIELDS.map((k) => [[k.field], ""])),
     deliveryMethod: "Standard Shipping",
   });
   const nextState = () => {
-    setState(state + 1);
-    if (state === 1) console.log(items, deliveryInfo);
+    if (state === 1) console.log(items, delivery);
+    else setState(state + 1);
   };
 
   return (
@@ -26,8 +26,8 @@ const Cart = () => {
         <div className="w-2/3">
           <Delivery
             state={state}
-            deliveryInfo={deliveryInfo}
-            setDeliveryInfo={setDeliveryInfo}
+            delivery={delivery}
+            setDelivery={setDelivery}
           />
           <Items state={state} items={items} setItems={setItems} />
         </div>
