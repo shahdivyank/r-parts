@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .placeholder-gray::placeholder {
+    color: #858585; /* Change this color to your desired placeholder color */
+  }
+}
