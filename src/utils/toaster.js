@@ -1,10 +1,18 @@
 import React from "react";
 import { toast } from "react-hot-toast";
-const toaster = (name, price) => {
+const toaster = (name, price, quantity, condition) => {
   return toast.custom(
-    <div className="flex items-center justify-center bg-white border-2 border-parts-orange shadow-md p-10 rounded-3xl">
-      <span className="font-bold">{name}</span> &nbsp; has been added with a
-      price of &nbsp;<span className="font-bold">${price}</span>
+    <div className="flex items-start flex-col justify-center bg-white border-2 border-parts-orange shadow-md w-6/12 p-2 rounded-3xl">
+      <div className="font-bold text-xl">
+        {name} ${price}
+      </div>
+      <div className="font-bold text-lg">
+        Items: <span className="font-normal text-parts-orange">{quantity}</span>
+      </div>
+      <div className="font-bold text-lg">
+        Condition:{" "}
+        <span className="font-normal text-parts-green">{condition}</span>
+      </div>
     </div>,
   );
 };

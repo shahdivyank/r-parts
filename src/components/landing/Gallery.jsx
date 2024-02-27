@@ -33,18 +33,18 @@ const ProductInfo = ({ item }) => (
 
 const Gallery = () => {
   return (
-    <div className="flex gap-x-6 w-full justify-between h-[500px]">
+    <div className="flex gap-x-6 justify-between h-[350px]">
       {/* FULL IMAGE */}
       <ProductImage item={products.item1} />
 
       {/* STACK */}
-      <div className="w-1/4 flex flex-col gap-y-6">
+      <div className="w-1/4 flex flex-col gap-y-4 font-outfit">
         <ProductImage item={products.item2} />
         <ProductInfo item={products.item2} />
       </div>
 
       {/* STACK */}
-      <div className="w-1/4 flex flex-col gap-y-6">
+      <div className="w-1/4 flex flex-col gap-y-4 font-outfit">
         <ProductInfo item={products.item3} />
         <ProductImage item={products.item3} />
       </div>

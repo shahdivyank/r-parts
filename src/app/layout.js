@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${bebas.variable} ${outfit.variable} ${montserrat.variable} flex justify-center items-center flex-col bg-parts-gray-100`}
+        className={`${bebas.variable} ${outfit.variable} ${montserrat.variable} min-h-screen flex justify-between items-center flex-col bg-parts-gray-100`}
       >
         <Navigation />
         <Toaster />

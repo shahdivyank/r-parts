@@ -1,26 +1,26 @@
 const Banner = () => {
-  const years = 100;
-  const parts = "3M";
-  const professors = "5M";
+  const years = 5;
+  const parts = 10;
+  const professors = 120;
 
   return (
-    <div className="w-full flex justify-evenly py-7 bg-parts-navy text-white font-outfit my-10">
+    <div className="w-full flex justify-center space-x-[10%] py-12 bg-parts-navy text-white font-outfit my-[8%]">
       <div className="flex items-center">
-        <p className="font-bold text-5xl">{years}+</p>
+        <p className="font-bold text-6xl">{years}+</p>
         <div className="ml-2 text-sm font-light">
-          YEARS <br /> OF SERVICE
+          SATISFIED <br /> CUSTOMERS
         </div>
       </div>
       <div className="flex items-center">
-        <p className="font-bold text-5xl">{parts}+</p>
+        <p className="font-bold text-6xl">{parts}+</p>
         <div className="ml-2 text-sm font-light">
           PARTS <br /> REFURBISHED
         </div>
       </div>
       <div className="flex items-center">
-        <p className="font-bold text-5xl">{professors}+</p>
+        <p className="font-bold text-6xl">${professors}+</p>
         <div className="ml-2 text-sm font-light">
-          ACTIVE <br /> PROFESSORS
+          TOTAL CUSTOMER <br /> DOLLARS SAVED
         </div>
       </div>
     </div>

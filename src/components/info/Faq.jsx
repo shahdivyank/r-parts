@@ -15,11 +15,19 @@ const Faq = ({ question, answer }) => {
           {question}
           <FiChevronRight
             className={`text-3xl ${
-              isOpen ? "rotate-90 duration-300" : "duration-300"
+              isOpen ? "rotate-90 duration-500" : "duration-300"
             }`}
           />
         </div>
-        {isOpen && <div className="p-3">{answer}</div>}
+        <div
+          style={{
+            maxHeight: isOpen ? "500px" : "0",
+            transition: "max-height 700ms ease-in-out",
+          }}
+          className="overflow-hidden"
+        >
+          {isOpen && <div className="p-3 ">{answer}</div>}
+        </div>
       </div>
     </>
   );

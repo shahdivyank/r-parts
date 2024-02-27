@@ -5,7 +5,7 @@ import PlaceHolder from "../../../public/png/placeholder.png";
 
 const Item = () => {
   return (
-    <div className="p-2 hover:scale-105">
+    <div className="p-5 font-outfit">
       <Link href="/view">
         <Image
           src={PlaceHolder}
@@ -14,7 +14,9 @@ const Item = () => {
           className="rounded-xl w-full"
         />
 
-        <p className="text-black font-semibold text-lg">Lorem ipsum dolor</p>
+        <p className="text-black font-semibold text-lg hover:text-parts-orange">
+          Lorem ipsum dolor
+        </p>
         <p className="font-light text-sm">
           Lorem ipsum dolor sit amet, consectetur adipiscin elit. Vestibulum
           convallis

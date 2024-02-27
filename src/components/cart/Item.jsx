@@ -4,7 +4,16 @@ import Image from "next/image";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { RxTrash } from "react-icons/rx";
 
-const Item = ({ name, description, condition, price, image, itemCount }) => {
+const Item = ({
+  id,
+  name,
+  description,
+  condition,
+  price,
+  image,
+  itemCount,
+  setItems,
+}) => {
   const [quantity, setQuantity] = useState(1);
 
   return (
@@ -43,9 +52,12 @@ const Item = ({ name, description, condition, price, image, itemCount }) => {
         <p className="font-outfit font-base text-base mt-2  h-2/3">
           ${price}.00
         </p>
-        <button className="cursor-pointer" onClick={null}>
-          <RxTrash className=" text-xl" />
-        </button>
+        <RxTrash
+          onClick={() =>
+            setItems((prev) => prev.filter((item) => item.id !== id))
+          }
+          className=" text-xl hover:text-red-500 hover:cursor-pointer"
+        />
       </div>
     </div>
   );

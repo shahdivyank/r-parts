@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import { FaMinus, FaPlus, FaRegPaperPlane } from "react-icons/fa";
-import Link from "next/link";
 import toaster from "@/utils/toaster";
+import { FaMinus, FaPlus } from "react-icons/fa";
+
 const Description = () => {
   const [quantity, setQuantity] = useState(1);
 
@@ -60,24 +60,16 @@ const Description = () => {
       <button
         className="px-8 py-2 bg-parts-orange font-outfit rounded-full text-white mt-4 cursor-pointer"
         onClick={() => {
-          toaster(selectedItem.data.title, selectedItem.data.price);
+          toaster(
+            selectedItem.data.title,
+            selectedItem.data.price,
+            quantity,
+            selectedItem.data.condition,
+          );
         }}
       >
         ADD TO CART
       </button>
-
-      <div className="border-2 border-parts-gray-400 rounded w-fit p-3 flex items-center mt-4">
-        <FaRegPaperPlane className="mx-3 text-2xl" />
-        <div className="font-outfit">
-          <p className="font-semibold">Free Pickup at WCH127</p>
-          <p>
-            Schedule Pickup Time at Checkout.{" "}
-            <Link href="/" className="underline">
-              Details.
-            </Link>
-          </p>
-        </div>
-      </div>
     </div>
   );
 };

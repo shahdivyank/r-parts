@@ -7,7 +7,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 
 const Navigation = () => {
   return (
-    <div className="flex w-full justify-between items-center font-outfit px-20 my-6">
+    <div className="flex w-11/12 justify-between items-center font-outfit my-6">
       <div className="flex gap-x-10 w-1/2 ">
         <Link
           href={"/"}
@@ -17,10 +17,10 @@ const Navigation = () => {
           <span>{"R'P"}</span>
           <span className="italic">A</span>RTS
         </Link>
-        <div className="flex w-1/2 items-center justify-between border-2 border-parts-500 px-4 py-2 rounded-3xl text-parts-gray-500">
+        <div className="flex w-1/2 items-center justify-between border-1 border-gray-300 border-parts-500 px-4 py-1 rounded-3xl text-parts-gray-500">
           <RiSearchLine />
           <input
-            className="w-full px-5 bg-parts-gray-100 font-outfit focus:outline-none"
+            className="w-full px-5 bg-parts-gray-100 text-gray-500 font-outfit focus:outline-none placeholder-gray"
             placeholder={"Search R'Parts"}
           />
         </div>{" "}
