@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FaMinus, FaPlus, FaRegPaperPlane } from "react-icons/fa";
 import Link from "next/link";
-
+import toaster from "@/utils/toaster";
 const Description = () => {
   const [quantity, setQuantity] = useState(1);
 
@@ -59,7 +59,9 @@ const Description = () => {
       </p>
       <button
         className="px-8 py-2 bg-parts-orange font-outfit rounded-full text-white mt-4 cursor-pointer"
-        onClick={null}
+        onClick={() => {
+          toaster(selectedItem.data.title, selectedItem.data.price);
+        }}
       >
         ADD TO CART
       </button>
