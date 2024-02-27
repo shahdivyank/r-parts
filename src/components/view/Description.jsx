@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import toaster from "@/utils/toaster";
 import { FaMinus, FaPlus } from "react-icons/fa";
+import product from "../../../public/svg/cartItem.svg";
 
 const Description = () => {
   const [quantity, setQuantity] = useState(1);
@@ -14,6 +15,7 @@ const Description = () => {
       condition: "New",
       available: 12,
       price: 59,
+      image: product,
     },
   };
 
@@ -61,6 +63,7 @@ const Description = () => {
         className="px-8 py-2 bg-parts-orange font-outfit rounded-full text-white mt-4 cursor-pointer"
         onClick={() => {
           toaster(
+            selectedItem.data.image,
             selectedItem.data.title,
             selectedItem.data.price,
             quantity,
