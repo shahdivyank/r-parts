@@ -3,7 +3,7 @@ import { Bebas_Neue, Outfit, Montserrat } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
-
+import { Toaster } from "react-hot-toast";
 // eslint-disable-next-line new-cap
 const bebas = Bebas_Neue({
   subsets: ["latin"],
@@ -37,6 +37,7 @@ export default function RootLayout({ children }) {
         className={`${bebas.variable} ${outfit.variable} ${montserrat.variable} min-h-screen flex justify-between items-center flex-col bg-parts-gray-100`}
       >
         <Navigation />
+        <Toaster />
         {children}
         <Footer />
       </body>
