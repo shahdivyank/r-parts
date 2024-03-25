@@ -3,7 +3,7 @@ import Input from "./Input";
 const Toolbar = ({ setFilters }) => {
   const onChange = (id, value) =>
     setFilters((prev) =>
-      prev.filter(({ id }) => id !== "name").concat({ id, value })
+      prev.filter(({ id }) => id !== "name").concat({ id, value }),
     );
 
   return (
