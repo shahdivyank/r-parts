@@ -18,103 +18,24 @@ const AddPhoto = ({ setImages, images }) => {
   };
 
   return (
-    <>
-      <div className="border rounded-3xl aspect-square flex justify-center items-center flex-col w-1/5 m-[1%]">
-        <div className="w-1/2">
-          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-          <button
-            className="border border-parts-gray-500 py-2 px-3 mt-4 text-parts-gray-500 rounded-3xl text-xs"
-            onClick={handleUpload}
-          >
-            UPLOAD FROM COMPUTER
-          </button>
+    <div className="grid grid-cols-4 gap-4 mb-20">
+      {Array.from({ length: 8 }).map((_, index) => (
+        <div
+          key={index}
+          className="border rounded-3xl aspect-square flex justify-center items-center flex-col w-full m-[1%]"
+        >
+          <div className="w-1/2">
+            <input type="file" onChange={(e) => setImage(e.target.files[0])} />
+            <button
+              className="border border-parts-gray-500 py-2 px-3 mt-4 text-parts-gray-500 rounded-3xl text-xs"
+              onClick={handleUpload}
+            >
+              UPLOAD FROM COMPUTER
+            </button>
+          </div>
         </div>
-      </div>
-
-      <div className="border rounded-3xl aspect-square flex justify-center items-center flex-col w-1/5 m-[1%]">
-        <div className="w-1/2">
-          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-          <button
-            className="border border-parts-gray-500 py-2 px-3 mt-4 text-parts-gray-500 rounded-3xl text-xs"
-            onClick={handleUpload}
-          >
-            UPLOAD FROM COMPUTER
-          </button>
-        </div>
-      </div>
-
-      <div className="border rounded-3xl aspect-square flex justify-center items-center flex-col w-1/5 m-[1%]">
-        <div className="w-1/2">
-          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-          <button
-            className="border border-parts-gray-500 py-2 px-3 mt-4 text-parts-gray-500 rounded-3xl text-xs"
-            onClick={handleUpload}
-          >
-            UPLOAD FROM COMPUTER
-          </button>
-        </div>
-      </div>
-
-      <div className="border rounded-3xl aspect-square flex justify-center items-center flex-col w-1/5 m-[1%]">
-        <div className="w-1/2">
-          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-          <button
-            className="border border-parts-gray-500 py-2 px-3 mt-4 text-parts-gray-500 rounded-3xl text-xs"
-            onClick={handleUpload}
-          >
-            UPLOAD FROM COMPUTER
-          </button>
-        </div>
-      </div>
-
-      <div className="border rounded-3xl aspect-square flex justify-center items-center flex-col w-1/5 m-[1%]">
-        <div className="w-1/2">
-          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-          <button
-            className="border border-parts-gray-500 py-2 px-3 mt-4 text-parts-gray-500 rounded-3xl text-xs"
-            onClick={handleUpload}
-          >
-            UPLOAD FROM COMPUTER
-          </button>
-        </div>
-      </div>
-
-      <div className="border rounded-3xl aspect-square flex justify-center items-center flex-col w-1/5 m-[1%]">
-        <div className="w-1/2">
-          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-          <button
-            className="border border-parts-gray-500 py-2 px-3 mt-4 text-parts-gray-500 rounded-3xl text-xs"
-            onClick={handleUpload}
-          >
-            UPLOAD FROM COMPUTER
-          </button>
-        </div>
-      </div>
-
-      <div className="border rounded-3xl aspect-square flex justify-center items-center flex-col w-1/5 m-[1%]">
-        <div className="w-1/2">
-          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-          <button
-            className="border border-parts-gray-500 py-2 px-3 mt-4 text-parts-gray-500 rounded-3xl text-xs"
-            onClick={handleUpload}
-          >
-            UPLOAD FROM COMPUTER
-          </button>
-        </div>
-      </div>
-
-      <div className="border rounded-3xl aspect-square flex justify-center items-center flex-col w-1/5 m-[1%]">
-        <div className="w-1/2">
-          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-          <button
-            className="border border-parts-gray-500 py-2 px-3 mt-4 text-parts-gray-500 rounded-3xl text-xs"
-            onClick={handleUpload}
-          >
-            UPLOAD FROM COMPUTER
-          </button>
-        </div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 };
 

@@ -47,7 +47,10 @@ const Information = ({ setState }) => {
         </div>
       </div>
 
-      <AddPhoto setImages={setImages} images={images} />
+      <div>
+        <div className="text-xl font-outfit font-medium my-20">Add Photos</div>
+        <AddPhoto setImages={setImages} images={images} />
+      </div>
 
       <div>
         <div className="text-xl font-outfit font-medium my-2">Description</div>
