@@ -1,19 +1,19 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Items from "./Items";
 import Total from "./Total";
 import Delivery from "./Delivery";
 
-import { loadStripe } from "@stripe/stripe-js";
+// import { loadStripe } from "@stripe/stripe-js";
 
 const Cart = () => {
-  useEffect(() => {
-    const stripe = loadStripe(`${process.env.NEXT_STRIPE_PUBLIC_KEY}`);
+  // useEffect(() => {
+  //   const stripe = loadStripe(`${process.env.NEXT_STRIPE_PUBLIC_KEY}`);
 
-    if (!stripe) {
-      return;
-    }
-  }, []);
+  //   if (!stripe) {
+  //     return;
+  //   }
+  // }, []);
   const [state, setState] = useState(0);
 
   return (
