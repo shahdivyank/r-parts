@@ -1,8 +1,31 @@
 import Button from "../Button";
 import { cart, cartHeader, cartList } from "@/data/cart";
 import { checkout, checkoutHeader, checkoutList } from "@/data/checkout";
+import { api } from "@/utils/api";
+import { useRouter } from "next/navigation";
 
-const Total = ({ state, nextState }) => {
+const Total = ({ state, setState }) => {
+  const router = useRouter();
+
+  const handlePayment = () => {
+    api({
+      method: "POST",
+      url: "/api/stripe/payment",
+      body: {
+        items: [
+          {
+            id: 1,
+            quantity: 2,
+          },
+          {
+            id: 0,
+            quantity: 3,
+          },
+        ],
+      },
+    }).then(({ url }) => router.push(url));
+  };
+
   return (
     <div className="font-outfit w-1/3">
       <div className="font-semibold text-xl mb-3">Order Summary</div>
@@ -32,13 +55,26 @@ const Total = ({ state, nextState }) => {
             </div>
           ))}
       </div>
-      <Button
-        text={state === 0 ? "PROCEED TO CHECKOUT" : "PLACE ORDER"}
-        color="bg-orange"
-        rounded="full"
-        size="checkout"
-        onClick={nextState}
-      />
+
+      {state === 0 && (
+        <Button
+          text="PROCEED TO SHIPPING"
+          color="bg-orange"
+          rounded="full"
+          size="checkout"
+          onClick={() => setState(state + 1)}
+        />
+      )}
+
+      {state === 1 && (
+        <Button
+          text="PROCEED TO PAYMENT"
+          color="bg-orange"
+          rounded="full"
+          size="checkout"
+          onClick={handlePayment}
+        />
+      )}
     </div>
   );
 };
