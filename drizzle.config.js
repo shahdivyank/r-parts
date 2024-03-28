@@ -1,8 +1,5 @@
-import "dotenv/config";
-// import { Config } from "drizzle-kit";
-
 export default {
-  schema: "./src/db/schema.ts",
+  schema: "./src/db/schema.js",
   out: "./migrations",
   driver: "turso",
   dbCredentials: {
