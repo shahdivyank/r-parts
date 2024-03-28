@@ -1,8 +1,31 @@
 import Button from "../Button";
 import { cart, cartHeader, cartList } from "@/data/cart";
 import { checkout, checkoutHeader, checkoutList } from "@/data/checkout";
+import { api } from "@/utils/api";
+import { useRouter } from "next/navigation";
 
 const Total = ({ state, setState }) => {
+  const router = useRouter();
+
+  const handlePayment = () => {
+    api({
+      method: "POST",
+      url: "/api/stripe/payment",
+      body: {
+        items: [
+          {
+            id: 1,
+            quantity: 2,
+          },
+          {
+            id: 0,
+            quantity: 3,
+          },
+        ],
+      },
+    }).then(({ url }) => router.push(url));
+  };
+
   return (
     <div className="font-outfit w-[30%]">
       <div className="p-8 py-7 bg-parts-gray-100 rounded-3xl mb-6">
@@ -31,13 +54,25 @@ const Total = ({ state, setState }) => {
             ))}
       </div>
 
-      <Button
-        text={state === 0 ? "PROCEED TO CHECKOUT" : "PLACE ORDER"}
-        color="bg-orange"
-        rounded="full"
-        size="checkout"
-        onClick={() => setState(state + 1)}
-      />
+      {state === 0 && (
+        <Button
+          text="PROCEED TO SHIPPING"
+          color="bg-orange"
+          rounded="full"
+          size="checkout"
+          onClick={() => setState(state + 1)}
+        />
+      )}
+
+      {state === 1 && (
+        <Button
+          text="PROCEED TO PAYMENT"
+          color="bg-orange"
+          rounded="full"
+          size="checkout"
+          onClick={handlePayment}
+        />
+      )}
     </div>
   );
 };
